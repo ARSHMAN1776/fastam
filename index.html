@@ -1,0 +1,3482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Fastam</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Strategy
+  * Template URL: https://bootstrapmade.com/strategy-bootstrap-agency-template/
+  * Updated: Jun 06 2025 with Bootstrap v5.3.6
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Fastam Solutions</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#contact">Get Started</a>
+
+    </div>
+  </header>
+  <main class="main">
+
+    <!-- Hero Section -->
+<section id="hero" class="hero section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 content-col" data-aos="fade-up">
+        <div class="content">
+          <div class="agency-name">
+            <h5></h5>
+          </div>
+
+          <div class="main-heading">
+            <h1>SMART AUTOMATION <br>& WEB SOLUTIONS</h1>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="description">
+            <p>Transform your business with cutting-edge AI automation and professional web development. From n8n and Zapier workflows to intelligent calling agents and custom web applications, we deliver powerful solutions that streamline operations and drive growth. Let us turn your vision into reality with technology that works for you.</p>
+          </div>
+
+          <div class="cta-button">
+            <a href="#services" class="btn">
+              <span>EXPLORE SERVICES</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5" data-aos="zoom-out">
+        <div class="visual-content">
+          <div class="fluid-shape">
+                <img src="assets/img/abstract/abstract-1.webp" alt="Abstract Fluid Shape" class="fluid-img">
+              </div>
+
+          <div class="stats-card">
+            <div class="stats-number">
+              <h2>100+</h2>
+            </div>
+            <div class="stats-label">
+              <p>Automation Projects</p>
+            </div>
+            <div class="stats-arrow">
+              <a href="#portfolio"><i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 3D Animation Effects */
+  .fluid-shape {
+    position: relative;
+    animation: float3d 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+  }
+
+  @keyframes float3d {
+    0%, 100% {
+      transform: translateY(0) rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+      transform: translateY(-20px) rotateX(5deg) rotateY(5deg);
+    }
+    50% {
+      transform: translateY(-10px) rotateX(-5deg) rotateY(10deg);
+    }
+    75% {
+      transform: translateY(-15px) rotateX(5deg) rotateY(-5deg);
+    }
+  }
+
+  .fluid-img {
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+  }
+
+  .fluid-img:hover {
+    transform: scale(1.05) translateZ(20px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  }
+
+  .stats-card {
+    animation: slideUp 1s ease-out 0.5s backwards;
+    transition: all 0.3s ease;
+  }
+
+  .stats-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .main-heading h1 {
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes textGlow {
+    from {
+      text-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    }
+    to {
+      text-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+    }
+  }
+
+  .cta-button .btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-button .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .cta-button .btn:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cta-button .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .agency-name h5 {
+    animation: fadeInDown 1s ease-out;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .description {
+    animation: fadeIn 1.5s ease-out 0.3s backwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .stats-arrow a {
+    transition: all 0.3s ease;
+  }
+
+  .stats-arrow a:hover {
+    transform: rotate(45deg) scale(1.2);
+  }
+</style>
+<!-- /Hero Section -->
+
+    <!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About</h2>
+    <div><span>Learn More</span> <span class="description-title">About Us</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gx-5 align-items-center">
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+        <div class="about-image position-relative">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" class="img-fluid rounded-4 shadow-sm about-main-img" alt="Team Collaboration" loading="lazy">
+          <div class="experience-badge">
+            <span class="years">5+</span>
+            <span class="text">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="300">
+        <div class="about-content">
+          <h2>Transforming Businesses with Smart Automation & Technology</h2>
+          <p class="lead">At Fastam Solutions, we specialize in delivering cutting-edge web development and AI automation solutions that drive efficiency and growth.</p>
+          <p>From intelligent workflow automation using n8n, Zapier, and Power Automate to custom web applications, AI calling agents, and professional design services - we provide comprehensive digital solutions tailored to your business needs.</p>
+
+          <div class="row g-4 mt-3">
+            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
+              <div class="feature-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <h5>Expert Automation Solutions</h5>
+                <p>Streamline your workflows with powerful automation tools including n8n, Zapier, Power Automate, and custom integrations that save time and reduce costs.</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="450">
+              <div class="feature-item">
+                <i class="bi bi-lightbulb-fill"></i>
+                <h5>Innovative Technology Stack</h5>
+                <p>We leverage the latest technologies including AI calling agents, Notion workspaces, Google Sheets automation, and professional Canva designs to deliver exceptional results.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#services" class="btn btn-primary mt-4">Explore Our Services</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-section mt-5 pt-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
+          <div class="testimonial-intro">
+            <h3>Client Success Stories</h3>
+            <p>Discover how Fastam Solutions has helped businesses automate operations, build powerful web applications, and achieve their digital transformation goals.</p>
+            <div class="swiper-nav-buttons mt-4">
+              <button class="slider-prev"><i class="bi bi-arrow-left"></i></button>
+              <button class="slider-next"><i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
+          <div class="testimonial-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 800,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": 1,
+                "spaceBetween": 30,
+                "navigation": {
+                  "nextEl": ".slider-next",
+                  "prevEl": ".slider-prev"
+                },
+                "breakpoints": {
+                  "768": {
+                    "slidesPerView": 2
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="rating mb-3">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"Fastam Solutions automated our entire workflow using n8n and Zapier. We've saved 20+ hours per week and increased our team's productivity dramatically!"</p>
+                  <div class="client-info d-flex align-items-center mt-4">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80" class="client-img" alt="Client" loading="lazy">
+                    <div>
+                      <h6 class="mb-0">Sarah Mitchell</h6>
+                      <span>Operations Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="rating mb-3">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                  <p>"The AI calling agent they developed has revolutionized our customer service. Professional, efficient, and exactly what we needed for our growing business."</p>
+                  <div class="client-info d-flex align-items-center mt-4">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" class="client-img" alt="Client" loading="lazy">
+                    <div>
+                      <h6 class="mb-0">James Rodriguez</h6>
+                      <span>CEO, Tech Startup</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="rating mb-3">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"Their web development expertise is outstanding. They built our custom platform with Google Sheets integration and Notion workspace setup. Highly recommended!"</p>
+                  <div class="client-info d-flex align-items-center mt-4">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80" class="client-img" alt="Client" loading="lazy">
+                    <div>
+                      <h6 class="mb-0">Emily Chen</h6>
+                      <span>Product Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="rating mb-3">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>"From Canva designs to Power Automate workflows, Fastam Solutions delivered everything on time and beyond expectations. True professionals!"</p>
+                  <div class="client-info d-flex align-items-center mt-4">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&q=80" class="client-img" alt="Client" loading="lazy">
+                    <div>
+                      <h6 class="mb-0">Michael Thompson</h6>
+                      <span>Marketing Director</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+<style>
+  /* 3D Animation Effects for About Section */
+  .about-main-img {
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+  }
+
+  .about-main-img:hover {
+    transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  }
+
+  .experience-badge {
+    animation: pulse3d 2s ease-in-out infinite;
+    transform-style: preserve-3d;
+  }
+
+  @keyframes pulse3d {
+    0%, 100% {
+      transform: scale(1) translateZ(0);
+    }
+    50% {
+      transform: scale(1.1) translateZ(20px);
+    }
+  }
+
+  .feature-item {
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-10px) translateZ(20px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .feature-item i {
+    transition: all 0.3s ease;
+  }
+
+  .feature-item:hover i {
+    transform: rotateY(360deg) scale(1.2);
+  }
+
+  .testimonial-item {
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+  }
+
+  .testimonial-item:hover {
+    transform: translateY(-5px) rotateX(2deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .client-img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .client-img:hover {
+    transform: scale(1.1) rotateZ(5deg);
+  }
+
+  .rating i {
+    color: #ffc107;
+    animation: starTwinkle 2s ease-in-out infinite;
+  }
+
+  .rating i:nth-child(1) { animation-delay: 0s; }
+  .rating i:nth-child(2) { animation-delay: 0.2s; }
+  .rating i:nth-child(3) { animation-delay: 0.4s; }
+  .rating i:nth-child(4) { animation-delay: 0.6s; }
+  .rating i:nth-child(5) { animation-delay: 0.8s; }
+
+  @keyframes starTwinkle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+  }
+
+  .slider-prev, .slider-next {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .slider-prev:hover, .slider-next:hover {
+    transform: scale(1.2) translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .about-content h2 {
+    animation: slideInLeft 1s ease-out;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .btn-primary {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+  }
+
+  .btn-primary:hover::after {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+</style>
+    <!-- Services Section -->
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+    <div><span>Check Our</span> <span class="description-title">Services</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="service-header">
+      <div class="row align-items-center">
+        <div class="col-lg-8 col-md-12">
+          <div class="service-intro">
+            <h2 class="service-heading">
+              <div>Intelligent automation &</div>
+              <div><span>digital transformation solutions</span></div>
+            </h2>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="service-summary">
+            <p>
+              We combine cutting-edge AI automation, professional web development, and innovative tools to streamline your business operations and accelerate growth through technology.
+            </p>
+            <a href="#contact" class="service-btn">
+              Get Started Today
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <a href="#contact" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <h3>
+            <a href="#contact">
+              Web <span>Development</span>
+            </a>
+          </h3>
+          <p>
+            Custom web applications, responsive websites, and powerful web platforms built with modern technologies. We create scalable solutions that grow with your business needs.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-robot"></i>
+          </div>
+          <a href="#contact" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <h3>
+            <a href="#contact">
+              AI <span>Automation</span>
+            </a>
+          </h3>
+          <p>
+            Streamline workflows with n8n, Zapier, and Power Automate. Automate repetitive tasks, integrate multiple platforms, and boost productivity with intelligent automation solutions.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-telephone-forward"></i>
+          </div>
+          <a href="#contact" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <h3>
+            <a href="#contact">
+              AI Calling <span>Agent</span>
+            </a>
+          </h3>
+          <p>
+            Intelligent voice agents that handle customer calls, schedule appointments, and provide 24/7 support. Reduce costs while improving customer satisfaction with AI-powered calls.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-journal-check"></i>
+          </div>
+          <a href="#contact" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <h3>
+            <a href="#contact">
+              Notion <span>Setup</span>
+            </a>
+          </h3>
+          <p>
+            Custom Notion workspaces, databases, and templates designed for your team. Organize projects, manage tasks, and collaborate efficiently with professionally structured Notion systems.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-palette-fill"></i>
+          </div>
+          <a href="#contact" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <h3>
+            <a href="#contact">
+              Canva <span>Designs</span>
+            </a>
+          </h3>
+          <p>
+            Professional graphics, social media posts, presentations, and marketing materials. Eye-catching designs that enhance your brand identity and engage your audience effectively.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-table"></i>
+          </div>
+          <a href="#contact" class="card-action d-flex align-items-center justify-content-center rounded-circle">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <h3>
+            <a href="#contact">
+              Google Sheets <span>Apps Script</span>
+            </a>
+          </h3>
+          <p>
+            Custom automation scripts, advanced formulas, and powerful integrations for Google Sheets. Transform spreadsheets into dynamic business tools that save time and reduce errors.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+<!-- Steps Section -->
+<section id="steps" class="steps section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Process</h2>
+    <div><span>How we</span> <span class="description-title">Work</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="steps-wrapper">
+
+      <div class="step-item" data-aos="fade-right" data-aos-delay="200">
+        <div class="step-content">
+          <div class="step-icon">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <div class="step-info">
+            <span class="step-number">Step 01</span>
+            <h3>Consultation & Discovery</h3>
+            <p>We start by understanding your business goals, current challenges, and automation needs. Our team conducts a thorough analysis to identify opportunities for improvement and efficiency gains.</p>
+          </div>
+        </div>
+      </div><!-- End Step Item -->
+
+      <div class="step-item" data-aos="fade-left" data-aos-delay="300">
+        <div class="step-content">
+          <div class="step-icon">
+            <i class="bi bi-diagram-3"></i>
+          </div>
+          <div class="step-info">
+            <span class="step-number">Step 02</span>
+            <h3>Solution Design & Planning</h3>
+            <p>We create a customized solution blueprint with detailed workflows, technology stack recommendations, and clear project timelines. Every solution is tailored to your specific requirements.</p>
+          </div>
+        </div>
+      </div><!-- End Step Item -->
+
+      <div class="step-item" data-aos="fade-right" data-aos-delay="400">
+        <div class="step-content">
+          <div class="step-icon">
+            <i class="bi bi-tools"></i>
+          </div>
+          <div class="step-info">
+            <span class="step-number">Step 03</span>
+            <h3>Development & Implementation</h3>
+            <p>Our expert team builds and implements your solution using best practices and cutting-edge technologies. We maintain transparent communication and provide regular progress updates throughout development.</p>
+          </div>
+        </div>
+      </div><!-- End Step Item -->
+
+      <div class="step-item" data-aos="fade-left" data-aos-delay="500">
+        <div class="step-content">
+          <div class="step-icon">
+            <i class="bi bi-rocket-takeoff"></i>
+          </div>
+          <div class="step-info">
+            <span class="step-number">Step 04</span>
+            <h3>Launch & Ongoing Support</h3>
+            <p>We ensure smooth deployment, provide comprehensive training, and offer continuous support. Our team monitors performance and optimizes your solution for maximum efficiency and ROI.</p>
+          </div>
+        </div>
+      </div><!-- End Step Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Steps Section -->
+
+<style>
+  /* 3D Animation Effects for Services Section */
+  .service-card {
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .service-card:hover {
+    transform: translateY(-15px) rotateX(5deg) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  }
+
+  .service-icon {
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+  }
+
+  .service-card:hover .service-icon {
+    transform: rotateY(360deg) scale(1.2);
+  }
+
+  .service-icon i {
+    animation: iconFloat 3s ease-in-out infinite;
+  }
+
+  @keyframes iconFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .card-action {
+    transition: all 0.4s ease;
+  }
+
+  .service-card:hover .card-action {
+    transform: rotate(45deg) scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .service-heading {
+    animation: slideInUp 1s ease-out;
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .service-btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .service-btn:hover::before {
+    left: 100%;
+  }
+
+  .service-btn:hover {
+    transform: translateX(10px);
+  }
+
+  /* Steps Section 3D Animations */
+  .step-item {
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+  }
+
+  .step-item:hover {
+    transform: translateX(20px) scale(1.02);
+  }
+
+  .step-icon {
+    transition: all 0.5s ease;
+    position: relative;
+  }
+
+  .step-item:hover .step-icon {
+    transform: rotateY(360deg) scale(1.1);
+  }
+
+  .step-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.2), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+  }
+
+  .step-item:hover .step-icon::after {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  .step-number {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+
+  .step-info h3 {
+    transition: all 0.3s ease;
+  }
+
+  .step-item:hover .step-info h3 {
+    color: #667eea;
+    transform: translateX(10px);
+  }
+
+  .step-content {
+    position: relative;
+  }
+
+  .step-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.05), transparent);
+    transition: width 0.5s ease;
+  }
+
+  .step-item:hover .step-content::before {
+    width: 100%;
+  }
+</style>
+
+    <!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative">
+
+      <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
+        <span class="badge text-uppercase mb-2">Limited Time Offer!</span>
+        <h2>Transform Your Business with Smart Automation</h2>
+        <p class="my-4">Fastam Solutions accelerates your digital transformation through AI automation, professional web development, and innovative tools. Join businesses that are saving 20+ hours weekly with our automation solutions.</p>
+
+        <div class="features d-flex flex-wrap gap-3 mb-4">
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>AI-Powered Workflows</span>
+          </div>
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>24/7 Expert Support</span>
+          </div>
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>Custom Integrations</span>
+          </div>
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>Scalable Solutions</span>
+          </div>
+        </div>
+
+        <div class="cta-buttons d-flex flex-wrap gap-3">
+          <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+          <a href="#services" class="btn btn-outline">Explore Services</a>
+        </div>
+      </div>
+
+      <div class="content-right position-relative" data-aos="fade-left" data-aos-delay="300">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Automation Dashboard" class="img-fluid rounded-4 cta-main-img">
+        <div class="floating-card">
+          <div class="card-icon">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <div class="card-content">
+            <span class="stats-number">300%</span>
+            <span class="stats-text">Efficiency Boost</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="decoration">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Call To Action Section -->
+
+<style>
+  /* 3D Animation Effects for CTA Section */
+  .call-to-action {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .advertise-1 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .badge {
+    animation: badgePulse 2s ease-in-out infinite;
+    display: inline-block;
+  }
+
+  @keyframes badgePulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+  }
+
+  .content-left h2 {
+    animation: slideInLeft 1s ease-out;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .feature-item {
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-5px) scale(1.1);
+  }
+
+  .feature-item i {
+    transition: all 0.3s ease;
+  }
+
+  .feature-item:hover i {
+    transform: rotate(360deg) scale(1.2);
+    color: #667eea;
+  }
+
+  .btn-primary {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+  }
+
+  .btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+  }
+
+  .btn-outline {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-outline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-outline:hover::after {
+    left: 100%;
+  }
+
+  .btn-outline:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .cta-main-img {
+    transition: all 0.6s ease;
+    transform-style: preserve-3d;
+    animation: imageFloat 4s ease-in-out infinite;
+  }
+
+  @keyframes imageFloat {
+    0%, 100% {
+      transform: translateY(0) rotateY(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotateY(5deg);
+    }
+  }
+
+  .cta-main-img:hover {
+    transform: scale(1.05) rotateY(10deg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .floating-card {
+    animation: cardFloat 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease;
+  }
+
+  @keyframes cardFloat {
+    0%, 100% {
+      transform: translateY(0) translateZ(0);
+    }
+    50% {
+      transform: translateY(-15px) translateZ(20px);
+    }
+  }
+
+  .floating-card:hover {
+    transform: scale(1.1) translateZ(30px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-icon {
+    transition: all 0.5s ease;
+  }
+
+  .floating-card:hover .card-icon {
+    transform: rotateY(360deg) scale(1.2);
+  }
+
+  .card-icon i {
+    animation: iconPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes iconPulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+  }
+
+  .stats-number {
+    animation: counterUp 2s ease-out;
+  }
+
+  @keyframes counterUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .decoration .circle-1,
+  .decoration .circle-2 {
+    animation: rotate3d 20s linear infinite;
+    transform-style: preserve-3d;
+  }
+
+  @keyframes rotate3d {
+    0% {
+      transform: rotate(0deg) translateZ(0);
+    }
+    100% {
+      transform: rotate(360deg) translateZ(20px);
+    }
+  }
+
+  .decoration .circle-2 {
+    animation-duration: 15s;
+    animation-direction: reverse;
+  }
+
+  /* Parallax effect on scroll */
+  @media (prefers-reduced-motion: no-preference) {
+    .content-right {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  /* Hover glow effect */
+  .call-to-action::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.1), transparent);
+    transform: translate(-50%, -50%);
+    animation: glowPulse 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+
+  /* Text reveal animation */
+  .content-left p {
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .features {
+    animation: fadeInUp 1s ease-out 0.5s backwards;
+  }
+
+  .cta-buttons {
+    animation: fadeInUp 1s ease-out 0.7s backwards;
+  }
+</style>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <div><span>Check Our</span> <span class="description-title">Testimonials</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="testimonials-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "slidesPerView": 1,
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h2>Sed ut perspiciatis unde omnis</h2>
+                    <p>
+                      Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    </p>
+                    <p>
+                      Beatae magnam dolore quia ipsum. Voluptatem totam et qui dolore dignissimos. Amet quia sapiente laudantium nihil illo et assumenda sit cupiditate. Nam perspiciatis perferendis minus consequatur. Enim ut eos quo.
+                    </p>
+                    <div class="profile d-flex align-items-center">
+                      <img src="assets/img/person/person-m-7.webp" class="profile-img" alt="">
+                      <div class="profile-info">
+                        <h3>Saul Goodman</h3>
+                        <span>Client</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/person/person-m-7.webp" class="featured-img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h2>Nemo enim ipsam voluptatem</h2>
+                    <p>
+                      Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    </p>
+                    <p>
+                      Dolorem excepturi esse qui amet maxime quibusdam aut repellendus voluptatum. Corrupti enim a repellat cumque est laborum fuga consequuntur. Dolorem nostrum deleniti quas voluptatem iure dolorum rerum. Repudiandae doloribus ut repellat harum vero aut. Modi aut velit aperiam aspernatur odit ut vitae.
+                    </p>
+                    <div class="profile d-flex align-items-center">
+                      <img src="assets/img/person/person-f-8.webp" class="profile-img" alt="">
+                      <div class="profile-info">
+                        <h3>Sara Wilsson</h3>
+                        <span>Designer</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/person/person-f-8.webp" class="featured-img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h2>
+                      Labore nostrum eos impedit
+                    </h2>
+                    <p>
+                      Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    </p>
+                    <p>
+                      Itaque ut explicabo vero occaecati est quam rerum sed. Numquam tempora aut aut quaerat quia illum. Nobis quia autem odit ipsam numquam. Doloribus sit sint corporis eius totam fuga. Hic nostrum suscipit corrupti nam expedita adipisci aut optio.
+                    </p>
+                    <div class="profile d-flex align-items-center">
+                      <img src="assets/img/person/person-m-9.webp" class="profile-img" alt="">
+                      <div class="profile-info">
+                        <h3>Matt Brandon</h3>
+                        <span>Freelancer</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/person/person-m-9.webp" class="featured-img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h2>Impedit dolor facilis nulla</h2>
+                    <p>
+                      Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    </p>
+                    <p>
+                      Omnis aspernatur accusantium qui delectus praesentium repellendus. Facilis sint odio aspernatur voluptas commodi qui qui qui pariatur. Corrupti deleniti itaque quaerat ipsum deleniti culpa tempora tempore. Et consequatur exercitationem hic aspernatur nobis est voluptatibus architecto laborum.
+                    </p>
+                    <div class="profile d-flex align-items-center">
+                      <img src="assets/img/person/person-f-10.webp" class="profile-img" alt="">
+                      <div class="profile-info">
+                        <h3>Jena Karlis</h3>
+                        <span>Store Owner</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/person/person-f-10.webp" class="featured-img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Item -->
+
+          </div>
+
+          <div class="swiper-navigation w-100 d-flex align-items-center justify-content-center">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Portfolio Section -->
+   <section id="portfolio" class="portfolio section">
+
+  <!-- Section Title -->
+  <div class="container section-title">
+    <h2>Portfolio</h2>
+    <div><span>Explore Our</span> <span class="description-title">Work Excellence</span></div>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="isotope-layout">
+
+      <ul class="portfolio-filters isotope-filters">
+        <li data-filter="*" class="filter-active">
+          <i class="bi bi-grid-3x3"></i> All Projects
+        </li>
+        <li data-filter=".filter-automation">
+          <i class="bi bi-lightning-charge"></i> Automation
+        </li>
+        <li data-filter=".filter-web">
+          <i class="bi bi-code-slash"></i> Web Development
+        </li>
+        <li data-filter=".filter-ai">
+          <i class="bi bi-robot"></i> AI Solutions
+        </li>
+        <li data-filter=".filter-design">
+          <i class="bi bi-palette"></i> Design
+        </li>
+      </ul>
+
+      <div class="row g-4 isotope-container">
+
+        <!-- Portfolio Item 1: n8n Workflow -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-automation">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" class="img-fluid" alt="n8n Workflow Automation" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">n8n Automation</div>
+                  <h3 class="entry-title">E-commerce Workflow</h3>
+                  <p class="entry-description">Automated order processing & inventory synchronization</p>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Portfolio Item 2: Business Dashboard -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" class="img-fluid" alt="Business Analytics Dashboard" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Web Development</div>
+                  <h3 class="entry-title">Business Dashboard</h3>
+                  <p class="entry-description">Real-time analytics with Google Sheets integration</p>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Portfolio Item 3: AI Calling Agent -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&q=80" class="img-fluid" alt="AI Voice Assistant" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">AI Solutions</div>
+                  <h3 class="entry-title">AI Calling Agent</h3>
+                  <p class="entry-description">24/7 intelligent customer support automation</p>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Portfolio Item 4: Brand Identity -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80" class="img-fluid" alt="Brand Identity Design" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Design Services</div>
+                  <h3 class="entry-title">Brand Identity</h3>
+                  <p class="entry-description">Complete visual identity & marketing materials</p>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Portfolio Item 5: CRM Integration -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-automation">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80" class="img-fluid" alt="CRM System Integration" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Zapier Automation</div>
+                  <h3 class="entry-title">CRM Integration Suite</h3>
+                  <p class="entry-description">Multi-platform automation & data synchronization</p>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Portfolio Item 6: Inventory System -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" class="img-fluid" alt="Inventory Management System" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Apps Script</div>
+                  <h3 class="entry-title">Inventory Management</h3>
+                  <p class="entry-description">Real-time tracking with automated alerts</p>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Portfolio Item 7: Team Workspace -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-automation">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" class="img-fluid" alt="Team Collaboration Workspace" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Notion Setup</div>
+                  <h3 class="entry-title">Team Workspace</h3>
+                  <p class="entry-description">Custom databases & project management system</p>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Portfolio Item 8: Document Processing -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" class="img-fluid" alt="AI Document Processing" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Power Automate</div>
+                  <h3 class="entry-title">Document Processing</h3>
+                  <p class="entry-description">AI-powered approval workflow automation</p>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+  :root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --dark-bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-light: #ffffff;
+    --text-muted: #b0b0b0;
+  }
+
+  body {
+    background: var(--dark-bg);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .portfolio.section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-title h2 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+
+  .section-title div {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-light);
+  }
+
+  .section-title span {
+    color: var(--text-muted);
+  }
+
+  .description-title {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Portfolio Filters */
+  .portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  .portfolio-filters li {
+    padding: 12px 28px;
+    background: var(--card-bg);
+    color: var(--text-muted);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .portfolio-filters li:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: var(--primary-color);
+    color: var(--text-light);
+    transform: translateY(-3px);
+  }
+
+  .portfolio-filters li.filter-active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  }
+
+  .portfolio-filters li i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .portfolio-filters li:hover i {
+    transform: scale(1.2);
+  }
+
+  /* Portfolio Items */
+  .portfolio-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  .portfolio-item:nth-child(1) { animation-delay: 0.1s; }
+  .portfolio-item:nth-child(2) { animation-delay: 0.15s; }
+  .portfolio-item:nth-child(3) { animation-delay: 0.2s; }
+  .portfolio-item:nth-child(4) { animation-delay: 0.25s; }
+  .portfolio-item:nth-child(5) { animation-delay: 0.3s; }
+  .portfolio-item:nth-child(6) { animation-delay: 0.35s; }
+  .portfolio-item:nth-child(7) { animation-delay: 0.4s; }
+  .portfolio-item:nth-child(8) { animation-delay: 0.45s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .portfolio-entry {
+    height: 100%;
+  }
+
+  .entry-meta {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+  }
+
+  .entry-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 0;
+    line-height: 1.3;
+  }
+
+  .entry-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .entry-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    filter: brightness(0.6) contrast(1.1);
+  }
+
+  /* Overlay */
+  .entry-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+  }
+
+  .overlay-content {
+    width: 100%;
+  }
+
+  .entry-description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    line-height: 1.6;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .portfolio-entry:hover .entry-description {
+    opacity: 1;
+    max-height: 100px;
+    margin-top: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .section-title div {
+      font-size: 32px;
+    }
+
+    .portfolio-filters {
+      gap: 10px;
+    }
+
+    .portfolio-filters li {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+
+    .entry-image img {
+      height: 250px;
+    }
+
+    .entry-title {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+<script>
+  // Initialize GLightbox
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+
+  // Portfolio filtering
+  const filters = document.querySelectorAll('.portfolio-filters li');
+  const items = document.querySelectorAll('.portfolio-item');
+
+  filters.forEach(filter => {
+    filter.addEventListener('click', function() {
+      const filterValue = this.getAttribute('data-filter');
+      
+      // Update active filter
+      filters.forEach(f => f.classList.remove('filter-active'));
+      this.classList.add('filter-active');
+      
+      // Filter items
+      items.forEach(item => {
+        if (filterValue === '*' || item.classList.contains(filterValue.substring(1))) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(30px)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 400);
+        }
+      });
+    });
+  });
+</script>
+
+<!-- /Portfolio Section -->
+
+    <!--
+    <section id="team" class="team section light-background">
+
+      Section Title 
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <div><span>Check Our</span> <span class="description-title">Team</span></div>
+      </div><
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex">
+              <div class="member-img">
+                <img src="assets/img/person/person-m-7.webp" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="member-info flex-grow-1">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member d-flex">
+              <div class="member-img">
+                <img src="assets/img/person/person-f-8.webp" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="member-info flex-grow-1">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <p>Labore ipsam sit consequatur exercitationem rerum laboriosam laudantium aut quod dolores exercitationem ut</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>End Team Member
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member d-flex">
+              <div class="member-img">
+                <img src="assets/img/person/person-m-6.webp" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="member-info flex-grow-1">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>Illum minima ea autem doloremque ipsum quidem quas aspernatur modi ut praesentium vel tque sed facilis at qui</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex">
+              <div class="member-img">
+                <img src="assets/img/person/person-f-4.webp" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="member-info flex-grow-1">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+                <p>Magni voluptatem accusamus assumenda cum nisi aut qui dolorem voluptate sed et veniam quasi quam consectetur</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="team-member d-flex">
+              <div class="member-img">
+                <img src="assets/img/person/person-m-12.webp" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="member-info flex-grow-1">
+                <h4>Brian Doe</h4>
+                <span>Marketing</span>
+                <p>Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="team-member d-flex">
+              <div class="member-img">
+                <img src="assets/img/person/person-f-9.webp" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="member-info flex-grow-1">
+                <h4>Josepha Palas</h4>
+                <span>Operation</span>
+                <p>Sint sint eveniet explicabo amet consequatur nesciunt error enim rerum earum et omnis fugit eligendi cupiditate vel</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>/Team Section -->
+
+    
+    <!-- Pricing Section -->
+    <!-- Pricing Section -->
+<section id="pricing" class="pricing section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Pricing</h2>
+    <div><span>Check Our</span> <span class="description-title">Service Packages</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+      
+      <!-- Web Development Package -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="pricing-card">
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Custom websites and web applications built with modern technologies</p>
+          </div>
+          <div class="plan-pricing">
+          
+
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Responsive Design</li>
+              <li><i class="bi bi-check-circle-fill"></i> Modern UI/UX</li>
+              <li><i class="bi bi-check-circle-fill"></i> SEO Optimized</li>
+              <li><i class="bi bi-check-circle-fill"></i> Mobile Friendly</li>
+              <li><i class="bi bi-check-circle-fill"></i> Fast Loading Speed</li>
+              <li><i class="bi bi-check-circle-fill"></i> 30 Days Support</li>
+            </ul>
+          </div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-plan">Get Custom Quote</a>
+          </div>
+        </div>
+      </div><!-- End Web Development Package -->
+
+      <!-- Automation Package -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="pricing-card popular">
+          <div class="popular-tag">Most Popular</div>
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <h3>Automation Solutions</h3>
+            <p>Workflow automation with n8n, Zapier, and Power Automate</p>
+          </div>
+          <div class="plan-pricing">
+            
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Custom Workflow Design</li>
+              <li><i class="bi bi-check-circle-fill"></i> n8n/Zapier Integration</li>
+              <li><i class="bi bi-check-circle-fill"></i> Power Automate Setup</li>
+              <li><i class="bi bi-check-circle-fill"></i> Multi-Platform Sync</li>
+              <li><i class="bi bi-check-circle-fill"></i> Error Handling</li>
+              <li><i class="bi bi-check-circle-fill"></i> Documentation Included</li>
+            </ul>
+          </div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-plan">Get Custom Quote</a>
+          </div>
+        </div>
+      </div><!-- End Automation Package -->
+
+      <!-- AI Calling Agent Package -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+        <div class="pricing-card">
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="bi bi-telephone-forward"></i>
+            </div>
+            <h3>AI Calling Agent</h3>
+            <p>Intelligent voice agents for customer support and sales</p>
+          </div>
+          <div class="plan-pricing">
+            
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Custom Voice Training</li>
+              <li><i class="bi bi-check-circle-fill"></i> 24/7 Availability</li>
+              <li><i class="bi bi-check-circle-fill"></i> CRM Integration</li>
+              <li><i class="bi bi-check-circle-fill"></i> Call Analytics</li>
+              <li><i class="bi bi-check-circle-fill"></i> Multi-Language Support</li>
+              <li><i class="bi bi-check-circle-fill"></i> Ongoing Optimization</li>
+            </ul>
+          </div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-plan">Get Custom Quote</a>
+          </div>
+        </div>
+      </div><!-- End AI Calling Agent Package -->
+
+      <!-- Notion Setup Package -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="pricing-card">
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="bi bi-journal-check"></i>
+            </div>
+            <h3>Notion Workspace</h3>
+            <p>Professional workspace setup and custom databases</p>
+          </div>
+          <div class="plan-pricing">
+           
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Custom Templates</li>
+              <li><i class="bi bi-check-circle-fill"></i> Database Design</li>
+              <li><i class="bi bi-check-circle-fill"></i> Team Collaboration</li>
+              <li><i class="bi bi-check-circle-fill"></i> Workflow Integration</li>
+              <li><i class="bi bi-check-circle-fill"></i> Training Session</li>
+              <li><i class="bi bi-check-circle-fill"></i> Best Practices Guide</li>
+            </ul>
+          </div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-plan">Get Custom Quote</a>
+          </div>
+        </div>
+      </div><!-- End Notion Setup Package -->
+
+      <!-- Design Package -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="pricing-card">
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="bi bi-palette-fill"></i>
+            </div>
+            <h3>Canva Designs</h3>
+            <p>Professional graphics and marketing materials</p>
+          </div>
+          <div class="plan-pricing">
+           
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Social Media Posts</li>
+              <li><i class="bi bi-check-circle-fill"></i> Presentation Slides</li>
+              <li><i class="bi bi-check-circle-fill"></i> Marketing Posters</li>
+              <li><i class="bi bi-check-circle-fill"></i> Brand Assets</li>
+              <li><i class="bi bi-check-circle-fill"></i> Unlimited Revisions</li>
+              <li><i class="bi bi-check-circle-fill"></i> Source Files Included</li>
+            </ul>
+          </div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-plan">Get Custom Quote</a>
+          </div>
+        </div>
+      </div><!-- End Design Package -->
+
+      <!-- Apps Script Package -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+        <div class="pricing-card">
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="bi bi-table"></i>
+            </div>
+            <h3>Google Sheets Scripts</h3>
+            <p>Custom automation and advanced spreadsheet solutions</p>
+          </div>
+          <div class="plan-pricing">
+           
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Custom Functions</li>
+              <li><i class="bi bi-check-circle-fill"></i> Auto Reports</li>
+              <li><i class="bi bi-check-circle-fill"></i> Data Integration</li>
+              <li><i class="bi bi-check-circle-fill"></i> Email Automation</li>
+              <li><i class="bi bi-check-circle-fill"></i> Dashboard Creation</li>
+              <li><i class="bi bi-check-circle-fill"></i> Code Documentation</li>
+            </ul>
+          </div>
+          <div class="plan-cta">
+            <a href="#contact" class="btn-plan">Get Custom Quote</a>
+          </div>
+        </div>
+      </div><!-- End Apps Script Package -->
+
+    </div>
+
+    <!-- Custom Package CTA -->
+    <div class="custom-package-cta" data-aos="fade-up" data-aos-delay="500">
+      <div class="cta-content">
+        <h3>Need a Custom Solution?</h3>
+        <p>Every business is unique. Let's discuss your specific requirements and create a tailored package that fits your needs and budget perfectly.</p>
+        <a href="#contact" class="btn-custom">Contact Us for Pricing</a>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Pricing Section -->
+
+<style>
+  /* Pricing Section Styles */
+  .pricing.section {
+    background: var(--surface-color);
+    padding: 80px 0;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-title h2 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+  }
+
+  .section-title div {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+
+  .section-title span {
+    color: var(--default-color);
+  }
+
+  .description-title {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+  }
+
+  /* Pricing Cards */
+  .pricing-card {
+    background: var(--contrast-color);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    padding: 40px 30px;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-15px) rotateX(3deg) scale(1.02);
+    box-shadow: 0 25px 60px rgba(102, 126, 234, 0.2);
+  }
+
+  .pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .pricing-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* Popular Card */
+  .pricing-card.popular {
+    border: 2px solid #667eea;
+    transform: scale(1.03);
+  }
+
+  .pricing-card.popular:hover {
+    transform: translateY(-15px) rotateX(3deg) scale(1.05);
+  }
+
+  .popular-tag {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 8px 50px;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Plan Header */
+  .plan-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .plan-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.5s ease;
+    animation: iconFloat 3s ease-in-out infinite;
+  }
+
+  @keyframes iconFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .pricing-card:hover .plan-icon {
+    transform: rotateY(360deg) scale(1.1);
+    animation: none;
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+  }
+
+  .plan-header h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 12px;
+  }
+
+  .plan-header p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Plan Pricing - Quote Style */
+  .plan-pricing {
+    padding: 30px 25px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    margin: 0 0 30px;
+    border-radius: 15px;
+    position: relative;
+  }
+
+  .price-quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .price-quote i {
+    font-size: 40px;
+    color: #667eea;
+    opacity: 0.3;
+    animation: quotePulse 2s ease-in-out infinite;
+  }
+
+  @keyframes quotePulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+  }
+
+  .price-quote span {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Plan Features */
+  .plan-features {
+    flex-grow: 1;
+    margin-bottom: 30px;
+  }
+
+  .plan-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .plan-features li {
+    padding: 12px 0;
+    color: var(--default-color);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+
+  .plan-features li:last-child {
+    border-bottom: none;
+  }
+
+  .plan-features li:hover {
+    transform: translateX(5px);
+    color: #667eea;
+  }
+
+  .plan-features li i {
+    font-size: 18px;
+    color: #667eea;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  .plan-features li:hover i {
+    transform: scale(1.2) rotate(360deg);
+  }
+
+  /* Plan CTA */
+  .plan-cta {
+    text-align: center;
+  }
+
+  .btn-plan {
+    display: inline-block;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-plan::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-plan:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 35px rgba(102, 126, 234, 0.5);
+    color: white;
+  }
+
+  /* Custom Package CTA */
+  .custom-package-cta {
+    margin-top: 60px;
+    text-align: center;
+    padding: 50px 30px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 20px;
+    border: 2px dashed color-mix(in srgb, #667eea, transparent 50%);
+  }
+
+  .cta-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 15px;
+  }
+
+  .cta-content p {
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+  }
+
+  .btn-custom {
+    display: inline-block;
+    padding: 16px 45px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  }
+
+  .btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+    color: white;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-title div {
+      font-size: 32px;
+    }
+
+    .pricing-card {
+      margin-bottom: 30px;
+    }
+
+    .pricing-card.popular {
+      transform: scale(1);
+    }
+
+    .popular-tag {
+      font-size: 10px;
+      padding: 6px 40px;
+    }
+
+    .plan-icon {
+      width: 70px;
+      height: 70px;
+      font-size: 32px;
+    }
+
+    .cta-content h3 {
+      font-size: 24px;
+    }
+  }
+</style><!-- /Pricing Section -->
+
+   <!-- Faq Section -->
+<section class="faq-9 faq section" id="faq">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-5" data-aos="fade-up">
+        <h2 class="faq-title">Have a question? Check out the FAQ</h2>
+        <p class="faq-description">Find answers to the most common questions about our web development, AI automation, and digital solutions services.</p>
+        <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+          <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+        <div class="faq-container">
+
+          <div class="faq-item faq-active">
+            <h3>What services does Fastam Solutions provide?</h3>
+            <div class="faq-content">
+              <p>We specialize in web development, AI automation solutions (n8n, Zapier, Power Automate), AI calling agents, Notion workspace setups, Canva designs, and Google Sheets Apps Script automation. Our goal is to streamline your business operations through cutting-edge technology and custom solutions.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>How long does it take to complete an automation project?</h3>
+            <div class="faq-content">
+              <p>Project timelines vary based on complexity. Simple workflow automations typically take 3-5 business days, while complex integrations with multiple platforms may require 2-3 weeks. We provide a detailed timeline during the consultation phase and keep you updated throughout the development process.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>Do you provide support after project completion?</h3>
+            <div class="faq-content">
+              <p>Yes! We offer 30 days of free support for all projects, including bug fixes and minor adjustments. We also provide extended support packages and ongoing maintenance plans to ensure your solutions continue running smoothly. Documentation and training are included with every project.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>Can you integrate with existing tools and platforms we use?</h3>
+            <div class="faq-content">
+              <p>Absolutely! We specialize in integrating various platforms including CRM systems, Google Workspace, Microsoft 365, Notion, Slack, email platforms, databases, and hundreds of other tools through n8n, Zapier, and Power Automate. We'll analyze your current tech stack and create seamless integrations.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>How much do your services cost?</h3>
+            <div class="faq-content">
+              <p>Pricing varies based on project scope, complexity, and specific requirements. Each business has unique needs, so we provide custom quotes after understanding your goals. Contact us for a free consultation and personalized quote tailored to your budget and objectives.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>What makes Fastam Solutions different from other service providers?</h3>
+            <div class="faq-content">
+              <p>We combine technical expertise with a client-first approach. Our team delivers custom solutions, not generic templates. We focus on understanding your business processes, provide transparent communication, offer comprehensive documentation, and ensure you can maintain and scale your solutions independently.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>Do I need technical knowledge to use your automation solutions?</h3>
+            <div class="faq-content">
+              <p>Not at all! We design user-friendly solutions that anyone can operate. Every project includes training sessions and clear documentation. We ensure your team is comfortable using the new systems before project completion. Our goal is to make technology work for you, not complicate your workflow.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>Can you help migrate from one automation tool to another?</h3>
+            <div class="faq-content">
+              <p>Yes! We help businesses migrate between platforms (Zapier to n8n, Power Automate to n8n, etc.). We analyze your existing workflows, recreate them in the new platform with improvements, test thoroughly, and ensure a smooth transition with zero downtime for your operations.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Faq Section -->
+
+<style>
+  /* FAQ Section 3D Animations */
+  .faq.section {
+    padding: 80px 0;
+    background: var(--surface-color);
+  }
+
+  .faq-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    animation: slideInLeft 1s ease-out;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .faq-description {
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    animation: fadeIn 1.2s ease-out 0.3s backwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .faq-arrow {
+    margin-top: 30px;
+    color: #667eea;
+    animation: arrowFloat 3s ease-in-out infinite;
+  }
+
+  @keyframes arrowFloat {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-10px) translateX(10px);
+    }
+  }
+
+  /* FAQ Container */
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* FAQ Items */
+  .faq-item {
+    background: var(--contrast-color);
+    border-radius: 15px;
+    padding: 25px 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transform-style: preserve-3d;
+    overflow: hidden;
+  }
+
+  .faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transform: scaleY(0);
+    transition: transform 0.4s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(10px) translateY(-3px) rotateY(2deg);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.3);
+  }
+
+  .faq-item:hover::before {
+    transform: scaleY(1);
+  }
+
+  .faq-item.faq-active {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+    border-color: #667eea;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  }
+
+  .faq-item.faq-active::before {
+    transform: scaleY(1);
+  }
+
+  /* FAQ Question */
+  .faq-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 0;
+    padding-right: 40px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover h3 {
+    color: #667eea;
+    transform: translateX(5px);
+  }
+
+  .faq-item.faq-active h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+  }
+
+  /* FAQ Content */
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .faq-item.faq-active .faq-content {
+    max-height: 500px;
+    animation: fadeInContent 0.5s ease-out;
+  }
+
+  @keyframes fadeInContent {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .faq-content p {
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  /* FAQ Toggle Icon */
+  .faq-toggle {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    font-size: 20px;
+    color: #667eea;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(102, 126, 234, 0.1);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .faq-item:hover .faq-toggle {
+    transform: scale(1.2);
+    background: rgba(102, 126, 234, 0.2);
+  }
+
+  .faq-item.faq-active .faq-toggle {
+    transform: rotate(90deg);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  }
+
+  /* Pulse animation for active item */
+  .faq-item.faq-active {
+    animation: pulseActive 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseActive {
+    0%, 100% {
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+    }
+    50% {
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .faq-title {
+      font-size: 32px;
+    }
+
+    .faq-arrow {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .faq-title {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .faq-description {
+      font-size: 14px;
+    }
+
+    .faq-item {
+      padding: 20px;
+    }
+
+    .faq-item h3 {
+      font-size: 16px;
+      padding-right: 35px;
+    }
+
+    .faq-toggle {
+      top: 22px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+    }
+
+    .faq-content p {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script>
+  // FAQ Toggle Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      item.addEventListener('click', function() {
+        // Toggle current item
+        const isActive = this.classList.contains('faq-active');
+        
+        // Close all items
+        faqItems.forEach(faq => {
+          faq.classList.remove('faq-active');
+        });
+        
+        // If item wasn't active, activate it
+        if (!isActive) {
+          this.classList.add('faq-active');
+        }
+      });
+    });
+  });
+</script>
+
+   
+  </main>
+
+  <<footer id="footer" class="footer">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename">Fastam Solutions</span>
+        </a>
+        <p>Transforming businesses through innovative AI automation, professional web development, and cutting-edge digital solutions.</p>
+        <div class="social-links d-flex mt-4">
+          <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="index.html#services">Web Development</a></li>
+          <li><a href="index.html#services">AI Automation</a></li>
+          <li><a href="index.html#services">AI Calling Agent</a></li>
+          <li><a href="index.html#services">Notion Setup</a></li>
+          <li><a href="index.html#services">Apps Script</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p><i class="bi bi-geo-alt"></i> Lahore, Punjab, Pakistan</p>
+        <p class="mt-3"><strong><i class="bi bi-telephone"></i> Phone:</strong> <span>+92 XXX XXXXXXX</span></p>
+        <p><strong><i class="bi bi-envelope"></i> Email:</strong> <span>info@fastamsolutions.com</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Fastam Solutions</strong> <span>All Rights Reserved</span></p>
+  </div>
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<style>
+  :root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --page-bg: #0d1d26;
+    --footer-bg: linear-gradient(135deg, #0f0f0f 0%, #2b2d2e 50%, #101111 100%);
+    --text-light: #ffffff;
+    --text-muted: #c8d0e0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Footer Styles - UPDATED TO MATCH CONTACT PAGE */
+  .footer {
+    background: var(--footer-bg);
+    color: #e0e0e0;
+    padding: 80px 0 30px;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid rgba(102, 126, 234, 0.3);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  }
+
+  .footer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
+    animation: rotateGradient 20s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes rotateGradient {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .footer-top {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Logo */
+  .footer .logo {
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  .footer .logo:hover {
+    transform: scale(1.05) translateY(-3px);
+  }
+
+  .sitename {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Footer About */
+  .footer-about p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  /* Social Links */
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-links a {
+    width: 45px;
+    height: 45px;
+    background: rgba(102, 126, 234, 0.1);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 18px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .social-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: -1;
+  }
+
+  .social-links a:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+
+  .social-links a:hover {
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  }
+
+  /* Footer Links */
+  .footer-links h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .footer-links h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 3px;
+    animation: widthPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes widthPulse {
+    0%, 100% {
+      width: 50px;
+    }
+    50% {
+      width: 70px;
+    }
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .footer-links li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+
+  .footer-links li:hover {
+    padding-left: 25px;
+  }
+
+  .footer-links li:hover::before {
+    left: 5px;
+    color: var(--secondary-color);
+  }
+
+  .footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .footer-links a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+  }
+
+  /* Footer Contact */
+  .footer-contact h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .footer-contact h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 3px;
+  }
+
+  .footer-contact p {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .footer-contact i {
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-size: 18px;
+  }
+
+  .footer-contact strong {
+    color: #ffffff;
+  }
+
+  /* Footer CTA Button */
+  .cta-footer {
+    margin-top: 25px;
+  }
+
+  .btn-footer {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-footer:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-footer:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+    color: white;
+  }
+
+  /* Copyright */
+  .copyright {
+    border-top: 1px solid rgba(102, 126, 234, 0.2);
+    padding-top: 30px;
+    color: var(--text-muted);
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .copyright .sitename {
+    font-size: 16px;
+  }
+
+  .credits {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .credits i {
+    color: #e74c3c;
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.3);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
+
+  /* Scroll Top Button */
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+  }
+
+  .scroll-top.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .scroll-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
+  }
+
+  .scroll-top i {
+    font-size: 28px;
+    animation: arrowBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes arrowBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .footer {
+      padding: 60px 0 30px;
+    }
+
+    .footer-contact {
+      text-align: left !important;
+    }
+
+    .footer-contact h4::after {
+      left: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 50px 0 20px;
+    }
+
+    .sitename {
+      font-size: 24px;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+
+    .scroll-top {
+      width: 45px;
+      height: 45px;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .scroll-top i {
+      font-size: 24px;
+    }
+  }
+</style>
+
+<script>
+  // Scroll to Top Button
+  const scrollTop = document.getElementById('scroll-top');
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      scrollTop.classList.add('active');
+    } else {
+      scrollTop.classList.remove('active');
+    }
+  });
+
+  scrollTop.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // Smooth scroll for footer links
+  document.querySelectorAll('.footer a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
