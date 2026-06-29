@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Healthcare — Fastam Solutions</title>
+  <meta name="description"
+    content="HIPAA-aligned AI for healthcare. Fastam builds patient intake bots, EHR-connected scheduling agents, and post-op follow-up automation.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(130px);
+      pointer-events: none;
+      z-index: 1;
+      animation: orbFloat 9s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbFloat {
+      from {
+        transform: translateY(0) scale(1)
+      }
+
+      to {
+        transform: translateY(-28px) scale(1.07)
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center
+      }
+
+      100% {
+        background-position: 200% center
+      }
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, #00e893 0%, #00d4ff 45%, #00e893 80%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 5s linear infinite;
+    }
+
+    .metric-hero {
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-family: var(--font-head);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #00e893, #00d4ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .metric-label {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      margin-top: 6px;
+    }
+
+    .pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #00e893;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 6px;
+    }
+
+    .pulse::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: rgba(0, 232, 147, .3);
+      animation: pls 2s ease-in-out infinite;
+    }
+
+    @keyframes pls {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: .6
+      }
+
+      50% {
+        transform: scale(1.7);
+        opacity: 0
+      }
+    }
+
+    .hipaa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 20px;
+      background: rgba(0, 232, 147, .06);
+      border: 1px solid rgba(0, 232, 147, .25);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: .73rem;
+      color: var(--success);
+    }
+
+    .feat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all .4s var(--ease);
+    }
+
+    .feat-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      opacity: 0;
+      transition: opacity .4s;
+      background: radial-gradient(ellipse at 50% 0%, rgba(0, 232, 147, .1) 0%, transparent 70%);
+    }
+
+    .feat-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0, 232, 147, .35);
+      box-shadow: 0 32px 64px rgba(0, 0, 0, .4), 0 0 32px rgba(0, 232, 147, .08);
+    }
+
+    .feat-card:hover::after {
+      opacity: 1;
+    }
+
+    .feat-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .feat-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      letter-spacing: .08em;
+      color: var(--success);
+      margin-top: 16px;
+    }
+
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .vs-col {
+      padding: 44px;
+    }
+
+    .vs-col.before {
+      background: rgba(255, 107, 107, .03);
+    }
+
+    .vs-col.after {
+      background: linear-gradient(160deg, rgba(0, 232, 147, .05) 0%, rgba(0, 212, 255, .04) 100%);
+    }
+
+    .vs-col h4 {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      opacity: .6;
+    }
+
+    .vs-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+      font-size: .93rem;
+      line-height: 1.6;
+    }
+
+    .vs-row i {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .vs-row.neg i {
+      color: #ff6b6b;
+    }
+
+    .vs-row.pos i {
+      color: #00e893;
+    }
+
+    .step-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      position: relative;
+    }
+
+    .step-wrap::before {
+      content: '';
+      position: absolute;
+      top: 34px;
+      left: calc(33.33% - 14px);
+      right: calc(33.33% - 14px);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(0, 232, 147, .5), rgba(0, 212, 255, .5));
+      z-index: 0;
+    }
+
+    .step-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 44px 32px;
+      text-align: center;
+      position: relative;
+      transition: all .4s var(--ease);
+    }
+
+    .step-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #00e893, #00d4ff);
+      border-radius: 2px;
+      transition: width .4s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, .3);
+    }
+
+    .step-card:hover::after {
+      width: 60%;
+    }
+
+    .step-num {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      font-family: var(--font-head);
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .s1 {
+      background: var(--surface);
+      border: 1px solid rgba(0, 232, 147, .35);
+      color: var(--success);
+      box-shadow: 0 0 20px rgba(0, 232, 147, .15);
+    }
+
+    .s2 {
+      background: var(--surface);
+      border: 1px solid rgba(0, 212, 255, .35);
+      color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 212, 255, .15);
+    }
+
+    .s3 {
+      background: var(--surface);
+      border: 1px solid rgba(108, 99, 255, .35);
+      color: var(--primary);
+      box-shadow: 0 0 20px rgba(108, 99, 255, .15);
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    .mq-wrap {
+      overflow: hidden;
+      padding: 32px 0;
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mq-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    .mq-wrap:hover .mq-track {
+      animation-play-state: paused;
+    }
+
+    .mq-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 48px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-right: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .mq-item i {
+      font-size: 1.3rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(0, 232, 147, .3);
+    }
+
+    .faq-q {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 28px;
+    }
+
+    .faq-q h4 {
+      margin: 0;
+      font-size: .97rem;
+      font-weight: 600;
+    }
+
+    .faq-toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--success);
+      transition: all .3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+      background: rgba(0, 232, 147, .1);
+    }
+
+    .faq-a {
+      display: none;
+      padding: 0 28px 22px;
+      color: var(--text-muted);
+      font-size: .9rem;
+      line-height: 1.75;
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    .cta-inner {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 80px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-inner::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 232, 147, .1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-sub {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      letter-spacing: .08em;
+      color: var(--text-subtle);
+      margin-top: 16px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s var(--ease), transform .7s var(--ease);
+    }
+
+    .reveal.vis {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal.d1 {
+      transition-delay: .1s;
+    }
+
+    .reveal.d2 {
+      transition-delay: .2s;
+    }
+
+    @media(max-width:768px) {
+
+      .vs-grid,
+      .step-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .step-wrap::before {
+        display: none;
+      }
+
+      .cta-inner {
+        padding: 48px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="page-hero"
+    style="position:relative;overflow:hidden;background:url('assets/img/healthcare_enterprise_bg.png') center/cover no-repeat;">
+    <div class="hero-orb" style="width:500px;height:500px;background:rgba(0,232,147,.12);top:-100px;right:-60px;"></div>
+    <div class="hero-orb"
+      style="width:360px;height:360px;background:rgba(0,212,255,.1);bottom:0;left:-60px;animation-delay:5s;"></div>
+    <div
+      style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,20,.88) 0%,var(--bg) 100%);z-index:0;">
+    </div>
+    <div class="container" style="position:relative;z-index:2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:var(--text-subtle)">Home</a><span
+          class="breadcrumb-sep">/</span><a href="#" style="color:var(--text-subtle)">Industries</a><span
+          class="breadcrumb-sep">/</span><span>Healthcare</span></nav>
+      <div style="display:flex;justify-content:center;margin-bottom:24px;">
+        <div class="hipaa-badge"><i class="bi bi-file-medical-fill"></i> HIPAA-Aligned Architecture</div>
+      </div>
+      <h1 style="max-width:860px;margin:0 auto 24px;text-align:center;">
+        AI That Cares for Your<br><span class="shimmer-text">Patients Around the Clock</span>
+      </h1>
+      <p style="max-width:600px;margin:0 auto 48px;text-align:center;font-size:1.05rem;line-height:1.8;">
+        We build <strong>compliant, clinical-grade AI agents</strong> for healthcare providers — automating patient
+        intake, appointment scheduling, EHR sync, and post-operative follow-up without touching PHI unsafely.
+      </p>
+      <div style="display:flex;justify-content:center;gap:64px;flex-wrap:wrap;">
+        <div style="text-align:center;" class="reveal">
+          <div class="metric-hero">65%</div>
+          <div class="metric-label">Reduction in Front-Desk Load</div>
+        </div>
+        <div style="text-align:center;" class="reveal d1">
+          <div class="metric-hero">24/7</div>
+          <div class="metric-label">Patient Availability</div>
+        </div>
+        <div style="text-align:center;" class="reveal d2">
+          <div class="metric-hero">4.8×</div>
+          <div class="metric-label">Faster Prior Auth Handling</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="mq-wrap">
+    <div class="mq-track">
+      <div class="mq-item"><i class="bi bi-file-medical" style="color:var(--success)"></i> HIPAA Aligned</div>
+      <div class="mq-item"><i class="bi bi-clipboard2-pulse" style="color:var(--secondary)"></i> Patient Intake</div>
+      <div class="mq-item"><i class="bi bi-calendar-check" style="color:var(--primary)"></i> EHR Scheduling</div>
+      <div class="mq-item"><i class="bi bi-telephone-plus" style="color:#ffb800"></i> Post-Op Follow-Up</div>
+      <div class="mq-item"><i class="bi bi-heart-pulse" style="color:var(--success)"></i> Triage Protocols</div>
+      <div class="mq-item"><i class="bi bi-hospital" style="color:var(--secondary)"></i> Epic / Cerner Sync</div>
+      <div class="mq-item"><i class="bi bi-person-badge" style="color:var(--primary)"></i> Insurance Verification</div>
+      <div class="mq-item"><i class="bi bi-chat-square-heart" style="color:#ffb800"></i> Patient Reminders</div>
+      <div class="mq-item"><i class="bi bi-file-medical" style="color:var(--success)"></i> HIPAA Aligned</div>
+      <div class="mq-item"><i class="bi bi-clipboard2-pulse" style="color:var(--secondary)"></i> Patient Intake</div>
+      <div class="mq-item"><i class="bi bi-calendar-check" style="color:var(--primary)"></i> EHR Scheduling</div>
+      <div class="mq-item"><i class="bi bi-telephone-plus" style="color:#ffb800"></i> Post-Op Follow-Up</div>
+      <div class="mq-item"><i class="bi bi-heart-pulse" style="color:var(--success)"></i> Triage Protocols</div>
+      <div class="mq-item"><i class="bi bi-hospital" style="color:var(--secondary)"></i> Epic / Cerner Sync</div>
+      <div class="mq-item"><i class="bi bi-person-badge" style="color:var(--primary)"></i> Insurance Verification</div>
+      <div class="mq-item"><i class="bi bi-chat-square-heart" style="color:#ffb800"></i> Patient Reminders</div>
+    </div>
+  </div>
+
+  <!-- VS -->
+  <section style="background:var(--bg-2);">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">The Clinical Shift</div>
+        <h2>Manual Front Desk vs <span class="gradient-text">AI-Powered Care</span></h2>
+        <p style="max-width:500px;margin:14px auto 0;font-size:.97rem;">Your clinical staff should focus on patients —
+          not scheduling calls, insurance forms, and WISMO queries.</p>
+      </div>
+      <div class="vs-grid reveal" style="margin-top:48px;">
+        <div class="vs-col before">
+          <h4>The Legacy Way</h4>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>Phone lines jammed with appointment
+              scheduling and rescheduling requests.</span></div>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>Manual insurance verification taking hours
+              per patient, delaying care.</span></div>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>No-shows unaddressed — no proactive reminder
+              or rescheduling system.</span></div>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>Manual post-op follow-up calls missed due to
+              staff bandwidth limits.</span></div>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>New patient intake paperwork slow,
+              error-prone, and duplicative.</span></div>
+        </div>
+        <div class="vs-col after">
+          <h4>The Fastam Way</h4>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>AI voice agent books, confirms, and
+              reschedules 24/7 without staff involvement.</span></div>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>Automated clearinghouse API queries
+              verify insurance eligibility in under 10 seconds.</span></div>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>Multi-touch reminder sequences (SMS +
+              voice) that cut no-show rates by 40%.</span></div>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>Structured post-op check-in calls to
+              gather outcomes and flag concerns to clinicians.</span></div>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>Conversational intake AI syncs directly
+              to Epic/Cerner — no double entry.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Clinical AI Solutions</div>
+        <h2>Engineered for <span class="gradient-text">Healthcare</span></h2>
+      </div>
+      <div class="grid-2" style="gap:24px;margin-top:48px;">
+        <div class="feat-card reveal">
+          <div class="feat-icon" style="background:rgba(0,232,147,.1);border:1px solid rgba(0,232,147,.2);"><i
+              class="bi bi-clipboard2-pulse" style="color:var(--success)"></i></div>
+          <h3>AI Patient Intake Agent</h3>
+          <p style="margin-top:12px;line-height:1.75;">Replace PDF forms with a conversational AI that collects
+            symptoms, medical history, insurance details, and consent — then structures and syncs the data directly to
+            your EHR system before the patient even arrives.</p>
+          <div class="feat-tag">✦ Epic, Cerner, Athena sync</div>
+        </div>
+        <div class="feat-card reveal d1">
+          <div class="feat-icon" style="background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);"><i
+              class="bi bi-calendar-check" style="color:var(--secondary)"></i></div>
+          <h3>Scheduling &amp; EHR Integration</h3>
+          <p style="margin-top:12px;line-height:1.75;">Our AI reads your practitioner schedules in real-time, books
+            appointments intelligently, sends reminders, and handles reschedules — all while writing back directly to
+            the EHR calendar. No double bookings, ever.</p>
+          <div class="feat-tag">✦ Real-time availability awareness</div>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon" style="background:rgba(108,99,255,.1);border:1px solid rgba(108,99,255,.2);"><i
+              class="bi bi-telephone-plus" style="color:var(--primary)"></i></div>
+          <h3>Post-Op Follow-Up AI</h3>
+          <p style="margin-top:12px;line-height:1.75;">Automated structured follow-up calls after procedures collect
+            pain scores, medication compliance, and wound status using a clinical questionnaire — with alerts sent to
+            the care team if abnormal responses are detected.</p>
+          <div class="feat-tag">✦ Escalation to on-call physician</div>
+        </div>
+        <div class="feat-card reveal d1">
+          <div class="feat-icon" style="background:rgba(255,184,0,.1);border:1px solid rgba(255,184,0,.2);"><i
+              class="bi bi-person-badge" style="color:#ffb800"></i></div>
+          <h3>Insurance Verification AI</h3>
+          <p style="margin-top:12px;line-height:1.75;">We hit clearinghouse APIs (Availity, Change Healthcare) before
+            the appointment to verify active coverage, copay amounts, and deductibles — eliminating billing surprises
+            and speeding up prior authorization workflows.</p>
+          <div class="feat-tag">✦ Prior auth workflow automation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section style="background:var(--bg-2);">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Deployment Process</div>
+        <h2>Clinical <span class="gradient-text">Integration</span> in 3 Phases</h2>
+      </div>
+      <div class="step-wrap" style="margin-top:56px;">
+        <div class="step-card reveal">
+          <div class="step-num s1">1</div>
+          <h4 style="margin-bottom:12px;">Clinical Workflow Review</h4>
+          <p style="font-size:.9rem;line-height:1.75;">We map out your front-desk bottlenecks, practitioner schedules,
+            insurance verification loops, and triage protocols to identify the highest-impact automation opportunities
+            first.</p>
+        </div>
+        <div class="step-card reveal d1">
+          <div class="step-num s2">2</div>
+          <h4 style="margin-bottom:12px;">Medical Knowledge Ingestion</h4>
+          <p style="font-size:.9rem;line-height:1.75;">We train the AI on your clinical procedures, pre-op and post-op
+            instructions, drug interaction guardrails, and triage protocols — with hard liability guardrails for
+            emergency scenarios.</p>
+        </div>
+        <div class="step-card reveal d2">
+          <div class="step-num s3">3</div>
+          <h4 style="margin-bottom:12px;">Live EHR Integration</h4>
+          <p style="font-size:.9rem;line-height:1.75;">Deployment connects directly to Epic, Cerner, or Athenahealth —
+            enabling real-time appointment booking, data syncing, and patient record updates without any manual
+            transcription.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--bg);">
+    <div class="container container-sm">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Common Questions</div>
+        <h2>Healthcare <span class="gradient-text">FAQ</span></h2>
+      </div>
+      <div style="margin-top:40px;">
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <h4>Is this system HIPAA compliant?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">We architect all healthcare solutions as HIPAA-aligned systems — utilizing BAA-covered
+            endpoints, ephemeral PHI processing (never stored in the AI layer), and full audit trails. We provide
+            architecture documentation for your compliance officer.</div>
+        </div>
+        <div class="faq-item reveal d1">
+          <div class="faq-q">
+            <h4>What if a patient reports a medical emergency during the AI interaction?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Our AI is trained with strict clinical liability guardrails. If it detects keywords
+            associated with self-harm, cardiac events, severe trauma, or other emergencies, it immediately halts and
+            directs the patient to call 911 or your on-call emergency line — and simultaneously alerts your care team.
+          </div>
+        </div>
+        <div class="faq-item reveal d2">
+          <div class="faq-q">
+            <h4>Can the AI process insurance eligibility verification?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Yes. We build custom workflows that query clearinghouse APIs (Availity, Change Healthcare)
+            to verify active patient coverage, copay requirements, and deductibles — automatically before each
+            appointment, with results pushed to the billing system.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <h4>Which EHR systems do you integrate with?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">We have pre-built connectors for Epic, Cerner, and Athenahealth. For other systems, we
+            integrate via HL7 FHIR APIs. If your EHR has any kind of API capability, we can build the bridge — typically
+            within the standard 5-day deployment window.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-2);padding-bottom:90px;">
+    <div class="container container-sm">
+      <div class="cta-inner reveal">
+        <div class="eyebrow" style="justify-content:center;"><span class="pulse"></span> Transform Your Practice</div>
+        <h2 style="margin:16px 0 20px;">AI for a <span class="gradient-text">Healthier Practice</span></h2>
+        <p style="max-width:480px;margin:0 auto 36px;font-size:1rem;line-height:1.8;">Give your clinical staff their
+          time back. Let's audit your front-desk operations and show you exactly how AI can reduce administrative
+          overhead while improving patient outcomes.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank"
+            class="btn btn-primary btn-lg">
+            <i class="bi bi-calendar3"></i> Book a Clinical AI Demo
+          </a>
+        </div>
+        <div class="cta-sub"><i class="bi bi-lock" style="margin-right:4px;"></i> BAA available. HIPAA architecture
+          reviewed on request.</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>

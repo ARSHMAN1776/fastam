@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrations Ecosystem — Fastam Solutions</title>
+  <meta name="description" content="Discover the unified automation and AI ecosystem. Fastam Solutions connects seamlessly to HubSpot, Salesforce, OpenAI, Stripe, Notion and 400+ more platforms.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+  <style>
+    .integ-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .integ-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      text-align: center;
+      transition: var(--trans);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .integ-card:hover {
+      border-color: var(--primary);
+      background: var(--surface-2);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow), var(--glow-sm);
+    }
+    .integ-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      color: var(--text);
+    }
+    .integ-card h4 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .integ-card p {
+      font-size: 0.85rem;
+      margin: 0;
+      color: var(--text-muted);
+    }
+    
+    .category-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
+      margin-top: 60px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero" style="background: url('assets/img/hero_automation_bg.png') center center / cover no-repeat; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,20,0.85) 0%, var(--bg) 100%); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a><span class="breadcrumb-sep">/</span><a href="#" style="color:rgba(255,255,255,0.6)">Company</a><span class="breadcrumb-sep">/</span><span>Integrations</span></nav>
+      <div class="eyebrow" style="justify-content:center; margin-bottom:24px">Unified Connectivity</div>
+      <h1 style="max-width:900px; margin:0 auto 24px">The Modern Enterprise <br><span class="gradient-text">Ecosystem</span></h1>
+      <p style="max-width:700px; margin:0 auto">We don't build isolated tools. Fastam Solutions architects AI and automation systems that deeply integrate with your existing tech stack, bringing unparalleled synchronization to your operations.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="container">
+      
+      <!-- Core Infrastructure & Orchestration -->
+      <div class="category-title">Core Orchestration & Infrastructure</div>
+      <div class="integ-grid">
+        <div class="integ-card reveal">
+          <div class="integ-icon" style="color: #625df5;"><i class="bi bi-diagram-3-fill"></i></div>
+          <h4>n8n</h4>
+          <p>Advanced node-based logic and custom API orchestration.</p>
+        </div>
+        <div class="integ-card reveal delay-1">
+          <div class="integ-icon" style="color: #ff4a00;"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h4>Zapier</h4>
+          <p>Rapid deployment workflows connecting 5000+ business applications.</p>
+        </div>
+        <div class="integ-card reveal delay-2">
+          <div class="integ-icon" style="color: #0078d4;"><i class="bi bi-microsoft"></i></div>
+          <h4>Power Automate</h4>
+          <p>Enterprise-grade Microsoft 365 and Azure ecosystem integration.</p>
+        </div>
+        <div class="integ-card reveal delay-3">
+          <div class="integ-icon" style="color: #FF9900;"><i class="bi bi-cloud-fill"></i></div>
+          <h4>AWS</h4>
+          <p>Secure cloud hosting, processing, and scalable serverless architecture.</p>
+        </div>
+      </div>
+
+      <!-- AI & LLM Models -->
+      <div class="category-title">Neural Engines & LLMs</div>
+      <div class="integ-grid">
+        <div class="integ-card reveal">
+          <div class="integ-icon" style="color: #10a37f;"><i class="bi bi-cpu-fill"></i></div>
+          <h4>OpenAI (GPT-5.5)</h4>
+          <p>Advanced predictive text, RAG, and multi-agent conversational capabilities.</p>
+        </div>
+        <div class="integ-card reveal delay-1">
+          <div class="integ-icon" style="color: #d1b5a5;"><i class="bi bi-hdd-rack-fill"></i></div>
+          <h4>Anthropic Claude</h4>
+          <p>High-context analytical processing and safe enterprise reasoning.</p>
+        </div>
+        <div class="integ-card reveal delay-2">
+          <div class="integ-icon" style="color: #FF2E2E;"><i class="bi bi-mic-fill"></i></div>
+          <h4>ElevenLabs</h4>
+          <p>Ultra-realistic conversational voice synthesis for our AI Calling Agents.</p>
+        </div>
+        <div class="integ-card reveal delay-3">
+          <div class="integ-icon" style="color: #f22f46;"><i class="bi bi-telephone-fill"></i></div>
+          <h4>Twilio</h4>
+          <p>Latency-free telecommunications and SMS routing infrastructure.</p>
+        </div>
+      </div>
+
+      <!-- CRM & Operations -->
+      <div class="category-title">CRM, Sales & Operations</div>
+      <div class="integ-grid">
+        <div class="integ-card reveal">
+          <div class="integ-icon" style="color: #ff7a59;"><i class="bi bi-bullseye"></i></div>
+          <h4>HubSpot</h4>
+          <p>Bi-directional data sync for inbound marketing and CRM alignment.</p>
+        </div>
+        <div class="integ-card reveal delay-1">
+          <div class="integ-icon" style="color: #00a1e0;"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+          <h4>Salesforce</h4>
+          <p>Enterprise lead routing, automated object creation, and SOQL queries.</p>
+        </div>
+        <div class="integ-card reveal delay-2">
+          <div class="integ-icon" style="color: var(--text);"><i class="bi bi-infinity"></i></div>
+          <h4>Notion</h4>
+          <p>Database synchronization and automated internal document generation.</p>
+        </div>
+        <div class="integ-card reveal delay-3">
+          <div class="integ-icon" style="color: #00d2ff;"><i class="bi bi-chat-left-dots-fill"></i></div>
+          <h4>Slack</h4>
+          <p>Real-time team alerts, human-in-the-loop approvals, and reporting.</p>
+        </div>
+      </div>
+
+      <!-- E-commerce & Finance -->
+      <div class="category-title">E-Commerce & Finance</div>
+      <div class="integ-grid">
+        <div class="integ-card reveal">
+          <div class="integ-icon" style="color: #635bff;"><i class="bi bi-credit-card-fill"></i></div>
+          <h4>Stripe</h4>
+          <p>Automated payment reconciliation, subscription management, and invoicing.</p>
+        </div>
+        <div class="integ-card reveal delay-1">
+          <div class="integ-icon" style="color: #96bf48;"><i class="bi bi-shop"></i></div>
+          <h4>Shopify</h4>
+          <p>Order fulfillment tracking, dynamic inventory, and customer support bots.</p>
+        </div>
+        <div class="integ-card reveal delay-2">
+          <div class="integ-icon" style="color: #1a73e8;"><i class="bi bi-table"></i></div>
+          <h4>Google Sheets</h4>
+          <p>Live financial modeling and rapid unstructured data collection via Apps Script.</p>
+        </div>
+        <div class="integ-card reveal delay-3">
+          <div class="integ-icon" style="color: #00C48C;"><i class="bi bi-envelope-fill"></i></div>
+          <h4>Mailchimp / Klaviyo</h4>
+          <p>Dynamic segment creation and high-conversion automated drip campaigns.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-cta" style="background:var(--bg); margin-top: 60px;">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <div class="eyebrow" style="justify-content:center">Don't See Your Tool?</div>
+        <h2>We Connect With <br><span class="gradient-text">Over 4,000 Apps</span></h2>
+        <p>If your software has an API or webhooks, we can integrate it. Let us build a proof of concept for your bespoke tech stack.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Integration+Inquiry" target="_blank" class="btn btn-primary btn-lg">
+            <i class="bi bi-plug-fill"></i> Request Custom Integration
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

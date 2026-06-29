@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Automation — Fastam Solutions</title>
+  <meta name="description" content="We design, build and deploy intelligent automation workflows using n8n, Zapier, Make, and Power Automate that connect your tools and eliminate repetitive t">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero" style="background: url('assets/img/hero_automation_bg.png') center center / cover no-repeat; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,15,0.88) 0%, var(--bg) 100%); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a><span class="breadcrumb-sep">/</span><a href="services.html" style="color:rgba(255,255,255,0.6)">Services</a><span class="breadcrumb-sep">/</span><span>AI Automation</span></nav>
+      <div class="eyebrow" style="justify-content:center">Technical Orchestration</div>
+      <h1><span class="gradient-text">Eliminate Operational Friction</span></h1>
+      <p style="max-width: 800px; margin: 0 auto;">We architect complex, failure-proof automation ecosystems using n8n, Zapier, and custom scripts to synchronize your entire technology stack.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid-2" style="gap:70px">
+        <div class="reveal-left">
+          <div class="svc-big-icon" style="background: var(--gradient); border:none; color:white; width: 64px; height: 64px; border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size: 1.8rem; margin-bottom: 24px;"><i class="bi bi-diagram-3-fill"></i></div>
+          <div class="eyebrow">The Infrastructure</div>
+          <h2>Bespoke <span class="gradient-text">Workflows</span></h2>
+          <p class="mt-16">Manual tasks aren't just slow—they are a security risk and a source of human error. We build self-healing automation pipelines that monitor themselves and alert you only when necessary.</p>
+          <ul style="margin-top:28px;padding:0">
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Self-Hosted n8n Instance Deployment & Security</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Multi-App Enterprise Zapier Orchestration</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Real-time Database & CRM Bi-directional Sync</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Custom API Wrapper Development (Node.js/Python)</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Automated Invoicing & Financial Reconciliation</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Lead Enrichment & Intelligent Routing Pipelines</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-32"><i class="bi bi-lightning-fill"></i> Build Your Pipeline</a>
+        </div>
+        <div class="reveal-right">
+          <div class="card" style="padding:44px; background: rgba(15,15,30,0.6); backdrop-filter: blur(24px); border: 1px solid rgba(0,212,255,0.15); box-shadow: 0 30px 60px rgba(0,0,0,0.4);">
+            <div style="text-align:center;margin-bottom:32px">
+              <div style="font-size:4rem;margin-bottom:20px; color: var(--primary);"><i class="bi bi-link-45deg"></i></div>
+              <h3>Automation Node</h3>
+              <p class="mt-16" style="font-size: 0.9rem; color: var(--text-subtle);">Scalable workflow orchestration by Fastam Solutions</p>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">99.9%</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Uptime SLA</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">1M+</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Tasks Processed</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Real-time</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Data Sync</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;color:var(--success)"><i class="bi bi-lock-fill"></i></div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">AES-256 Auth</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Enterprise ROI</div>
+        <h2>Connected <span class="gradient-text">Efficiency</span></h2>
+      </div>
+      <div class="benefits-grid">
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-clock-fill"></i></span><h4>Save 40+ hrs/mo</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Reclaim thousands of hours currently lost to repetitive data entry.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-cash-stack"></i></span><h4>Scale Without Hiring</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Handle 10x the workload without increasing your team's headcount.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-shield-fill-check"></i></span><h4>Zero Error Rate</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Machines don't make typos. Ensure 100% data integrity across systems.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-infinity"></i></span><h4>Infinite Uptime</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Your backend operations continue running 24/7/365, even when you sleep.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-eye-fill"></i></span><h4>Full Observability</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Comprehensive logging and error reporting for every single node.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-bounding-box'></i></span><h4>Platform Agnostic</h4><p style="font-size: 0.8rem; color: var(--text-muted);">We connect any two tools with an API. No limitations, no silos.</p></div>
+      </div>
+  <section>
+    <div class="container">
+      <div class="sec-head center reveal"><div class="eyebrow">Our Process</div><h2>How We Deliver <span class="gradient-text">Your Project</span></h2></div>
+      <div class="process-wrap"><div class="process-line"></div>
+        <div class="process-grid">
+          <div class="process-step reveal"><div class="step-num">01</div><h4>Discovery Call</h4><p>We understand your goals, current setup, and exact requirements in a free 30-min session.</p></div>
+          <div class="process-step reveal delay-1"><div class="step-num">02</div><h4>Custom Proposal</h4><p>You receive a detailed scope, timeline, and pricing document within 24 hours.</p></div>
+          <div class="process-step reveal delay-2"><div class="step-num">03</div><h4>Development</h4><p>We build with regular check-ins and updates. Transparent progress, zero surprises.</p></div>
+          <div class="process-step reveal delay-3"><div class="step-num">04</div><h4>Delivery & Support</h4><p>Full handover, documentation, and post-launch support to ensure everything is perfect.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <div class="eyebrow" style="justify-content:center">Get Started</div>
+        <h2>Ready for World-Class<br><span class="gradient-text">AI Automation?</span></h2>
+        <p>Email us today and get a custom proposal within 24 hours. No commitment required.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=AI Automation+Project+Inquiry" target="_blank" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Get a Free Quote</a>
+          <a href="portfolio.html" class="btn btn-outline btn-lg">View Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

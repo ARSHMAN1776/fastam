@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Real Estate — Fastam Solutions</title>
+  <meta name="description"
+    content="Never miss a real estate lead again. Fastam builds AI Voice Agents and chatbots for brokerages and agencies to qualify buyers 24/7 and sync with your CRM.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(130px);
+      pointer-events: none;
+      z-index: 1;
+      animation: orbFloat 9s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbFloat {
+      from {
+        transform: translateY(0) scale(1)
+      }
+
+      to {
+        transform: translateY(-28px) scale(1.07)
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center
+      }
+
+      100% {
+        background-position: 200% center
+      }
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, #6c63ff 0%, #00d4ff 45%, #6c63ff 80%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 5s linear infinite;
+    }
+
+    .metric-hero {
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-family: var(--font-head);
+      font-weight: 800;
+      line-height: 1;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .metric-label {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      margin-top: 6px;
+    }
+
+    .pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #00e893;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 6px;
+    }
+
+    .pulse::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: rgba(0, 232, 147, .3);
+      animation: pls 2s ease-in-out infinite;
+    }
+
+    @keyframes pls {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: .6
+      }
+
+      50% {
+        transform: scale(1.7);
+        opacity: 0
+      }
+    }
+
+    .feat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all .4s var(--ease);
+    }
+
+    .feat-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      opacity: 0;
+      transition: opacity .4s;
+      background: radial-gradient(ellipse at 50% 0%, rgba(108, 99, 255, .12) 0%, transparent 70%);
+    }
+
+    .feat-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(108, 99, 255, .4);
+      box-shadow: 0 32px 64px rgba(0, 0, 0, .4), 0 0 32px rgba(108, 99, 255, .1);
+    }
+
+    .feat-card:hover::after {
+      opacity: 1;
+    }
+
+    .feat-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .feat-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      letter-spacing: .08em;
+      color: var(--primary);
+      margin-top: 16px;
+    }
+
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .vs-col {
+      padding: 44px;
+    }
+
+    .vs-col.before {
+      background: rgba(255, 107, 107, .03);
+    }
+
+    .vs-col.after {
+      background: linear-gradient(160deg, rgba(108, 99, 255, .05) 0%, rgba(0, 212, 255, .04) 100%);
+    }
+
+    .vs-col h4 {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      opacity: .6;
+    }
+
+    .vs-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+      font-size: .93rem;
+      line-height: 1.6;
+    }
+
+    .vs-row i {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .vs-row.neg i {
+      color: #ff6b6b;
+    }
+
+    .vs-row.pos i {
+      color: #00e893;
+    }
+
+    /* Integration pill row */
+    .int-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .int-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: .78rem;
+      color: var(--text-muted);
+      transition: all .3s;
+    }
+
+    .int-pill:hover {
+      border-color: rgba(108, 99, 255, .4);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    .step-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      position: relative;
+    }
+
+    .step-wrap::before {
+      content: '';
+      position: absolute;
+      top: 34px;
+      left: calc(33.33% - 14px);
+      right: calc(33.33% - 14px);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(108, 99, 255, .5), rgba(0, 212, 255, .5));
+      z-index: 0;
+    }
+
+    .step-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 44px 32px;
+      text-align: center;
+      position: relative;
+      transition: all .4s var(--ease);
+    }
+
+    .step-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--gradient);
+      border-radius: 2px;
+      transition: width .4s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, .3);
+    }
+
+    .step-card:hover::after {
+      width: 60%;
+    }
+
+    .step-num {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      font-family: var(--font-head);
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .s1 {
+      background: var(--surface);
+      border: 1px solid rgba(108, 99, 255, .35);
+      color: var(--primary);
+      box-shadow: 0 0 20px rgba(108, 99, 255, .15);
+    }
+
+    .s2 {
+      background: var(--surface);
+      border: 1px solid rgba(0, 212, 255, .35);
+      color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 212, 255, .15);
+    }
+
+    .s3 {
+      background: var(--surface);
+      border: 1px solid rgba(0, 232, 147, .35);
+      color: var(--success);
+      box-shadow: 0 0 20px rgba(0, 232, 147, .15);
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    .mq-wrap {
+      overflow: hidden;
+      padding: 32px 0;
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mq-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    .mq-wrap:hover .mq-track {
+      animation-play-state: paused;
+    }
+
+    .mq-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 48px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-right: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .mq-item i {
+      font-size: 1.3rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(108, 99, 255, .3);
+    }
+
+    .faq-q {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 28px;
+    }
+
+    .faq-q h4 {
+      margin: 0;
+      font-size: .97rem;
+      font-weight: 600;
+    }
+
+    .faq-toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--primary);
+      transition: all .3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+      background: rgba(108, 99, 255, .1);
+    }
+
+    .faq-a {
+      display: none;
+      padding: 0 28px 22px;
+      color: var(--text-muted);
+      font-size: .9rem;
+      line-height: 1.75;
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    .cta-inner {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 80px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-inner::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(108, 99, 255, .15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-sub {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      letter-spacing: .08em;
+      color: var(--text-subtle);
+      margin-top: 16px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s var(--ease), transform .7s var(--ease);
+    }
+
+    .reveal.vis {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal.d1 {
+      transition-delay: .1s;
+    }
+
+    .reveal.d2 {
+      transition-delay: .2s;
+    }
+
+    @media(max-width:768px) {
+
+      .vs-grid,
+      .step-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .step-wrap::before {
+        display: none;
+      }
+
+      .cta-inner {
+        padding: 48px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="page-hero"
+    style="position:relative;overflow:hidden;background:url('assets/img/realestate_enterprise_bg.png') center/cover no-repeat;">
+    <div class="hero-orb" style="width:520px;height:520px;background:rgba(108,99,255,.18);top:-100px;right:-60px;">
+    </div>
+    <div class="hero-orb"
+      style="width:360px;height:360px;background:rgba(0,212,255,.12);bottom:0;left:-60px;animation-delay:5s;"></div>
+    <div
+      style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,20,.88) 0%,var(--bg) 100%);z-index:0;">
+    </div>
+    <div class="container" style="position:relative;z-index:2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:var(--text-subtle)">Home</a><span
+          class="breadcrumb-sep">/</span><a href="#" style="color:var(--text-subtle)">Industries</a><span
+          class="breadcrumb-sep">/</span><span>Real Estate</span></nav>
+      <div class="eyebrow" style="justify-content:center;margin-bottom:20px;"><span class="pulse"></span> AI for
+        Agencies &amp; Brokerages</div>
+      <h1 style="max-width:860px;margin:0 auto 24px;text-align:center;">
+        Qualify More Leads,<br><span class="shimmer-text">Close More Deals</span>
+      </h1>
+      <p style="max-width:600px;margin:0 auto 48px;text-align:center;font-size:1.05rem;line-height:1.8;">
+        The first agent to respond <strong>wins the lead</strong>. We deploy AI systems that qualify buyers and sellers
+        24/7, book property viewings automatically, and sync everything to your CRM — while your agents focus on
+        closing.
+      </p>
+      <div style="display:flex;justify-content:center;gap:64px;flex-wrap:wrap;">
+        <div style="text-align:center;" class="reveal">
+          <div class="metric-hero">5×</div>
+          <div class="metric-label">Speed-to-Lead Increase</div>
+        </div>
+        <div style="text-align:center;" class="reveal d1">
+          <div class="metric-hero">100%</div>
+          <div class="metric-label">Call Answer Rate</div>
+        </div>
+        <div style="text-align:center;" class="reveal d2">
+          <div class="metric-hero">+38%</div>
+          <div class="metric-label">Viewings Booked/Month</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="mq-wrap">
+    <div class="mq-track">
+      <div class="mq-item"><i class="bi bi-house" style="color:var(--primary)"></i> MLS Integration</div>
+      <div class="mq-item"><i class="bi bi-geo-alt" style="color:var(--secondary)"></i> Property Matching</div>
+      <div class="mq-item"><i class="bi bi-key" style="color:var(--success)"></i> Viewing Bookings</div>
+      <div class="mq-item"><i class="bi bi-person-lines-fill" style="color:#ffb800"></i> Buyer Profiling</div>
+      <div class="mq-item"><i class="bi bi-building" style="color:var(--primary)"></i> Off-Market Listings</div>
+      <div class="mq-item"><i class="bi bi-chat-dots" style="color:var(--secondary)"></i> SMS Lead Nurture</div>
+      <div class="mq-item"><i class="bi bi-diagram-3" style="color:var(--success)"></i> CRM Auto-Logging</div>
+      <div class="mq-item"><i class="bi bi-telephone-outbound" style="color:#ffb800"></i> Voice AI Outreach</div>
+      <div class="mq-item"><i class="bi bi-house" style="color:var(--primary)"></i> MLS Integration</div>
+      <div class="mq-item"><i class="bi bi-geo-alt" style="color:var(--secondary)"></i> Property Matching</div>
+      <div class="mq-item"><i class="bi bi-key" style="color:var(--success)"></i> Viewing Bookings</div>
+      <div class="mq-item"><i class="bi bi-person-lines-fill" style="color:#ffb800"></i> Buyer Profiling</div>
+      <div class="mq-item"><i class="bi bi-building" style="color:var(--primary)"></i> Off-Market Listings</div>
+      <div class="mq-item"><i class="bi bi-chat-dots" style="color:var(--secondary)"></i> SMS Lead Nurture</div>
+      <div class="mq-item"><i class="bi bi-diagram-3" style="color:var(--success)"></i> CRM Auto-Logging</div>
+      <div class="mq-item"><i class="bi bi-telephone-outbound" style="color:#ffb800"></i> Voice AI Outreach</div>
+    </div>
+  </div>
+
+  <!-- VS -->
+  <section style="background:var(--bg-2);">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">The Agent Evolution</div>
+        <h2>Manual Response vs <span class="gradient-text">AI-Speed Follow-Up</span></h2>
+        <p style="max-width:500px;margin:14px auto 0;font-size:.97rem;">The #1 reason leads go cold in real estate is
+          response time. Fastam ensures no inquiry ever waits more than 30 seconds for a response.</p>
+      </div>
+      <div class="vs-grid reveal" style="margin-top:48px;">
+        <div class="vs-col before">
+          <h4>The Legacy Way</h4>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>Agents calling back hours later — the lead
+              has already listed with a competitor.</span></div>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>60% of agent time wasted on manual data entry
+              into CRM systems.</span></div>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>Calls and inquiries missed on nights,
+              weekends, and during showings.</span></div>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>Cold leads forgotten in the CRM — no
+              follow-up sequence, no pipeline.</span></div>
+          <div class="vs-row neg"><i class="bi bi-x-circle-fill"></i><span>No systematic qualification — agents wasting
+              time with unqualified prospects.</span></div>
+        </div>
+        <div class="vs-col after">
+          <h4>The Fastam Way</h4>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>AI answers and qualifies every new
+              inquiry within 30 seconds — 24/7/365.</span></div>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>Every interaction, transcript, and buyer
+              intent score auto-logged in the CRM.</span></div>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>Never miss a midnight lead — AI works
+              around the clock without overtime.</span></div>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>Autonomous outbound SMS nurture sequences
+              that keep the pipeline warm.</span></div>
+          <div class="vs-row pos"><i class="bi bi-check-circle-fill"></i><span>Budget, timeline, and location
+              preferences qualified before any agent call.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Core Capabilities</div>
+        <h2>Engineered for <span class="gradient-text">Real Estate</span></h2>
+      </div>
+      <div class="grid-2" style="gap:24px;margin-top:48px;">
+        <div class="feat-card reveal">
+          <div class="feat-icon" style="background:rgba(108,99,255,.1);border:1px solid rgba(108,99,255,.2);"><i
+              class="bi bi-telephone-fill" style="color:var(--primary)"></i></div>
+          <h3>AI Voice Receptionist</h3>
+          <p style="margin-top:12px;line-height:1.75;">Don't let any inquiry go to voicemail. Our AI Voice Agents answer
+            instantly, sound indistinguishable from humans, and qualify buyers on budget, timeline, and location
+            preference before booking them into your agent's calendar.</p>
+          <div class="feat-tag">✦ Sub-500ms response latency</div>
+        </div>
+        <div class="feat-card reveal d1">
+          <div class="feat-icon" style="background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);"><i
+              class="bi bi-diagram-3" style="color:var(--secondary)"></i></div>
+          <h3>Full CRM Integration</h3>
+          <p style="margin-top:12px;line-height:1.75;">We build deep bi-directional integrations with Follow Up Boss,
+            GoHighLevel, KvCORE, and HubSpot. Every AI interaction, transcript, and buyer profile is logged as a
+            structured contact record — automatically.</p>
+          <div class="feat-tag">✦ Follow Up Boss · GHL · KvCORE ready</div>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon" style="background:rgba(0,232,147,.1);border:1px solid rgba(0,232,147,.2);"><i
+              class="bi bi-house-heart" style="color:var(--success)"></i></div>
+          <h3>AI Listing Chatbot</h3>
+          <p style="margin-top:12px;line-height:1.75;">Hook your chatbot directly into your MLS data feed. When a
+            prospect asks "Show me 3-bedroom homes under $800k in the South Bay," the AI queries your database and sends
+            them a curated list of matching listings with viewing links.</p>
+          <div class="feat-tag">✦ MLS / IDX data sync</div>
+        </div>
+        <div class="feat-card reveal d1">
+          <div class="feat-icon" style="background:rgba(255,184,0,.1);border:1px solid rgba(255,184,0,.2);"><i
+              class="bi bi-chat-text" style="color:#ffb800"></i></div>
+          <h3>Speed-to-Lead SMS AI</h3>
+          <p style="margin-top:12px;line-height:1.75;">Instantly text back every new inquiry from Zillow, Realtor.com,
+            or your own site. Our AI nurtures the lead through a multi-touch SMS sequence until they're ready to speak
+            with an agent — keeping the pipeline hot.</p>
+          <div class="feat-tag">✦ &lt;30s from inquiry to first contact</div>
+        </div>
+      </div>
+      <div class="int-row reveal">
+        <div class="int-pill"><i class="bi bi-diagram-3"></i> Follow Up Boss</div>
+        <div class="int-pill"><i class="bi bi-kanban"></i> GoHighLevel</div>
+        <div class="int-pill"><i class="bi bi-grid-3x3-gap"></i> KvCORE</div>
+        <div class="int-pill"><i class="bi bi-house"></i> MLS · Zillow</div>
+        <div class="int-pill"><i class="bi bi-phone"></i> Twilio SMS</div>
+        <div class="int-pill"><i class="bi bi-calendar3"></i> Calendly</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section style="background:var(--bg-2);">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Deployment Process</div>
+        <h2>How We <span class="gradient-text">Integrate</span></h2>
+      </div>
+      <div class="step-wrap" style="margin-top:56px;">
+        <div class="step-card reveal">
+          <div class="step-num s1">1</div>
+          <h4 style="margin-bottom:12px;">Brokerage Audit</h4>
+          <p style="font-size:.9rem;line-height:1.75;">We examine how you acquire leads (Zillow, Facebook, referrals)
+            and how your agents currently manage their pipeline in Follow Up Boss or KvCORE — identifying every manual
+            bottleneck.</p>
+        </div>
+        <div class="step-card reveal d1">
+          <div class="step-num s2">2</div>
+          <h4 style="margin-bottom:12px;">Listing Data Sync</h4>
+          <p style="font-size:.9rem;line-height:1.75;">We connect the AI directly to your active MLS/IDX listings
+            database so it can reference real-time availability, pricing, and property details — enabling
+            property-specific conversations at scale.</p>
+        </div>
+        <div class="step-card reveal d2">
+          <div class="step-num s3">3</div>
+          <h4 style="margin-bottom:12px;">Live Multi-Channel Outbound</h4>
+          <p style="font-size:.9rem;line-height:1.75;">Deployment of SMS and Voice AI that instantly contacts every new
+            inquiry, qualifies their budget and timeline, and routes hot leads to the right agent with a full dossier
+            attached.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--bg);">
+    <div class="container container-sm">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Common Questions</div>
+        <h2>Real Estate <span class="gradient-text">FAQ</span></h2>
+      </div>
+      <div style="margin-top:40px;">
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <h4>Can the AI capture leads automatically from Zillow or Realtor.com?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Yes. We parse inbound email notifications or set up direct webhooks from aggregator sites
+            and instantly trigger an outbound AI SMS or voice call to the new lead in under 30 seconds — before any
+            competitor agent can respond.</div>
+        </div>
+        <div class="faq-item reveal d1">
+          <div class="faq-q">
+            <h4>Will it sync with Follow Up Boss or GoHighLevel?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">We specialize in real estate CRMs. Every AI interaction, transcript, and qualifying data
+            point (budget, desired location, timeline) is automatically logged as a structured note on the contact
+            record. No manual entry required.</div>
+        </div>
+        <div class="faq-item reveal d2">
+          <div class="faq-q">
+            <h4>Can the bot send property images and listing links to prospects?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Absolutely. If a prospect asks for 3-bedroom homes under $800k in a specific neighborhood,
+            the AI queries your MLS data and replies with a curated set of matching listing links, photos, and viewing
+            availability — all via SMS or WhatsApp.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <h4>What happens after the AI qualifies a lead?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Once a lead is qualified, the AI books them directly into the right agent's calendar (via
+            Calendly or your CRM's booking system), sends a confirmation SMS to the lead, and creates a contact record
+            with qualification notes — ready for the agent to review before the call.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-2);padding-bottom:90px;">
+    <div class="container container-sm">
+      <div class="cta-inner reveal">
+        <div class="eyebrow" style="justify-content:center;"><span class="pulse"></span> Ready to Dominate?</div>
+        <h2 style="margin:16px 0 20px;">Automate Your <span class="gradient-text">Real Estate Pipeline</span></h2>
+        <p style="max-width:480px;margin:0 auto 36px;font-size:1rem;line-height:1.8;">Stop doing data entry. Stop
+          missing weekend calls. Start closing more deals with AI that qualifies every lead, books every viewing, and
+          logs every interaction — automatically.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank"
+            class="btn btn-primary btn-lg">
+            <i class="bi bi-calendar3"></i> Book Strategy Session
+          </a>
+        </div>
+        <div class="cta-sub"><i class="bi bi-lock" style="margin-right:4px;"></i> No commitment. Response within 24
+          hours.</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>

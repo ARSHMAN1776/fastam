@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: CRM Automation — Fastam Solutions</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero" style="padding-bottom:60px">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="portfolio.html">Portfolio</a><span class="breadcrumb-sep">/</span><span>Case Study</span></nav>
+      <div class="tag tag-secondary mb-16" style="margin:0 auto 16px">⚡ AI Automation</div>
+      <h1 style="max-width:800px;margin:0 auto 20px">How We Saved a Real Estate Agency<br><span class="gradient-text">25 Hours Per Week</span> with n8n</h1>
+      <p style="max-width:600px;margin:0 auto">A complete CRM automation overhaul that transformed manual chaos into a seamless, automated pipeline — delivered in under 2 weeks.</p>
+      <div class="case-hero-strip">
+        <div class="card case-info-card reveal">
+          <div class="case-info-label">Industry</div>
+          <div class="case-info-val">Real Estate</div>
+        </div>
+        <div class="card case-info-card reveal delay-1">
+          <div class="case-info-label">Timeline</div>
+          <div class="case-info-val">12 Days</div>
+        </div>
+        <div class="card case-info-card reveal delay-2">
+          <div class="case-info-label">Service Used</div>
+          <div class="case-info-val">AI Automation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container container-sm">
+      <div class="grid-2 mb-48">
+        <div class="reveal-left">
+          <div class="eyebrow">The Challenge</div>
+          <h2>Manual Work Was <span class="gradient-text">Killing Growth</span></h2>
+          <p class="mt-16">A growing real estate agency with 8 agents was spending 25+ hours per week manually copying lead data between their website, CRM, email platform, and Slack. Leads were falling through the cracks. Agents were frustrated. Revenue was suffering.</p>
+          <p class="mt-16">They needed a solution that would automatically handle lead capture, CRM entry, agent assignment, follow-up sequences and internal notifications — without adding any manual touchpoints.</p>
+        </div>
+        <div class="card reveal-right" style="padding:36px">
+          <h4 style="margin-bottom:20px">Problems Before Fastam</h4>
+          <ul style="display:flex;flex-direction:column;gap:12px">
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-x-circle-fill" style="color:var(--accent)"></i> 25+ hours/week wasted on manual data entry</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-x-circle-fill" style="color:var(--accent)"></i> Leads getting lost between systems</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-x-circle-fill" style="color:var(--accent)"></i> No automated follow-up sequences</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-x-circle-fill" style="color:var(--accent)"></i> Agents notified by email only — slow response</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-x-circle-fill" style="color:var(--accent)"></i> No visibility into lead pipeline status</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-x-circle-fill" style="color:var(--accent)"></i> CRM data was 3–4 days behind reality</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="grid-2 mb-48 mt-48">
+        <div class="card reveal-left" style="padding:36px">
+          <h4 style="margin-bottom:20px">The Fastam Solution Stack</h4>
+          <ul style="display:flex;flex-direction:column;gap:12px">
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> n8n workflow: Website → CRM auto-entry</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Smart lead scoring & auto-assignment to agents</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> 7-email drip sequence with personalization</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Instant Slack + WhatsApp agent notifications</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Google Sheets real-time pipeline dashboard</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Automated appointment booking with Google Calendar</li>
+          </ul>
+        </div>
+        <div class="reveal-right">
+          <div class="eyebrow">The Solution</div>
+          <h2>12-Day <span class="gradient-text">Automation Overhaul</span></h2>
+          <p class="mt-16">We built a multi-platform n8n automation system that connected their website forms, HubSpot CRM, Gmail, Slack, WhatsApp, and Google Calendar into one seamless, zero-touch pipeline.</p>
+          <p class="mt-16">Every new lead is now automatically scored, assigned, notified to the right agent via Slack/WhatsApp, entered into the CRM, and enrolled in a personalized email sequence — all within 30 seconds of form submission.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Results -->
+      <div class="sec-head center reveal mt-48"><div class="eyebrow">Results</div><h2>Numbers That <span class="gradient-text">Speak for Themselves</span></h2></div>
+      <div class="case-results">
+        <div class="card result-card reveal">
+          <div class="result-num">25hrs</div>
+          <div class="result-label">Saved per week in manual work</div>
+        </div>
+        <div class="card result-card reveal delay-1">
+          <div class="result-num">3×</div>
+          <div class="result-label">Faster lead response time</div>
+        </div>
+        <div class="card result-card reveal delay-2">
+          <div class="result-num">47%</div>
+          <div class="result-label">Increase in lead conversion rate</div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="card mt-48 reveal" style="padding:48px;text-align:center;background:var(--gradient-dark);border-color:var(--border-2)">
+        <div style="font-size:3rem;margin-bottom:16px">❝</div>
+        <p style="font-size:1.15rem;font-style:italic;max-width:600px;margin:0 auto 28px;color:var(--text)">"Fastam built in 12 days what our internal team said would take 3 months. The automation is flawless. We found 2 leads in the first hour that would have been lost under our old system."</p>
+        <div class="d-flex align-center justify-center gap-16">
+          <div style="width:54px;height:54px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem">SM</div>
+          <div style="text-align:left">
+            <div style="font-weight:700">Sarah Mitchell</div>
+            <div style="font-size:.82rem;color:var(--text-muted)">Operations Manager · Premier Real Estate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <h2>Want Results Like This<br><span class="gradient-text">for Your Business?</span></h2>
+        <p>Book a free call and we'll map out exactly which automation opportunities exist in your business right now.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Automation+Project+Inquiry" target="_blank" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Get This for My Business</a>
+          <a href="portfolio.html" class="btn btn-outline btn-lg">← Back to Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

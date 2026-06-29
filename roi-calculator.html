@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI ROI Calculator — Fastam Solutions</title>
+  <meta name="description" content="Calculate your exact return on investment from deploying Fastam Solutions AI agents. Discover how much you can save on support, operations, and lead generation.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+  <style>
+    .roi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: stretch;
+    }
+    @media (max-width: 991px) {
+      .roi-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .roi-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+    }
+    
+    .slider-wrap {
+      margin-bottom: 30px;
+    }
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 12px;
+    }
+    .slider-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .slider-value {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    
+    /* Custom Range Slider */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      background: transparent;
+    }
+    input[type=range]:focus {
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    input[type=range]::-webkit-slider-thumb {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: var(--gradient);
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -9px;
+      box-shadow: 0 0 15px rgba(108, 99, 255, 0.5);
+      transition: transform 0.1s;
+    }
+    input[type=range]:active::-webkit-slider-thumb {
+      transform: scale(1.2);
+    }
+
+    /* Results Panel */
+    .results-panel {
+      background: linear-gradient(135deg, #0a0a1a 0%, #050510 100%);
+      border: 1px solid rgba(108,99,255,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .results-panel::before {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, transparent 50%);
+      top: -25%;
+      left: -25%;
+      pointer-events: none;
+      animation: pulse 4s infinite alternate;
+    }
+    
+    .result-block {
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+    }
+    .result-block:last-child {
+      margin-bottom: 0;
+    }
+    .result-sub {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .result-num {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .yearly-savings {
+      font-size: 4rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav injected by JS -->
+  <div id="nav-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background: url('assets/img/finance_enterprise_bg.png') center center / cover no-repeat; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,20,0.85) 0%, var(--bg) 100%); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a><span class="breadcrumb-sep">/</span><span>ROI Calculator</span></nav>
+      <div class="eyebrow" style="justify-content:center">The Business Case</div>
+      <h1>Quantify Your <span class="gradient-text">Efficiency</span></h1>
+      <p style="max-width: 800px; margin: 0 auto;">Use our proprietary ROI modeling engine to calculate the exact operational cost reduction and revenue recapture potential of Fastam AI deployments.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR SECTION -->
+  <section style="padding-top:20px;">
+    <div class="container container-sm">
+      <div class="roi-grid">
+        
+        <!-- INPUTS -->
+        <div class="roi-panel reveal">
+          <h3>Your Current Operations</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom: 30px;">Input your current monthly support or operations volume.</p>
+          
+          <div class="slider-wrap">
+            <div class="slider-header">
+              <span class="slider-label">Inquiries / Tickets per Month</span>
+              <span class="slider-value" id="valInquiries">5,000</span>
+            </div>
+            <input type="range" id="slipInquiries" min="100" max="50000" step="100" value="5000">
+          </div>
+
+          <div class="slider-wrap">
+            <div class="slider-header">
+              <span class="slider-label">Avg. Time per Ticket (Mins)</span>
+              <span class="slider-value" id="valTime">10</span>
+            </div>
+            <input type="range" id="slipTime" min="1" max="60" step="1" value="10">
+          </div>
+
+          <div class="slider-wrap">
+            <div class="slider-header">
+              <span class="slider-label">Employee Hourly Cost ($)</span>
+              <span class="slider-value" id="valRate">$25</span>
+            </div>
+            <input type="range" id="slipRate" min="10" max="100" step="1" value="25">
+          </div>
+
+          <div class="slider-wrap" style="margin-bottom:0">
+            <div class="slider-header">
+              <span class="slider-label">Expected AI Resolution Rate</span>
+              <span class="slider-value" id="valAiRate">60%</span>
+            </div>
+            <input type="range" id="slipAiRate" min="20" max="95" step="1" value="60">
+            <div style="font-size:0.75rem; color:var(--text-subtle); margin-top:8px;">Industry average for eCommerce/Service bots is 55-75%.</div>
+          </div>
+        </div>
+
+        <!-- OUTPUTS -->
+        <div class="roi-panel results-panel reveal delay-1">
+          <div class="result-block">
+            <div class="result-sub">Current Monthly Cost (Human Only)</div>
+            <div class="result-num" id="resCurrentCost">$20,833</div>
+          </div>
+          
+          <div class="result-block">
+            <div class="result-sub">Human Hours Saved by AI / Month</div>
+            <div class="result-num" id="resHours" style="color:var(--secondary)">500 hrs</div>
+          </div>
+
+          <div style="height:1px; background:rgba(255,255,255,0.1); margin: 30px 0; position:relative; z-index:2"></div>
+
+          <div class="result-block">
+            <div class="result-sub" style="color:var(--success)">Total Annual Savings Extrapolated</div>
+            <div class="result-num yearly-savings" id="resSavings">$150,000</div>
+          </div>
+          
+          <div style="position:relative; z-index:2; margin-top: 40px;">
+            <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank" class="btn btn-primary" style="width:100%">Claim Your Savings →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-cta" style="background:var(--bg)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <div class="eyebrow" style="justify-content:center">Don't Leave Money on the Table</div>
+        <h2>Stop Paying For <br><span class="gradient-text">Manual Data Entry</span></h2>
+        <p>Every month you delay automation is a month of wasted operational spend. Let's fix that.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank" class="btn btn-primary btn-lg">
+            <i class="bi bi-clock-history"></i> Free Workflow Audit
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ROI Calculator Logic
+      const inInquiries = document.getElementById('slipInquiries');
+      const inTime      = document.getElementById('slipTime');
+      const inRate      = document.getElementById('slipRate');
+      const inAiRate    = document.getElementById('slipAiRate');
+
+      const valInquiries = document.getElementById('valInquiries');
+      const valTime      = document.getElementById('valTime');
+      const valRate      = document.getElementById('valRate');
+      const valAiRate    = document.getElementById('valAiRate');
+
+      const resCurrentCost = document.getElementById('resCurrentCost');
+      const resHours       = document.getElementById('resHours');
+      const resSavings     = document.getElementById('resSavings');
+
+      function calculateROI() {
+        const inquiries = parseInt(inInquiries.value);
+        const time      = parseInt(inTime.value);
+        const rate      = parseInt(inRate.value);
+        const aiRate    = parseInt(inAiRate.value) / 100;
+
+        valInquiries.innerText = inquiries.toLocaleString();
+        valTime.innerText      = time + "";
+        valRate.innerText      = "$" + rate;
+        valAiRate.innerText    = (aiRate * 100).toFixed(0) + "%";
+
+        // Current math
+        const totalMinutes = inquiries * time;
+        const totalHours   = totalMinutes / 60;
+        const currentCost  = totalHours * rate;
+
+        // AI Math
+        const aiHandledInquiries = inquiries * aiRate;
+        const aiMinutesSaved     = aiHandledInquiries * time;
+        const aiHoursSaved       = aiMinutesSaved / 60;
+        const moneySavedMonthly  = aiHoursSaved * rate;
+        
+        // Let's assume an average blended API + server cost of $0.05 per AI interaction
+        const estimatedTechCostMonthly = aiHandledInquiries * 0.05;
+        const netMonthlySavings = moneySavedMonthly - estimatedTechCostMonthly;
+        
+        const annualSavings = netMonthlySavings * 12;
+
+        resCurrentCost.innerText = "$" + Math.round(currentCost).toLocaleString();
+        resHours.innerText       = Math.round(aiHoursSaved).toLocaleString() + " hrs";
+        resSavings.innerText     = "$" + Math.round(annualSavings).toLocaleString();
+      }
+
+      inInquiries.addEventListener('input', calculateROI);
+      inTime.addEventListener('input', calculateROI);
+      inRate.addEventListener('input', calculateROI);
+      inAiRate.addEventListener('input', calculateROI);
+
+      // Init
+      calculateROI();
+    });
+  </script>
+</body>
+</html>

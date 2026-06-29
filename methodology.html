@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Methodology — Fastam Solutions</title>
+  <meta name="description" content="Explore the Fastam Engineering Lifecycle: A 4-phase technical roadmap for deploying production-ready AI infrastructures.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+  <style>
+    .methodology-timeline {
+      position: relative;
+      padding: 60px 0;
+    }
+    .methodology-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: var(--border);
+      transform: translateX(-50%);
+    }
+    .phase-step {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100px;
+      width: 100%;
+      position: relative;
+    }
+    .phase-content {
+      width: 45%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 40px;
+      border-radius: 20px;
+      position: relative;
+      transition: var(--trans);
+    }
+    .phase-content:hover { border-color: var(--primary); transform: translateY(-5px); }
+    .phase-dot {
+      width: 20px;
+      height: 20px;
+      background: var(--bg);
+      border: 3px solid var(--primary);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      box-shadow: 0 0 15px var(--primary);
+    }
+    .phase-num {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: block;
+      letter-spacing: 0.2em;
+    }
+    .phase-step.even { flex-direction: row-reverse; }
+    
+    @media (max-width: 991px) {
+      .methodology-timeline::before { left: 20px; }
+      .phase-dot { left: 20px; }
+      .phase-content { width: calc(100% - 60px); margin-left: 60px; }
+      .phase-step { margin-bottom: 60px; }
+      .phase-step.even { flex-direction: row; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html" style="color:var(--text-subtle)">Home</a><span class="breadcrumb-sep">/</span><a href="#" style="color:var(--text-subtle)">Company</a><span class="breadcrumb-sep">/</span><span>Methodology</span></nav>
+      <div class="eyebrow" style="justify-content:center; margin-bottom:24px">The Fastam Protocol</div>
+      <h1 style="max-width:900px; margin:0 auto 24px">Building for <br><span class="gradient-text">Predictable Performance</span></h1>
+      <p style="max-width:650px; margin:0 auto">AI deployment is more than just a prompt. We follow a rigorous 4-phase engineering lifecycle to ensure your automation is secure, scalable, and delivers measurable ROI.</p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="methodology-timeline">
+        
+        <!-- Phase 1 -->
+        <div class="phase-step reveal">
+          <div class="phase-content">
+            <span class="phase-num">PHASE 01</span>
+            <h3>System Audit & Feasibility</h3>
+            <p style="color:var(--text-muted); font-size:0.95rem;">We begin with a deep dive into your existing tech stack. We map data flows, identify redundancy, and define the 'Ground Truth' for your AI's knowledge base. This stage ends with a comprehensive Technical Architecture Document (TAD).</p>
+          </div>
+          <div class="phase-dot"></div>
+          <div style="width:45%"></div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase-step even reveal">
+          <div class="phase-content">
+            <span class="phase-num">PHASE 02</span>
+            <h3>Architecture & Integration</h3>
+            <p style="color:var(--text-muted); font-size:0.95rem;">We construct the middleware layer that bridges your data with leading LLM models. Using modular Python frameworks and high-concurrency event loops, we build the brains that will drive your automation forward.</p>
+          </div>
+          <div class="phase-dot"></div>
+          <div style="width:45%"></div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase-step reveal">
+          <div class="phase-content">
+            <span class="phase-num">PHASE 03</span>
+            <h3>Stress Testing & Sandboxing</h3>
+            <p style="color:var(--text-muted); font-size:0.95rem;">Production-grade AI requires adversarial testing. We run your system through rigorous "Red Teaming" exercises to prevent hallucination and ensure data privacy before we push a single line to production.</p>
+          </div>
+          <div class="phase-dot"></div>
+          <div style="width:45%"></div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="phase-step even reveal">
+          <div class="phase-content">
+            <span class="phase-num">PHASE 04</span>
+            <h3>CI/CD Deployment & MLOps</h3>
+            <p style="color:var(--text-muted); font-size:0.95rem;">Launch is just the beginning. We manage the full lifecycle, monitoring performance metrics in real-time and implementing a feedback loop for continuous agent retraining and optimization.</p>
+          </div>
+          <div class="phase-dot"></div>
+          <div style="width:45%"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+  
+  <section class="section-cta" style="background:var(--bg)">
+          <div class="container">
+            <div class="cta-wrap reveal">
+              <div class="eyebrow" style="justify-content:center">The Blueprint for Success</div>
+              <h2>Ready to Architect Your <br><span class="gradient-text">AI Future?</span></h2>
+              <p>Download our full methodology whitepaper or book a technical consultation with an lead engineer today.</p>
+              <div class="cta-btns">
+                <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank" class="btn btn-primary btn-lg">
+                  <i class="bi bi-gear-fill"></i> Technical Strategy Call
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+</body>
+</html>

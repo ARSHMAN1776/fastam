@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Calling Agent — Fastam Solutions</title>
+  <meta name="description" content="We build intelligent voice AI agents that answer calls, qualify leads, book appointments, and handle customer inquiries — all automatically, at any hour, i">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero" style="background: url('assets/img/hero_voice_ai_bg.png') center center / cover no-repeat; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,20,0.8) 0%, var(--bg) 100%); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a><span class="breadcrumb-sep">/</span><a href="services.html" style="color:rgba(255,255,255,0.6)">Services</a><span class="breadcrumb-sep">/</span><span>AI Calling Agent</span></nav>
+      <div class="eyebrow" style="justify-content:center">Enterprise Voice AI</div>
+      <h1><span class="gradient-text">Your 24/7 AI Voice Team</span></h1>
+      <p style="max-width: 800px; margin: 0 auto;">We develop ultra-low latency, natural-sounding voice AI agents that handle outbound qualification, inbound support, and appointment setting at enterprise scale.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid-2" style="gap:70px">
+        <div class="reveal-left">
+          <div class="svc-big-icon" style="background: var(--gradient); border:none; color:white; width: 64px; height: 64px; border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size: 1.8rem; margin-bottom: 24px;"><i class="bi bi-mic-fill"></i></div>
+          <div class="eyebrow">Enterprise Capabilities</div>
+          <h2>Production-Ready<br><span class="gradient-text">Voice Systems</span></h2>
+          <p class="mt-16">Every AI Calling Agent deployment is a complete engineering effort. We don't just "set it up" — we optimize the prompt engineering, latency, and CRM integrations for maximum ROI.</p>
+          <ul style="margin-top:28px;padding:0">
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Zero-Latency Inbound Handling</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> High-Volume Outbound Qualification</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Dynamic Appointment Booking (Cal.com/Calendly)</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> 30+ Languages & Custom Dialects</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Real-time CRM Sync (Salesforce, HubSpot, GHL)</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Advanced Post-Call Sentiment Analysis</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-32"><i class="bi bi-headset"></i> Book Strategy Session</a>
+        </div>
+        <div class="reveal-right">
+          <div class="card" style="padding:44px; background: rgba(15,15,30,0.6); backdrop-filter: blur(24px); border: 1px solid rgba(255,107,107,0.15); box-shadow: 0 30px 60px rgba(0,0,0,0.4);">
+            <div style="text-align:center;margin-bottom:32px">
+              <div style="font-size:4rem;margin-bottom:20px; color: #FF6B6B;"><i class="bi bi-cpu-fill"></i></div>
+              <h3>Voice AI Instance</h3>
+              <p class="mt-16" style="font-size: 0.9rem; color: var(--text-subtle);">Managed Enterprise Deployment by Fastam Solutions</p>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">500ms</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Avg Latency</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Infinite</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Concurrency</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">24/7</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Operation</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;color:var(--success)"><i class="bi bi-shield-check"></i></div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">SOC2 Ready</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Enterprise Value</div>
+        <h2>The Fastam <span class="gradient-text">Voice Edge</span></h2>
+      </div>
+      <div class="benefits-grid">
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-headset"></i></span><h4>Zero Wait Times</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Eliminate hold times completely for your customers.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-graph-down-arrow"></i></span><h4>-70% OpEx</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Drastically reduce the cost per lead and support ticket.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-calendar-check"></i></span><h4>Direct Booking</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Fully integrated with your team's real-time calendars.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-translate"></i></span><h4>Global Reach</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Scale to any language or dialect without hiring overhead.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-database-fill-gear"></i></span><h4>Deep CRM Logging</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Automatic transcripts and summaries for every call.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-lightning-charge-fill"></i></span><h4>Instant Scaling</h4><p style="font-size: 0.8rem; color: var(--text-muted);">From 1 to 1,000 concurrent calls in seconds.</p></div>
+      </div>
+  <section>
+    <div class="container">
+      <div class="sec-head center reveal"><div class="eyebrow">Our Process</div><h2>How We Deliver <span class="gradient-text">Your Project</span></h2></div>
+      <div class="process-wrap"><div class="process-line"></div>
+        <div class="process-grid">
+          <div class="process-step reveal"><div class="step-num">01</div><h4>Discovery Call</h4><p>We understand your goals, current setup, and exact requirements in a free 30-min session.</p></div>
+          <div class="process-step reveal delay-1"><div class="step-num">02</div><h4>Custom Proposal</h4><p>You receive a detailed scope, timeline, and pricing document within 24 hours.</p></div>
+          <div class="process-step reveal delay-2"><div class="step-num">03</div><h4>Development</h4><p>We build with regular check-ins and updates. Transparent progress, zero surprises.</p></div>
+          <div class="process-step reveal delay-3"><div class="step-num">04</div><h4>Delivery & Support</h4><p>Full handover, documentation, and post-launch support to ensure everything is perfect.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <div class="eyebrow" style="justify-content:center">Get Started</div>
+        <h2>Ready for World-Class<br><span class="gradient-text">AI Calling Agent?</span></h2>
+        <p>Email us today and get a custom proposal within 24 hours. No commitment required.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=AI Calling Agent+Project+Inquiry" target="_blank" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Get a Free Quote</a>
+          <a href="portfolio.html" class="btn btn-outline btn-lg">View Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

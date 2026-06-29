@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbooks — Fastam Solutions</title>
+  <meta name="description" content="Fastam Solutions playbooks — expert insights on AI automation, web development, chatbots, and digital transformation. Learn how to grow your business with technology.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Playbooks</span></nav>
+      <div class="eyebrow" style="justify-content:center">Knowledge Hub</div>
+      <h1>Insights, Guides &<br><span class="gradient-text">Expert Resources</span></h1>
+      <p>Deep dives on AI automation, web development, productivity systems, and the future of digital business. Written by the Fastam team.</p>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section style="padding:60px 0">
+    <div class="container">
+      <div class="card reveal" style="overflow:hidden">
+        <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:0">
+          <div style="position:relative; overflow:hidden;">
+            <img src="assets/img/hero_automation_bg.png" alt="Featured Playbook" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <div style="position:absolute; top:20px; left:20px;">
+              <div class="tag tag-primary">Featured</div>
+            </div>
+          </div>
+          <div style="padding:48px">
+            <div class="tag tag-primary" style="margin-bottom:16px">🔥 Featured Playbook</div>
+            <h2 style="font-size:1.8rem;margin-bottom:16px">The Complete Guide to Building a Business Automation System with n8n in 2025</h2>
+            <p>From zero to a fully automated business stack in 30 days. We cover CRM automation, email sequences, lead capture, Slack notifications, and 30+ workflow templates you can copy today.</p>
+            
+            <a href="playbook-post.html" class="btn btn-primary">Read Full Playbook <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Playbooks Grid -->
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="d-flex align-center justify-content-between flex-wrap gap-16 mb-32 reveal">
+        <h3>Latest Playbooks</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="pf-btn active" data-filter="all" onclick="filterBlog(this,'all')">All</button>
+          <button class="pf-btn" onclick="filterBlog(this,'automation')">Automation</button>
+          <button class="pf-btn" onclick="filterBlog(this,'ai')">AI & Chatbots</button>
+          <button class="pf-btn" onclick="filterBlog(this,'web')">Web Dev</button>
+          <button class="pf-btn" onclick="filterBlog(this,'productivity')">Productivity</button>
+        </div>
+      </div>
+      <div class="blog-grid">
+        <div class="card blog-card reveal">
+          <div class="blog-thumb">
+            <img src="assets/img/hero_automation_bg.png" alt="⚡ Cover" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+          <div class="blog-body">
+            <div class="tag tag-primary">AI Automation</div>
+            <h4>n8n vs Zapier vs Make: Which Automation Tool is Right for Your Business in 2025?</h4>
+            <p>A detailed head-to-head comparison of the top 3 automation platforms — pricing, capabilities, ease of use, and when to use each one.</p>
+            
+          </div>
+        </div>
+        <div class="card blog-card reveal delay-1">
+          <div class="blog-thumb">
+            <img src="assets/img/healthcare_enterprise_bg.png" alt="🤖 Cover" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+          <div class="blog-body">
+            <div class="tag tag-secondary">AI Chatbots</div>
+            <h4>How to Train an AI Chatbot on Your Business Data (Without Any Coding)</h4>
+            <p>Step-by-step guide to creating a customer support bot that actually understands your products, services, and tone of voice.</p>
+            
+          </div>
+        </div>
+        <div class="card blog-card reveal delay-2">
+          <div class="blog-thumb">
+            <img src="assets/img/hero_voice_ai_bg.png" alt="📞 Cover" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+          <div class="blog-body">
+            <div class="tag tag-muted">AI Calling</div>
+            <h4>AI Calling Agents: The Business Case for Replacing Your Phone Team</h4>
+            <p>Real numbers from businesses using AI voice agents. Cost savings, CSAT scores, and when human agents still win.</p>
+            
+          </div>
+        </div>
+        <div class="card blog-card reveal">
+          <div class="blog-thumb">
+            <img src="assets/img/ecommerce_enterprise_bg.png" alt="💻 Cover" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+          <div class="blog-body">
+            <div class="tag tag-primary">Web Dev</div>
+            <h4>Why Your Website is Costing You Customers (And How to Fix It in 7 Days)</h4>
+            <p>The most common website mistakes that kill conversion rates — and the exact changes that made our clients 3x their leads.</p>
+            
+          </div>
+        </div>
+        <div class="card blog-card reveal delay-1">
+          <div class="blog-thumb">
+            <img src="assets/img/finance_enterprise_bg.png" alt="📋 Cover" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+          <div class="blog-body">
+            <div class="tag tag-success">CRM AI</div>
+            <h4>How to Connect OpenAI to Your CRM: A Step-by-Step Guide for HubSpot & Salesforce</h4>
+            <p>The complete blueprint to automatically score leads, enrich company data, and draft follow-up emails using AI directly inside your CRM.</p>
+            
+          </div>
+        </div>
+        <div class="card blog-card reveal delay-2">
+          <div class="blog-thumb">
+            <img src="assets/img/leadgen_enterprise_bg.png" alt="📊 Cover" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+          <div class="blog-body">
+            <div class="tag tag-muted">Custom AI</div>
+            <h4>Building Autonomous Agents: How to Move Beyond Simple Chatbots in 2025</h4>
+            <p>Learn the architectural patterns of multi-agent systems using LangGraph and CrewAI to solve complex business operations automatically.</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-48 reveal">
+        <a href="playbook-post.html" class="btn btn-outline btn-lg">Load More Playbooks <i class="bi bi-arrow-down"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section style="background:var(--bg-2)">
+    <div class="container container-sm">
+      <div class="cta-wrap reveal">
+        <div class="eyebrow" style="justify-content:center">Stay Updated</div>
+        <h2>Get AI & Automation <span class="gradient-text">Insights Weekly</span></h2>
+        <p>Join 500+ founders and operators who get our best automation tips, AI tool reviews, and workflow templates every week.</p>
+        <div style="display:flex;gap:10px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+          <input type="email" class="form-control" style="flex:1;min-width:240px" placeholder="your@email.com">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Newsletter+Signup" target="_blank" class="btn btn-primary">Subscribe Free</a>
+        </div>
+        <p style="font-size:.78rem;margin-top:12px">No spam. Unsubscribe any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

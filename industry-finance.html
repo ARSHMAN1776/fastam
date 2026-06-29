@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Finance &amp; Fintech — Fastam Solutions</title>
+  <meta name="description"
+    content="Compliant, encrypted AI for financial institutions. Fastam builds SOC2-ready AI agents for loan qualification, fraud detection, and client support.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(130px);
+      pointer-events: none;
+      z-index: 1;
+      animation: orbFloat 9s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbFloat {
+      from {
+        transform: translateY(0) scale(1)
+      }
+
+      to {
+        transform: translateY(-28px) scale(1.07)
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center
+      }
+
+      100% {
+        background-position: 200% center
+      }
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, #00d4ff 0%, #6c63ff 45%, #00d4ff 80%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 5s linear infinite;
+    }
+
+    .metric-hero {
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-family: var(--font-head);
+      font-weight: 800;
+      line-height: 1;
+      background: var(--gradient-r);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .metric-label {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      margin-top: 6px;
+    }
+
+    .pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #00e893;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 6px;
+    }
+
+    .pulse::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: rgba(0, 232, 147, .3);
+      animation: pls 2s ease-in-out infinite;
+    }
+
+    @keyframes pls {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: .6
+      }
+
+      50% {
+        transform: scale(1.7);
+        opacity: 0
+      }
+    }
+
+    /* Security badge */
+    .sec-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 20px;
+      background: rgba(0, 232, 147, .06);
+      border: 1px solid rgba(0, 232, 147, .25);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: .73rem;
+      color: var(--success);
+    }
+
+    .feat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all .4s var(--ease);
+    }
+
+    .feat-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      opacity: 0;
+      transition: opacity .4s;
+      background: radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, .1) 0%, transparent 70%);
+    }
+
+    .feat-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0, 212, 255, .4);
+      box-shadow: 0 32px 64px rgba(0, 0, 0, .4), 0 0 32px rgba(0, 212, 255, .08);
+    }
+
+    .feat-card:hover::after {
+      opacity: 1;
+    }
+
+    .feat-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .feat-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      letter-spacing: .08em;
+      color: var(--secondary);
+      margin-top: 16px;
+    }
+
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .vs-col {
+      padding: 44px;
+    }
+
+    .vs-col.before {
+      background: rgba(255, 107, 107, .03);
+    }
+
+    .vs-col.after {
+      background: linear-gradient(160deg, rgba(0, 212, 255, .05) 0%, rgba(108, 99, 255, .04) 100%);
+    }
+
+    .vs-col h4 {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      opacity: .6;
+    }
+
+    .vs-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+      font-size: .93rem;
+      line-height: 1.6;
+    }
+
+    .vs-row i {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .vs-row.neg i {
+      color: #ff6b6b;
+    }
+
+    .vs-row.pos i {
+      color: #00e893;
+    }
+
+    /* Terminal code block */
+    .terminal {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      font-family: var(--font-mono);
+      font-size: .8rem;
+    }
+
+    .terminal-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .terminal-log {
+      color: var(--success);
+      line-height: 2;
+    }
+
+    .terminal-label {
+      color: var(--text-subtle);
+      font-size: .68rem;
+      margin-bottom: 8px;
+      letter-spacing: .1em;
+    }
+
+    .step-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      position: relative;
+    }
+
+    .step-wrap::before {
+      content: '';
+      position: absolute;
+      top: 34px;
+      left: calc(33.33% - 14px);
+      right: calc(33.33% - 14px);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(0, 212, 255, .5), rgba(108, 99, 255, .5));
+      z-index: 0;
+    }
+
+    .step-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 44px 32px;
+      text-align: center;
+      position: relative;
+      transition: all .4s var(--ease);
+    }
+
+    .step-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--gradient-r);
+      border-radius: 2px;
+      transition: width .4s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, .3);
+    }
+
+    .step-card:hover::after {
+      width: 60%;
+    }
+
+    .step-num {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      font-family: var(--font-head);
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .s1 {
+      background: var(--surface);
+      border: 1px solid rgba(0, 212, 255, .35);
+      color: var(--secondary);
+      box-shadow: 0 0 20px rgba(0, 212, 255, .15);
+    }
+
+    .s2 {
+      background: var(--surface);
+      border: 1px solid rgba(108, 99, 255, .35);
+      color: var(--primary);
+      box-shadow: 0 0 20px rgba(108, 99, 255, .15);
+    }
+
+    .s3 {
+      background: var(--surface);
+      border: 1px solid rgba(0, 232, 147, .35);
+      color: var(--success);
+      box-shadow: 0 0 20px rgba(0, 232, 147, .15);
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    .mq-wrap {
+      overflow: hidden;
+      padding: 32px 0;
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mq-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    .mq-wrap:hover .mq-track {
+      animation-play-state: paused;
+    }
+
+    .mq-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 48px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-right: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .mq-item i {
+      font-size: 1.3rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(0, 212, 255, .3);
+    }
+
+    .faq-q {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 28px;
+    }
+
+    .faq-q h4 {
+      margin: 0;
+      font-size: .97rem;
+      font-weight: 600;
+    }
+
+    .faq-toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--secondary);
+      transition: all .3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+      background: rgba(0, 212, 255, .1);
+    }
+
+    .faq-a {
+      display: none;
+      padding: 0 28px 22px;
+      color: var(--text-muted);
+      font-size: .9rem;
+      line-height: 1.75;
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    .cta-inner {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 80px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-inner::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 212, 255, .12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-sub {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      letter-spacing: .08em;
+      color: var(--text-subtle);
+      margin-top: 16px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: .78rem;
+      color: var(--text-muted);
+      transition: all .3s;
+    }
+
+    .pill:hover {
+      border-color: rgba(0, 212, 255, .4);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s var(--ease), transform .7s var(--ease);
+    }
+
+    .reveal.vis {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal.d1 {
+      transition-delay: .1s;
+    }
+
+    .reveal.d2 {
+      transition-delay: .2s;
+    }
+
+    @media(max-width:768px) {
+
+      .vs-grid,
+      .step-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .step-wrap::before {
+        display: none;
+      }
+
+      .cta-inner {
+        padding: 48px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="page-hero"
+    style="position:relative;overflow:hidden;background:url('assets/img/finance_enterprise_bg.png') center/cover no-repeat;">
+    <div class="hero-orb" style="width:500px;height:500px;background:rgba(0,212,255,.14);top:-100px;right:-60px;"></div>
+    <div class="hero-orb"
+      style="width:360px;height:360px;background:rgba(108,99,255,.12);bottom:0;left:-60px;animation-delay:5s;animation-duration:12s;">
+    </div>
+    <div
+      style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,20,.88) 0%,var(--bg) 100%);z-index:0;">
+    </div>
+    <div class="container" style="position:relative;z-index:2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:var(--text-subtle)">Home</a><span
+          class="breadcrumb-sep">/</span><a href="#" style="color:var(--text-subtle)">Industries</a><span
+          class="breadcrumb-sep">/</span><span>Finance</span></nav>
+      <div style="display:flex;justify-content:center;margin-bottom:24px;">
+        <div class="sec-badge"><i class="bi bi-shield-lock-fill"></i> Bank-Grade AES-256 Encryption</div>
+      </div>
+      <h1 style="max-width:860px;margin:0 auto 24px;text-align:center;">
+        AI Intelligence for the<br><span class="shimmer-text">Financial Frontline</span>
+      </h1>
+      <p style="max-width:600px;margin:0 auto 48px;text-align:center;font-size:1.05rem;line-height:1.8;">
+        <strong>Secure, compliant, and lightning-fast.</strong> We deploy AI that handles loan pre-qualification, fraud
+        alerts, and wealth management support — built inside encrypted, SOC2-ready infrastructure.
+      </p>
+      <div style="display:flex;justify-content:center;gap:64px;flex-wrap:wrap;">
+        <div style="text-align:center;" class="reveal">
+          <div class="metric-hero">90%</div>
+          <div class="metric-label">KYC Processing Speedup</div>
+        </div>
+        <div style="text-align:center;" class="reveal d1">
+          <div class="metric-hero">Zero</div>
+          <div class="metric-label">Compliance Overhead</div>
+        </div>
+        <div style="text-align:center;" class="reveal d2">
+          <div class="metric-hero">24/7</div>
+          <div class="metric-label">Live Transaction Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="mq-wrap">
+    <div class="mq-track">
+      <div class="mq-item"><i class="bi bi-shield-lock" style="color:var(--primary)"></i> SOC2 Ready</div>
+      <div class="mq-item"><i class="bi bi-credit-card" style="color:var(--secondary)"></i> Fraud Alerts</div>
+      <div class="mq-item"><i class="bi bi-graph-up-arrow" style="color:var(--success)"></i> Loan Qualification</div>
+      <div class="mq-item"><i class="bi bi-lock" style="color:#ffb800"></i> Encrypted Pipelines</div>
+      <div class="mq-item"><i class="bi bi-eye-slash" style="color:var(--primary)"></i> PII Masking</div>
+      <div class="mq-item"><i class="bi bi-bank2" style="color:var(--secondary)"></i> KYC Automation</div>
+      <div class="mq-item"><i class="bi bi-safe2" style="color:var(--success)"></i> Zero Data Retention</div>
+      <div class="mq-item"><i class="bi bi-person-check" style="color:#ffb800"></i> Identity Verification</div>
+      <div class="mq-item"><i class="bi bi-shield-lock" style="color:var(--primary)"></i> SOC2 Ready</div>
+      <div class="mq-item"><i class="bi bi-credit-card" style="color:var(--secondary)"></i> Fraud Alerts</div>
+      <div class="mq-item"><i class="bi bi-graph-up-arrow" style="color:var(--success)"></i> Loan Qualification</div>
+      <div class="mq-item"><i class="bi bi-lock" style="color:#ffb800"></i> Encrypted Pipelines</div>
+      <div class="mq-item"><i class="bi bi-eye-slash" style="color:var(--primary)"></i> PII Masking</div>
+      <div class="mq-item"><i class="bi bi-bank2" style="color:var(--secondary)"></i> KYC Automation</div>
+      <div class="mq-item"><i class="bi bi-safe2" style="color:var(--success)"></i> Zero Data Retention</div>
+      <div class="mq-item"><i class="bi bi-person-check" style="color:#ffb800"></i> Identity Verification</div>
+    </div>
+  </div>
+
+  <!-- SOLUTIONS -->
+  <section style="background:var(--bg-2);">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Financial Services</div>
+        <h2>Enterprise <span class="gradient-text">Fintech</span> Engineering</h2>
+      </div>
+      <div class="grid-2" style="gap:24px;margin-top:48px;">
+        <div class="feat-card reveal">
+          <div class="feat-icon" style="background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);"><i
+              class="bi bi-credit-card-2-front" style="color:var(--secondary)"></i></div>
+          <h3>AI Credit Qualification</h3>
+          <p style="margin-top:12px;line-height:1.75;">Automate loan and credit applications end-to-end. Our AI agents
+            gather proof of income, verify identity against government DBs, and calculate debt-to-income ratios in
+            real-time — delivering qualified dossiers to your underwriters.</p>
+          <div class="feat-tag">✦ Plaid + Stripe integration ready</div>
+        </div>
+        <div class="feat-card reveal d1">
+          <div class="feat-icon" style="background:rgba(108,99,255,.1);border:1px solid rgba(108,99,255,.2);"><i
+              class="bi bi-graph-up-arrow" style="color:var(--primary)"></i></div>
+          <h3>Wealth Management Support</h3>
+          <p style="margin-top:12px;line-height:1.75;">Give HNW clients instant access to market summaries, portfolio
+            balances, and advisor scheduling with a secure, private AI — fully tailored to your firm's investment
+            philosophy and compliance guidelines.</p>
+          <div class="feat-tag">✦ Private VPC deployment only</div>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon" style="background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.2);"><i
+              class="bi bi-shield-exclamation" style="color:#ff6b6b"></i></div>
+          <h3>Fraud Alert Automation</h3>
+          <p style="margin-top:12px;line-height:1.75;">When a suspicious transaction fires, our AI triggers instant
+            multi-channel verification (Voice + SMS) — allowing customers to confirm or block charges in seconds,
+            drastically shrinking the fraud loss window.</p>
+          <div class="feat-tag">✦ &lt;5s detection-to-action latency</div>
+        </div>
+        <div class="feat-card reveal d1">
+          <div class="feat-icon" style="background:rgba(0,232,147,.1);border:1px solid rgba(0,232,147,.2);"><i
+              class="bi bi-file-earmark-bar-graph" style="color:var(--success)"></i></div>
+          <h3>Algorithmic Reporting</h3>
+          <p style="margin-top:12px;line-height:1.75;">Connect your fragmented data infrastructure and generate complex
+            quarterly reports, compliance audits, and trend analyses using natural language queries — no SQL, no data
+            engineers needed in the loop.</p>
+          <div class="feat-tag">✦ NLP-to-SQL query engine</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY SECTION -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal">
+          <div class="eyebrow">Compliance First</div>
+          <h2>Financial Data <span class="gradient-text">Sovereignty</span></h2>
+          <p style="margin-top:16px;line-height:1.8;">For financial institutions, security isn't a feature — it's the
+            foundation. Our deployments run inside private, encrypted VPCs with ephemerally processed data so that
+            sensitive financial records are never exposed to public foundational models or stored beyond a transaction
+            window.</p>
+          <ul style="margin-top:28px;display:flex;flex-direction:column;gap:12px;">
+            <li style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:.82rem;"><i
+                class="bi bi-shield-check" style="color:var(--success);font-size:1rem;"></i> AICPA SOC 2 Compliance
+              Architecture</li>
+            <li style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:.82rem;"><i
+                class="bi bi-shield-check" style="color:var(--success);font-size:1rem;"></i> PII Scrubbing &amp;
+              Field-Level Encryption</li>
+            <li style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:.82rem;"><i
+                class="bi bi-shield-check" style="color:var(--success);font-size:1rem;"></i> Zero Data Retention (ZDR)
+              API Endpoints</li>
+            <li style="display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:.82rem;"><i
+                class="bi bi-shield-check" style="color:var(--success);font-size:1rem;"></i> Private VPC Deployment — No
+              Shared Infrastructure</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 reveal d1">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <div class="dot" style="background:#ff6b6b;"></div>
+              <div class="dot" style="background:#ffb800;"></div>
+              <div class="dot" style="background:#51cf66;"></div>
+            </div>
+            <div class="terminal-label">SECURE_PROC_LOG [0x442B] — ENCRYPTED ENCLAVE</div>
+            <div class="terminal-log">
+              &gt; Initialize Secure Enclave...<br>
+              &gt; Loading encryption keys (AES-256)...<br>
+              &gt; [OK] Private VPC confirmed.<br>
+              &gt; Masking PII Data Fields → tokenized.<br>
+              &gt; [OK] Identity Verified via KYC API.<br>
+              &gt; [OK] Credit Score Synced (Plaid).<br>
+              &gt; [OK] DTI ratio calculated: 28%.<br>
+              &gt; [OK] Risk Score: <span style="color:#ffb800;">LOW</span>.<br>
+              &gt; Pushing to Underwriting Queue...<br>
+              &gt; <span style="color:#51cf66;">[COMPLETE] Transaction logged — 0 PII retained.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section style="background:var(--bg-2);">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Deployment Process</div>
+        <h2>How We <span class="gradient-text">Integrate</span></h2>
+        <p style="max-width:440px;margin:14px auto 0;font-size:.95rem;">Built for compliance-heavy environments. Every
+          phase is security-reviewed.</p>
+      </div>
+      <div class="step-wrap" style="margin-top:56px;">
+        <div class="step-card reveal">
+          <div class="step-num s1">1</div>
+          <h4 style="margin-bottom:12px;">Risk &amp; Security Audit</h4>
+          <p style="font-size:.9rem;line-height:1.75;">We assess your data infrastructure and regulatory obligations
+            before writing a single line of code — ensuring absolute compliance from architecture to deployment.</p>
+        </div>
+        <div class="step-card reveal d1">
+          <div class="step-num s2">2</div>
+          <h4 style="margin-bottom:12px;">Enclave Deployment</h4>
+          <p style="font-size:.9rem;line-height:1.75;">We build your AI logic inside a secure, private VPC. Financial
+            data never touches public foundational model endpoints — all processing is ephemeral and fully state-logged.
+          </p>
+        </div>
+        <div class="step-card reveal d2">
+          <div class="step-num s3">3</div>
+          <h4 style="margin-bottom:12px;">Live Auditable Sync</h4>
+          <p style="font-size:.9rem;line-height:1.75;">Deployment with full state-logging and audit trails. Every AI
+            decision, data transfer, and flag is recorded and exportable for regulatory review at any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--bg);">
+    <div class="container container-sm">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Common Questions</div>
+        <h2>Finance &amp; Fintech <span class="gradient-text">FAQ</span></h2>
+      </div>
+      <div style="margin-top:40px;">
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <h4>Are your bots compliant with GDPR and SOC2?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Yes. We build entirely within encrypted environments using Zero Data Retention (ZDR) API
+            configurations — meaning PII is tokenized in transit and never stored by the AI layer. We can provide
+            architecture diagrams for your compliance team.</div>
+        </div>
+        <div class="faq-item reveal d1">
+          <div class="faq-q">
+            <h4>Can the AI connect to legacy core banking systems?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Through custom middleware and RPA (Robotic Process Automation), we can interface with
+            modern API platforms (Stripe, Plaid, Finicity) and legacy SOAP/XML core banking systems. If it has an
+            endpoint, we connect it.</div>
+        </div>
+        <div class="faq-item reveal d2">
+          <div class="faq-q">
+            <h4>How does the AI handle sensitive data like SSNs or account numbers?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Our data pipelines use field-level encryption and immediate tokenization on intake. The raw
+            text (SSNs, account numbers) is never exposed to the LLM processing layer — only encrypted tokens are passed
+            through the workflow.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            <h4>Is this suitable for regulated financial institutions (banks, credit unions)?</h4>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-a">Yes. We specifically design for regulated entities. Our deployment architecture includes
+            BAA-equivalent agreements, full audit logging, and architecture documentation suitable for regulatory
+            submissions or internal compliance reviews.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-2);padding-bottom:90px;">
+    <div class="container container-sm">
+      <div class="cta-inner reveal">
+        <div class="eyebrow" style="justify-content:center;"><span class="pulse"></span> Ready to Deploy?</div>
+        <h2 style="margin:16px 0 20px;">Secure AI for the <span class="gradient-text">Financial Sector</span></h2>
+        <p style="max-width:480px;margin:0 auto 36px;font-size:1rem;line-height:1.8;">Let's audit your current
+          infrastructure and identify where AI can accelerate compliance workflows, reduce operational cost, and protect
+          your clients — securely.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank"
+            class="btn btn-primary btn-lg">
+            <i class="bi bi-shield-lock"></i> Request a Secure Demo
+          </a>
+        </div>
+        <div class="cta-sub"><i class="bi bi-lock" style="margin-right:4px;"></i> NDA available upon request. Response
+          within 24 hours.</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+
+</html>

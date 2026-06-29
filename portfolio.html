@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Fastam Solutions</title>
+  <meta name="description" content="Explore Fastam Solutions portfolio of AI automation, web development, and digital transformation projects delivered for clients worldwide.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Portfolio</span></nav>
+      <div class="eyebrow" style="justify-content:center">Our Work</div>
+      <h1>Projects That <span class="gradient-text">Move the Needle</span></h1>
+      <p>100+ projects delivered across industries. Every one built to solve real problems and produce measurable results.</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section style="padding:60px 0;background:var(--bg-2)">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-cell reveal"><div class="stat-num"><span data-count="100" data-suffix="+">0+</span></div><div class="stat-label">Projects Completed</div></div>
+        <div class="stat-cell reveal delay-1"><div class="stat-num"><span data-count="50" data-suffix="+">0+</span></div><div class="stat-label">Happy Clients</div></div>
+        <div class="stat-cell reveal delay-2"><div class="stat-num"><span data-count="10" data-suffix="+">0+</span></div><div class="stat-label">Countries Served</div></div>
+        <div class="stat-cell reveal delay-3"><div class="stat-num"><span data-count="99" data-suffix="%">0%</span></div><div class="stat-label">Satisfaction Rate</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="portfolio-filters reveal">
+        <button class="pf-btn active" data-filter="all">All Projects</button>
+        <button class="pf-btn" data-filter="web">Web Dev</button>
+        <button class="pf-btn" data-filter="automation">Automation</button>
+        <button class="pf-btn" data-filter="ai">AI Systems</button>
+        <button class="pf-btn" data-filter="design">Design</button>
+      </div>
+      <div class="portfolio-grid">
+
+        <!-- Project Cards (with creative visual placeholders) -->
+        <div class="card pf-card reveal" data-cat="web">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_hms.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study-hms.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-primary">Healthcare SaaS</span><span class="tag tag-secondary">AI Systems</span></div>
+            <div class="pf-title">Hospital Management System for 9 Operational Roles</div>
+          </div>
+        </div>
+
+        <div class="card pf-card reveal delay-1" data-cat="automation">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_crm.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-secondary">Automation</span><span class="tag tag-muted">CRM</span></div>
+            <div class="pf-title">Real Estate CRM Automation</div>
+          </div>
+        </div>
+
+        <div class="card pf-card reveal delay-2" data-cat="ai">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_chatbot.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-primary">AI Systems</span><span class="tag tag-muted">SaaS</span></div>
+            <div class="pf-title">SaaS Customer Support AI Bot</div>
+          </div>
+        </div>
+
+        <div class="card pf-card reveal" data-cat="ai">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_voice.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-primary">AI Systems</span><span class="tag tag-muted">Healthcare</span></div>
+            <div class="pf-title">Medical Clinic Appointment AI</div>
+          </div>
+        </div>
+
+        <div class="card pf-card reveal delay-1" data-cat="web">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_saas.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-primary">Web Dev</span><span class="tag tag-muted">SaaS</span></div>
+            <div class="pf-title">HR Analytics SaaS Dashboard</div>
+          </div>
+        </div>
+
+        <div class="card pf-card reveal delay-2" data-cat="automation">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_flow.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-secondary">Automation</span><span class="tag tag-muted">Marketing</span></div>
+            <div class="pf-title">Agency Marketing Automation Stack</div>
+          </div>
+        </div>
+
+        <div class="card pf-card reveal" data-cat="automation">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_brand.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-primary">CRM AI</span><span class="tag tag-muted">Enterprise</span></div>
+            <div class="pf-title">HubSpot & Salesforce AI Synchronization</div>
+          </div>
+        </div>
+
+        <div class="card pf-card reveal delay-1" data-cat="automation">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_notion.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-primary">Custom AI</span><span class="tag tag-muted">LLM Apps</span></div>
+            <div class="pf-title">Autonomous AI Agent for Document Intelligence</div>
+          </div>
+        </div>
+
+        <div class="card pf-card reveal delay-2" data-cat="web">
+          <div class="pf-img" style="background: url('assets/img/portfolio/portfolio_restaurant.png') center center / cover no-repeat">
+            <div class="pf-overlay"><a href="case-study.html" class="btn btn-primary btn-sm">View Case Study</a></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags"><span class="tag tag-primary">Chatbots</span><span class="tag tag-muted">WhatsApp</span></div>
+            <div class="pf-title">Multi-Channel Customer Support AI Agent</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <div class="eyebrow" style="justify-content:center">Your Project is Next</div>
+        <h2>Ready to Build Something<br><span class="gradient-text">Remarkable?</span></h2>
+        <p>Join our growing list of successful clients. Let's start with a free 30-minute strategy call.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Start Your Project</a>
+          <a href="case-study.html" class="btn btn-outline btn-lg">Read a Case Study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

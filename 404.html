@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Fastam Solutions</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="page-404">
+    <div class="err-code">404</div>
+    <div class="err-content">
+      <div style="font-size:5rem;margin-bottom:20px">🔍</div>
+      <h2>Page Not Found</h2>
+      <p>Oops — the page you're looking for has either moved, been deleted, or never existed. Let's get you back on track.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px">
+        <a href="index.html" class="btn btn-primary btn-lg"><i class="bi bi-house-fill"></i> Back to Home</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+      </div>
+      <div style="margin-top:48px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center">
+        <a href="services.html" class="btn btn-ghost">Services</a>
+        <a href="portfolio.html" class="btn btn-ghost">Portfolio</a>
+        <a href="pricing.html" class="btn btn-ghost">Pricing</a>
+        <a href="playbooks.html" class="btn btn-ghost">Playbooks</a>
+        <a href="faq.html" class="btn btn-ghost">FAQ</a>
+      </div>
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Fastam Solutions</title>
+  <meta name="description" content="Master Services Agreement and Terms of Service for Fastam Solutions enterprise AI and automation clients.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero" style="padding-bottom:60px">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Terms of Service</span></nav>
+      <h1>Terms of <span class="gradient-text">Service</span></h1>
+      <p>Last updated: March 15, 2026. Master Services Agreement governing all Fastam Solutions projects and deployments.</p>
+    </div>
+  </section>
+  <section style="padding-top:40px">
+    <div class="container container-sm">
+      <div class="post-content">
+        <h2>1. Master Services Agreement (MSA)</h2>
+        <p>This document governs the relationship between Fastam Solutions ("Agency", "We") and the client ("Client", "You"). By engaging our services, including but not limited to AI Automation, Custom Web Development, Chatbot Deployment, and Cloud Architecture, you agree to the terms outlined below.</p>
+        
+        <h2>2. Scope of Work & Deliverables</h2>
+        <p>All projects will be defined by a formal Proposal or Statement of Work (SOW) which details the specific deliverables, timelines, and technical requirements. Fastam Solutions reserves the right to adjust timelines if third-party dependencies (APIs, client-side data, access permissions) cause undue delay.</p>
+        
+        <h2>3. Intellectual Property Rights</h2>
+        <p>Upon final payment, all custom code, automation architectures, deployed workflows, and AI training data specific to your business become your exclusive Intellectual Property (IP). Fastam Solutions retains the right to reuse open-source libraries, generic frameworks, and proprietary background technology tools developed independently of your project.</p>
+        
+        <h2>4. Data Privacy & Confidentiality (NDA)</h2>
+        <p>We treat all client data as strictly confidential. As outlined in our Privacy Policy and Security Standards, we deploy Zero Data Retention (ZDR) endpoints where applicable. Fastam Solutions will not use your proprietary workflows, customer data, or internal correspondence to train public language models.</p>
+        
+        <h2>5. Service Level Agreement (SLA) & Support</h2>
+        <p>For clients on active retainer or subscription plans (e.g., Professional/Enterprise Chatbot hosting), Fastam Solutions guarantees a 99.9% uptime for the AI infrastructure under our direct control. Issues originating from third-party vendor downtime (e.g., OpenAI, AWS, Twilio, n8n cloud) are exempt from this SLA, though we will provide robust error-handling to minimize disruption.</p>
+        
+        <h2>6. Payment Terms</h2>
+        <p>Standard project terms require a 50% initial deposit prior to commencement, with the remaining 50% due upon successful completion of the User Acceptance Testing (UAT) phase. Subscription services (e.g., Chatbots, AI Calling Agents) are billed monthly in advance and can be canceled at any time; however, partial months are non-refundable.</p>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>Fastam Solutions engineers highly reliable systems, but we cannot be held liable for indirect, incidental, or consequential damages resulting from the use or inability to use our delivered software, especially when integrated with unstable third-party platforms or modified by the Client's internal teams after handover.</p>
+        
+        <h2>8. Contact Legal</h2>
+        <p>For questions regarding enterprise SLAs, custom NDAs, or compliance documentation, please contact our administrative team at: <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank" style="color:var(--primary)">fastamsolutions@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

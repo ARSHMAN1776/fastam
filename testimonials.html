@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials — Fastam Solutions</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Testimonials</span></nav>
+      <div class="eyebrow" style="justify-content:center">Client Love</div>
+      <h1>Real Results from<br><span class="gradient-text">Real Businesses</span></h1>
+      <p>Our commitment to excellence is reflected in the success of our partners. We are currently curating and verifying our latest client success stories.</p>
+    </div>
+  </section>
+  <section style="padding:60px 0;background:var(--bg-2)">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-cell reveal"><div class="stat-num"><span data-count="50" data-suffix="+">50+</span></div><div class="stat-label">Happy Clients</div></div>
+        <div class="stat-cell reveal delay-1"><div class="stat-num"><span data-count="99" data-suffix="%">99%</span></div><div class="stat-label">Satisfaction Rate</div></div>
+        <div class="stat-cell reveal delay-2"><div class="stat-num">5.0</div><div class="stat-label">Average Rating</div></div>
+        <div class="stat-cell reveal delay-3"><div class="stat-num"><span data-count="100" data-suffix="+">100+</span></div><div class="stat-label">Projects Delivered</div></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1100px;margin:0 auto">
+
+        <div class="card reveal" style="padding:32px;border:1px solid rgba(108,99,255,0.2)">
+          <div style="color:#f59e0b;font-size:1rem;margin-bottom:16px">★★★★★</div>
+          <p style="font-style:italic;font-size:.9rem;line-height:1.8;color:var(--text-muted);margin-bottom:20px">"Fastam built our n8n workflow from scratch. Order confirmations, inventory updates, and customer emails now run fully automated. We save 25+ hours every week."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" style="width:44px;height:44px;border-radius:50%;object-fit:cover" alt="James">
+            <div><div style="font-weight:700;font-size:.88rem">James Rodriguez</div><div style="color:var(--text-subtle);font-size:.78rem">CEO · Nexus Retail Group</div></div>
+          </div>
+          <div style="margin-top:14px;font-size:.75rem;color:var(--text-subtle);border-top:1px solid var(--border);padding-top:12px"><i class="bi bi-check-circle-fill" style="color:#10b981;margin-right:6px"></i>Verified · n8n Automation</div>
+        </div>
+
+        <div class="card reveal delay-1" style="padding:32px;border:1px solid rgba(108,99,255,0.2)">
+          <div style="color:#f59e0b;font-size:1rem;margin-bottom:16px">★★★★★</div>
+          <p style="font-style:italic;font-size:.9rem;line-height:1.8;color:var(--text-muted);margin-bottom:20px">"Our AI calling agent handles 300+ inbound calls per day now. Customer satisfaction went up, response time dropped from hours to seconds. Genuinely life-changing for our clinic."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" style="width:44px;height:44px;border-radius:50%;object-fit:cover" alt="Sarah">
+            <div><div style="font-weight:700;font-size:.88rem">Sarah Mitchell</div><div style="color:var(--text-subtle);font-size:.78rem">Operations Director · MedSwift Clinic</div></div>
+          </div>
+          <div style="margin-top:14px;font-size:.75rem;color:var(--text-subtle);border-top:1px solid var(--border);padding-top:12px"><i class="bi bi-check-circle-fill" style="color:#10b981;margin-right:6px"></i>Verified · AI Calling Agent</div>
+        </div>
+
+        <div class="card reveal delay-2" style="padding:32px;border:1px solid rgba(108,99,255,0.2)">
+          <div style="color:#f59e0b;font-size:1rem;margin-bottom:16px">★★★★★</div>
+          <p style="font-style:italic;font-size:.9rem;line-height:1.8;color:var(--text-muted);margin-bottom:20px">"Delivered our client portal ahead of schedule. The Google Sheets integration was flawless. They also suggested improvements we hadn't thought of — and implemented them same day."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" style="width:44px;height:44px;border-radius:50%;object-fit:cover" alt="Emily">
+            <div><div style="font-weight:700;font-size:.88rem">Emily Chen</div><div style="color:var(--text-subtle);font-size:.78rem">Product Manager · Veloura Tech</div></div>
+          </div>
+          <div style="margin-top:14px;font-size:.75rem;color:var(--text-subtle);border-top:1px solid var(--border);padding-top:12px"><i class="bi bi-check-circle-fill" style="color:#10b981;margin-right:6px"></i>Verified · Web Development</div>
+        </div>
+
+        <div class="card reveal" style="padding:32px;border:1px solid rgba(108,99,255,0.2)">
+          <div style="color:#f59e0b;font-size:1rem;margin-bottom:16px">★★★★★</div>
+          <p style="font-style:italic;font-size:.9rem;line-height:1.8;color:var(--text-muted);margin-bottom:20px">"The CRM AI integration they built for us connects HubSpot, Slack, and email seamlessly. Lead assignment is instant, follow-ups are automated, and our team hasn't touched manual entry since. Absolutely brilliant!"</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" style="width:44px;height:44px;border-radius:50%;object-fit:cover" alt="Michael">
+            <div><div style="font-weight:700;font-size:.88rem">Michael Thompson</div><div style="color:var(--text-subtle);font-size:.78rem">Marketing Director · BrightLeaf Agency</div></div>
+          </div>
+          <div style="margin-top:14px;font-size:.75rem;color:var(--text-subtle);border-top:1px solid var(--border);padding-top:12px"><i class="bi bi-check-circle-fill" style="color:#10b981;margin-right:6px"></i>Verified · CRM AI Integration</div>
+        </div>
+
+        <div class="card reveal delay-1" style="padding:32px;border:1px solid rgba(108,99,255,0.2)">
+          <div style="color:#f59e0b;font-size:1rem;margin-bottom:16px">★★★★★</div>
+          <p style="font-style:italic;font-size:.9rem;line-height:1.8;color:var(--text-muted);margin-bottom:20px">"Fastam built a custom AI agent that parses inbound procurement requests, cross-references our inventory database, and drafts quotes automatically. What used to take our sales team hours now happens in seconds."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80" style="width:44px;height:44px;border-radius:50%;object-fit:cover" alt="Daniel">
+            <div><div style="font-weight:700;font-size:.88rem">Daniel Kowalski</div><div style="color:var(--text-subtle);font-size:.78rem">Store Manager · Urban Supply Co.</div></div>
+          </div>
+          <div style="margin-top:14px;font-size:.75rem;color:var(--text-subtle);border-top:1px solid var(--border);padding-top:12px"><i class="bi bi-check-circle-fill" style="color:#10b981;margin-right:6px"></i>Verified · Custom AI Development</div>
+        </div>
+
+        <div class="card reveal delay-2" style="padding:32px;border:1px solid rgba(108,99,255,0.2)">
+          <div style="color:#f59e0b;font-size:1rem;margin-bottom:16px">★★★★★</div>
+          <p style="font-style:italic;font-size:.9rem;line-height:1.8;color:var(--text-muted);margin-bottom:20px">"Our onboarding process was completely automated using n8n and AI. We went from manually managing contracts and logins to a fully autonomous setup. Our client satisfaction score skyrocketed."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&q=80" style="width:44px;height:44px;border-radius:50%;object-fit:cover" alt="Priya">
+            <div><div style="font-weight:700;font-size:.88rem">Priya Sharma</div><div style="color:var(--text-subtle);font-size:.78rem">Brand Strategist · Nouri Wellness</div></div>
+          </div>
+          <div style="margin-top:14px;font-size:.75rem;color:var(--text-subtle);border-top:1px solid var(--border);padding-top:12px"><i class="bi bi-check-circle-fill" style="color:#10b981;margin-right:6px"></i>Verified · AI Workflow Automation</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <h2>Ready to Become Our<br><span class="gradient-text">Next Success Story?</span></h2>
+        <p>Book a free consultation and let's discuss how we can transform your business.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Start Your Project</a>
+          <a href="portfolio.html" class="btn btn-outline btn-lg">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

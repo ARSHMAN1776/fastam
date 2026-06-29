@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tech Stack — Fastam Solutions</title>
+  <meta name="description" content="Discover the advanced AI technology stack we use at Fastam Solutions to build enterprise-grade automation and software.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+  <style>
+    .tech-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 32px;
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .tech-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-8px);
+      background: rgba(108, 99, 255, 0.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .tech-icon-wrap {
+      width: 60px;
+      height: 60px;
+      background: var(--gradient-dark);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+    .tech-badge {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin-bottom: 12px;
+      display: inline-block;
+      color: var(--text-subtle);
+    }
+    .grid-tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .tier-head {
+      margin-top: 80px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="page-hero" style="background: url('assets/img/enterprise_hero_tech.png') center center / cover no-repeat; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,15,0.9) 0%, var(--bg) 100%); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a><span class="breadcrumb-sep">/</span><a href="services.html" style="color:rgba(255,255,255,0.6)">Services</a><span class="breadcrumb-sep">/</span><span>Tech Stack</span></nav>
+      <div class="eyebrow" style="justify-content:center">Technical Infrastructure</div>
+      <h1>The Fastam <span class="gradient-text">Intelligence Stack</span></h1>
+      <p style="max-width: 800px; margin: 0 auto;">We don't just use AI; we architect with it. Our technical foundation is built on the world's most powerful cognitive engines and engineering platforms.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section>
+    <div class="container">
+      
+      <!-- Tier 1: Cognitive Engines -->
+      <div class="tier-head reveal">
+        <div>
+          <div class="eyebrow">Tier 01</div>
+          <h3>Cognitive Engines</h3>
+        </div>
+        <div class="tag tag-primary">Neural Processing</div>
+      </div>
+      
+      <div class="grid-tools">
+        <!-- GPT-4o -->
+        <div class="tech-card reveal">
+          <div class="tech-badge">LLM / Advanced Reasoning</div>
+          <div class="tech-icon-wrap" style="color: #10a37f; border-color: rgba(16, 163, 127, 0.3);"><i class="bi bi-robot"></i></div>
+          <h4>OpenAI GPT-5.5</h4>
+          <p>The standard for complex reasoning and multimodal understanding. We utilize GPT-5.5's chain-of-thought processing for high-fidelity architectural logic and agentic orchestration.</p>
+        </div>
+        <!-- Claude -->
+        <div class="tech-card reveal delay-1">
+          <div class="tech-badge">LLM / Coding Mastery</div>
+          <div class="tech-icon-wrap" style="color: #d97757; border-color: rgba(217, 119, 87, 0.3);"><i class="bi bi-cpu"></i></div>
+          <h4>Claude Sonnet 4.6 / Opus 4.8</h4>
+          <p>The industry benchmark for hybrid reasoning and nuanced technical documentation. We leverage Claude Sonnet 4.6 and Opus 4.8 for precision-critical software engineering and deep context synthesis.</p>
+        </div>
+        <!-- Gemini -->
+        <div class="tech-card reveal delay-2">
+          <div class="tech-badge">LLM / Infinite Context</div>
+          <div class="tech-icon-wrap" style="color: #4285f4; border-color: rgba(66, 133, 244, 0.3);"><i class="bi bi-google"></i></div>
+          <h4>Gemini 3.5 Flash</h4>
+          <p>With its 2M+ context window and native multimodality, Gemini 3.5 Flash allows us to analyze entire enterprise codebases and process massive datasets with zero data loss.</p>
+        </div>
+        <!-- ElevenLabs -->
+        <div class="tech-card reveal">
+          <div class="tech-badge">Voice AI / Synthesis</div>
+          <div class="tech-icon-wrap" style="color: #2DCE89; border-color: rgba(45, 206, 137, 0.3);"><i class="bi bi-mic-fill"></i></div>
+          <h4>ElevenLabs</h4>
+          <p>The global leader in high-fidelity AI voice synthesis. We use ElevenLabs to power our AI Calling Agents with low-latency, human-like emotional resonance and multilingual capabilities.</p>
+        </div>
+      </div>
+
+      <!-- Tier 2: Intelligent Engineering -->
+      <div class="tier-head reveal" style="margin-top: 100px;">
+        <div>
+          <div class="eyebrow">Tier 02</div>
+          <h3>Intelligent Engineering</h3>
+        </div>
+        <div class="tag tag-secondary">DevOps & IDE</div>
+      </div>
+
+      <div class="grid-tools">
+        <!-- Cursor -->
+        <div class="tech-card reveal">
+          <div class="tech-badge">AI Code Editor</div>
+          <div class="tech-icon-wrap" style="color: var(--secondary); border-color: rgba(0, 212, 255, 0.3);"><i class="bi bi-code-square"></i></div>
+          <h4>Cursor</h4>
+          <p>The AI-first code editor that powers our rapid development cycle. It allows our engineers to ship enterprise-grade code 5x faster with neural-assisted refatcoring.</p>
+        </div>
+        <!-- Replit -->
+        <div class="tech-card reveal delay-1">
+          <div class="tech-badge">Agentic Cloud IDE</div>
+          <div class="tech-icon-wrap" style="color: #f26622; border-color: rgba(242, 102, 34, 0.3);"><i class="bi bi-cloud-check"></i></div>
+          <h4>Replit Agent</h4>
+          <p>Utilized for rapid prototyping and autonomous deployment of microservices. Replit allows us to move from ideation to live environment in minutes.</p>
+        </div>
+        <!-- Lovable -->
+        <div class="tech-card reveal delay-2">
+          <div class="tech-badge">Full-Stack AI</div>
+          <div class="tech-icon-wrap" style="color: #ff6b6b; border-color: rgba(255, 107, 107, 0.3);"><i class="bi bi-heart-pulse-fill"></i></div>
+          <h4>Lovable.ai</h4>
+          <p>Our choice for high-speed front-end engineering. Lovable enables us to generate pixel-perfect, performance-optimized React components via natural language.</p>
+        </div>
+      </div>
+
+      <!-- Tier 3: Workflow Orchestration -->
+      <div class="tier-head reveal" style="margin-top: 100px;">
+        <div>
+          <div class="eyebrow">Tier 03</div>
+          <h3>Workflow Orchestration</h3>
+        </div>
+        <div class="tag tag-success">Automation Core</div>
+      </div>
+
+      <div class="grid-tools">
+        <!-- n8n -->
+        <div class="tech-card reveal">
+          <div class="tech-badge">Fair-Code Automation</div>
+          <div class="tech-icon-wrap" style="color: #ff6c37; border-color: rgba(255, 108, 55, 0.3);"><i class="bi bi-diagram-3-fill"></i></div>
+          <h4>n8n.io</h4>
+          <p>The brain of our automation systems. Self-hosted and secure, n8n handles the complex conditional logic required for enterprise-scaling.</p>
+        </div>
+        <!-- Zapier -->
+        <div class="tech-card reveal delay-1">
+          <div class="tech-badge">Integration Hub</div>
+          <div class="tech-icon-wrap" style="color: #ff4a00; border-color: rgba(255, 74, 0, 0.3);"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h4>Zapier Central</h4>
+          <p>Connecting 6,000+ apps. We use Zapier for rapid glue-code and cross-platform syncing where speed and reliability are paramount.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <h2>Want This Stack<br><span class="gradient-text">In Your Business?</span></h2>
+        <p>We don't just use these tools ourselves—we architect custom versions of these systems for our clients. Let's build your AI advantage.</p>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="bi bi-rocket-takeoff-fill"></i> Architect Your Solution</a>
+          <a href="services.html" class="btn btn-outline btn-lg">Back to Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

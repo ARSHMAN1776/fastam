@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Fastam Solutions | Elite AI Agency</title>
+  <meta name="description" content="Fastam Solutions delivers Custom AI Development, Chatbot Development, CRM AI Integration, AI Automation, Voice Agents & Done-For-You AI retainers for high-growth businesses.">
+  <meta name="keywords" content="AI development, chatbot development, CRM AI integration, AI automation, voice agents, AI agency, HubSpot AI, n8n automation">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background: url('assets/img/hero_abstract_core.png') center center / cover no-repeat; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,15,0.9) 0%, var(--bg) 100%); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a><span class="breadcrumb-sep">/</span><span>Services</span></nav>
+      <div class="eyebrow" style="justify-content:center">Elite AI Services</div>
+      <h1>Your Entire AI Infrastructure.<br><span class="gradient-text">Built & Managed For You.</span></h1>
+      <p style="max-width: 700px; margin: 0 auto;">We don't sell tools. We deploy complete AI systems that replace manual work, accelerate revenue, and give your business an unfair competitive advantage.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:28px;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-primary btn-lg"><i class="bi bi-calendar-check"></i> Book Free Strategy Call</a>
+        <a href="pricing.html" class="btn btn-outline btn-lg">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE 1: CUSTOM AI DEVELOPMENT ==================== -->
+  <section>
+    <div class="container">
+      <div class="grid-2 mb-48" style="gap:60px">
+        <div class="reveal-left">
+          <div class="svc-icon" style="margin-bottom:24px;width:70px;height:70px;font-size:2rem; background: var(--gradient); border:none; color:white; display:flex; align-items:center; justify-content:center;"><i class="bi bi-cpu-fill"></i></div>
+          <div class="eyebrow">Service 01</div>
+          <h2>Custom AI Development</h2>
+          <p class="mt-16">We engineer custom GPT-5.5, Claude Sonnet 4.6 & Gemini 3.5 Flash-powered applications, AI copilots, and autonomous multi-agent systems — precision-built for your exact business operations. Not templates. Not off-the-shelf tools. Bespoke AI infrastructure.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Custom LLM Applications & AI Copilots</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Autonomous Multi-Agent Systems (LangGraph / CrewAI)</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> RAG-Powered Knowledge Bases (Pinecone / Weaviate)</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Fine-Tuned Models for Industry-Specific Use Cases</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-32"><i class="bi bi-calendar-check"></i> Start Building</a>
+        </div>
+        <div class="card reveal-right" style="padding:40px; background: rgba(15,15,30,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(108,99,255,0.2);">
+          <div style="background:var(--bg-card);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px; border: 1px solid var(--border)">
+            <div style="display:flex;gap:6px"><span style="width:12px;height:12px;border-radius:50%;background:#FF6B6B;display:block"></span><span style="width:12px;height:12px;border-radius:50%;background:#FFB800;display:block"></span><span style="width:12px;height:12px;border-radius:50%;background:var(--success);display:block"></span></div>
+            <div style="font-family:var(--font-mono);font-size:.78rem;color:var(--secondary)">ai_agent.config</div>
+            <div style="font-family:var(--font-mono);font-size:.75rem;line-height:1.8;color:var(--text-muted)">
+              {<br>
+              &nbsp;&nbsp;<span style="color:#A5A1FF">"model"</span>: <span style="color:var(--success)">"gpt-5.5"</span>,<br>
+              &nbsp;&nbsp;<span style="color:#A5A1FF">"memory"</span>: <span style="color:var(--success)">"PERSISTENT"</span>,<br>
+              &nbsp;&nbsp;<span style="color:#A5A1FF">"tools"</span>: <span style="color:var(--success)">"[crm, email, calendar]"</span>,<br>
+              &nbsp;&nbsp;<span style="color:#A5A1FF">"mode"</span>: <span style="color:var(--success)">"AUTONOMOUS"</span><br>
+              }
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+            <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center">
+              <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">GPT-5.5</div>
+              <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase;">Primary Model</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center">
+              <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">3–14d</div>
+              <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase;">To Deploy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ==================== SERVICE 2: CHATBOT DEVELOPMENT ==================== -->
+      <div class="grid-2 mb-48" style="gap:60px">
+        <div class="card reveal-left" style="padding:40px;order:2; background: rgba(15,15,30,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(0,212,255,0.2);">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.4rem;color:#25D366"><i class="bi bi-whatsapp"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">WhatsApp</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.4rem;color:#E1306C"><i class="bi bi-instagram"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Instagram</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.4rem;color:#229ED9"><i class="bi bi-telegram"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Telegram</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.4rem;color:#6C63FF"><i class="bi bi-globe"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Web</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.4rem;color:#1877F2"><i class="bi bi-messenger"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Messenger</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.4rem;color:var(--success)"><i class="bi bi-slack"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Slack</div></div>
+          </div>
+          <div style="margin-top:20px;padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px">
+            <div style="font-size:.7rem;color:var(--text-subtle);margin-bottom:12px;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.1em">Conversion Impact</div>
+            <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">70% fewer support tickets</div>
+            <div style="font-size:.8rem;color:var(--text-muted);margin-top:6px">Average within first 30 days of deployment</div>
+          </div>
+        </div>
+        <div class="reveal-right" style="order:1">
+          <div class="svc-icon" style="margin-bottom:24px;width:70px;height:70px;font-size:2rem; background: var(--gradient); border:none; color:white; display:flex; align-items:center; justify-content:center;"><i class="bi bi-chat-dots-fill"></i></div>
+          <div class="eyebrow">Service 02</div>
+          <h2>Chatbot Development</h2>
+          <p class="mt-16">Omnichannel AI chatbots trained on your business data, deployed across every platform your customers use. These aren't generic rule-based bots — they understand context, handle objections, and close leads 24/7 without you lifting a finger.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Web, WhatsApp, Instagram, Telegram & Slack Bots</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> RAG-Enhanced Knowledge Base Training</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Lead Capture, Qualification & Handoff Flows</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Conversation Analytics & Continuous Optimization</li>
+          </ul>
+          <a href="ai-chatbot.html" class="btn btn-primary mt-32">Deploy Your Chatbot <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ==================== SERVICE 3: CRM AI INTEGRATION ==================== -->
+      <div class="grid-2 mb-48" style="gap:60px">
+        <div class="reveal-left">
+          <div class="svc-icon" style="margin-bottom:24px;width:70px;height:70px;font-size:2rem; background: var(--gradient); border:none; color:white; display:flex; align-items:center; justify-content:center;"><i class="bi bi-arrow-repeat"></i></div>
+          <div class="eyebrow">Service 03</div>
+          <h2>CRM AI Integration</h2>
+          <p class="mt-16">Your CRM should work for you — not the other way around. We inject AI directly into HubSpot, Salesforce, GoHighLevel, and Pipedrive. AI-powered lead scoring, automated follow-up sequences, pipeline intelligence, and zero manual data entry.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> HubSpot, Salesforce & GoHighLevel AI Integration</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> AI Lead Scoring & Predictive Pipeline Management</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Automated Email & SMS Follow-Up Sequences</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Bi-Directional Data Sync Across All Platforms</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-32">Integrate Your CRM <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="card reveal-right" style="padding:40px; background: rgba(15,15,30,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(81,255,184,0.15);">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px">
+              <div style="display:flex;align-items:center;gap:10px"><i class="bi bi-person-fill" style="color:var(--primary)"></i><span style="font-size:.82rem;color:var(--text-muted)">Lead: John Smith</span></div>
+              <div style="background:rgba(0,232,147,0.15);color:var(--success);padding:3px 10px;border-radius:20px;font-size:.65rem;font-family:var(--font-mono);text-transform:uppercase">Hot Lead 94%</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px">
+              <div style="display:flex;align-items:center;gap:10px"><i class="bi bi-envelope-fill" style="color:var(--secondary)"></i><span style="font-size:.82rem;color:var(--text-muted)">Follow-up sent</span></div>
+              <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--text-subtle)">Auto · 2s ago</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px">
+              <div style="display:flex;align-items:center;gap:10px"><i class="bi bi-calendar-check-fill" style="color:#FFB800"></i><span style="font-size:.82rem;color:var(--text-muted)">Meeting booked</span></div>
+              <div style="background:rgba(255,184,0,0.15);color:#FFB800;padding:3px 10px;border-radius:20px;font-size:.65rem;font-family:var(--font-mono);text-transform:uppercase">CRM Synced</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px">
+              <div style="display:flex;align-items:center;gap:10px"><i class="bi bi-graph-up-arrow" style="color:var(--success)"></i><span style="font-size:.82rem;color:var(--text-muted)">Deal moved: Proposal</span></div>
+              <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--text-subtle)">AI triggered</div>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:20px;background:rgba(81,255,184,0.05);border:1px solid rgba(81,255,184,0.15);border-radius:12px;text-align:center">
+            <div style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;color:var(--success)">0 min</div>
+            <div style="font-size:.75rem;color:var(--text-muted);text-transform:uppercase;font-family:var(--font-mono)">Manual data entry per day</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ==================== SERVICE 4: AI AUTOMATION ==================== -->
+      <div class="grid-2 mb-48" style="gap:60px">
+        <div class="card reveal-left" style="padding:40px;order:2; background: rgba(15,15,30,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,184,0,0.15);">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.2rem;color:#625df5"><i class="bi bi-diagram-3-fill"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">n8n</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.2rem;color:#ff4a00"><i class="bi bi-lightning-charge-fill"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Zapier</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.2rem;color:#00a3e0"><i class="bi bi-infinity"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Make</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.2rem;color:#0078d4"><i class="bi bi-microsoft"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Power</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.2rem;color:var(--success)"><i class="bi bi-envelope-at-fill"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">Email</div></div>
+            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:1.2rem;color:var(--secondary)"><i class="bi bi-database-fill"></i></div><div style="font-size:.65rem;color:var(--text-muted);margin-top:8px;text-transform:uppercase">API</div></div>
+          </div>
+          <div style="margin-top:20px;padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px">
+            <div style="font-size:.7rem;color:var(--text-subtle);margin-bottom:12px;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.1em">Operational Impact</div>
+            <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">20+ hrs/week saved</div>
+            <div style="font-size:.8rem;color:var(--text-muted);margin-top:6px">Average across all deployed automation systems</div>
+          </div>
+        </div>
+        <div class="reveal-right" style="order:1">
+          <div class="svc-icon" style="margin-bottom:24px;width:70px;height:70px;font-size:2rem; background: var(--gradient); border:none; color:white; display:flex; align-items:center; justify-content:center;"><i class="bi bi-lightning-charge-fill"></i></div>
+          <div class="eyebrow">Service 04</div>
+          <h2>AI Automation</h2>
+          <p class="mt-16">Eliminate manual churn permanently. We architect self-healing automation ecosystems with n8n, Make, Zapier & Power Automate that connect your entire software stack into one unified, autonomous machine that runs 24/7 without supervision.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> End-to-End Workflow Orchestration (n8n / Make / Zapier)</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> AI-Enriched Data Pipelines & Reporting Flows</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Automated Invoice, Contract & Document Generation</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Error Recovery & Self-Healing Automation Systems</li>
+          </ul>
+          <a href="ai-automation.html" class="btn btn-primary mt-32">Automate Your Business <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ==================== SERVICE 5: AI VOICE AGENTS ==================== -->
+      <div class="grid-2 mb-48" style="gap:60px">
+        <div class="reveal-left">
+          <div class="svc-icon" style="margin-bottom:24px;width:70px;height:70px;font-size:2rem; background: var(--gradient); border:none; color:white; display:flex; align-items:center; justify-content:center;"><i class="bi bi-telephone-fill"></i></div>
+          <div class="eyebrow">Service 05</div>
+          <h2>AI Voice Agents</h2>
+          <p class="mt-16">Deploy ultra-realistic AI voice agents powered by Vapi + ElevenLabs that handle inbound and outbound calls with sub-200ms response time. They qualify leads, book appointments, handle objections, and escalate complex cases — all without a human agent.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> 24/7 Inbound & Outbound AI Calling (Vapi + Twilio)</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Hyper-Realistic Voices via ElevenLabs</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Appointment Booking & CRM Auto-Update</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Call Transcripts, Analytics & Sentiment Analysis</li>
+          </ul>
+          <a href="ai-calling-agent.html" class="btn btn-primary mt-32">Deploy Voice Agent <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="card reveal-right" style="padding:40px; background: rgba(15,15,30,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,107,107,0.2);">
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px">
+              <div style="width:40px;height:40px;background:rgba(255,107,107,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#FF6B6B;flex-shrink:0"><i class="bi bi-telephone-fill"></i></div>
+              <div><div style="font-size:.78rem;font-weight:600">Inbound Call Received</div><div style="font-size:.68rem;color:var(--text-subtle);font-family:var(--font-mono)">Agent connected · &lt;200ms</div></div>
+              <div style="margin-left:auto;background:rgba(0,232,147,0.15);color:var(--success);padding:4px 10px;border-radius:20px;font-size:.65rem;font-family:var(--font-mono)">LIVE</div>
+            </div>
+            <div style="padding:16px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px">
+              <div style="font-size:.68rem;color:var(--text-subtle);font-family:var(--font-mono);margin-bottom:8px;text-transform:uppercase">AI Agent Speaking</div>
+              <div style="font-size:.85rem;color:var(--text-muted);font-style:italic">"Hi! I'm calling from Fastam Solutions. Is this a good time to discuss how we can save your team 20 hours a week with AI automation?"</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+              <div style="text-align:center;padding:14px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px">
+                <div style="font-size:1.2rem;font-weight:800;color:var(--success)">300+</div>
+                <div style="font-size:.65rem;color:var(--text-subtle);font-family:var(--font-mono)">Calls/day</div>
+              </div>
+              <div style="text-align:center;padding:14px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px">
+                <div style="font-size:1.2rem;font-weight:800;color:var(--primary)">&lt;200ms</div>
+                <div style="font-size:.65rem;color:var(--text-subtle);font-family:var(--font-mono)">Response</div>
+              </div>
+              <div style="text-align:center;padding:14px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px">
+                <div style="font-size:1.2rem;font-weight:800;color:#FFB800">24/7</div>
+                <div style="font-size:.65rem;color:var(--text-subtle);font-family:var(--font-mono)">Always On</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ==================== SERVICE 6: AI WEB DEVELOPMENT ==================== -->
+      <div class="grid-2 mb-48" style="gap:60px">
+        <div class="card reveal-left" style="padding:40px;order:2; background: rgba(15,15,30,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(108,99,255,0.2);">
+          <div style="background:var(--bg-card);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;border:1px solid var(--border)">
+            <div style="display:flex;gap:6px"><span style="width:12px;height:12px;border-radius:50%;background:#FF6B6B;display:block"></span><span style="width:12px;height:12px;border-radius:50%;background:#FFB800;display:block"></span><span style="width:12px;height:12px;border-radius:50%;background:var(--success);display:block"></span></div>
+            <div style="font-family:var(--font-mono);font-size:.78rem;color:var(--secondary)">webapp.config</div>
+            <div style="font-family:var(--font-mono);font-size:.75rem;line-height:1.8;color:var(--text-muted)">
+              {<br>
+              &nbsp;&nbsp;<span style="color:#A5A1FF">"framework"</span>: <span style="color:var(--success)">"Next.js 14"</span>,<br>
+              &nbsp;&nbsp;<span style="color:#A5A1FF">"ai_layer"</span>: <span style="color:var(--success)">"EMBEDDED"</span>,<br>
+              &nbsp;&nbsp;<span style="color:#A5A1FF">"performance"</span>: <span style="color:var(--success)">"99+ PageSpeed"</span>,<br>
+              &nbsp;&nbsp;<span style="color:#A5A1FF">"seo"</span>: <span style="color:var(--success)">"OPTIMIZED"</span><br>
+              }
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+            <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center">
+              <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">99+</div>
+              <div style="font-size:.7rem;color:var(--text-muted);text-transform:uppercase">PageSpeed</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center">
+              <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">AI Built-In</div>
+              <div style="font-size:.7rem;color:var(--text-muted);text-transform:uppercase">Every Project</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right" style="order:1">
+          <div class="svc-icon" style="margin-bottom:24px;width:70px;height:70px;font-size:2rem; background: var(--gradient); border:none; color:white; display:flex; align-items:center; justify-content:center;"><i class="bi bi-code-slash"></i></div>
+          <div class="eyebrow">Service 06</div>
+          <h2>AI-Powered Web Development</h2>
+          <p class="mt-16">We don't just build websites. We build AI-native digital products — web applications with AI search, smart recommendation engines, real-time analytics dashboards, and chatbot integrations baked in from day one. Built on Next.js for maximum performance.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Next.js & React AI-Native Web Applications</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Embedded AI Search, Chat & Recommendation</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Custom Client Portals & SaaS Dashboards</li>
+            <li class="d-flex align-center gap-16" style="font-size:.875rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> 99+ PageSpeed · SEO-Optimized · Production-Ready</li>
+          </ul>
+          <a href="web-development.html" class="btn btn-primary mt-32">Build Your Platform <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- ==================== QUICK SERVICES GRID: RETAINER + CONSULTING ==================== -->
+      <div class="sec-head center reveal" style="margin-top:60px">
+        <div class="eyebrow">Premium Tiers</div>
+        <h2>Go Further with <span class="gradient-text">Elite Engagement</span></h2>
+        <p>For businesses ready to go all-in on AI transformation — full agency partnership or strategic consulting.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px" class="reveal">
+
+        <!-- Done-For-You -->
+        <div class="card" style="padding:40px;background:linear-gradient(135deg,rgba(108,99,255,0.1),rgba(0,212,255,0.05));border:1px solid rgba(108,99,255,0.3)">
+          <div class="svc-icon" style="margin-bottom:20px;width:60px;height:60px;font-size:1.6rem;background:var(--gradient);border:none;color:#fff;display:flex;align-items:center;justify-content:center"><i class="bi bi-rocket-takeoff-fill"></i></div>
+          <div class="eyebrow">Service 07</div>
+          <h3 style="font-size:1.4rem;margin-bottom:12px">Done-For-You AI Retainer</h3>
+          <p>Monthly agency partnership. We become your full AI team — auditing, building, deploying, maintaining, and optimizing your entire AI infrastructure every single month.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+            <li class="d-flex align-center gap-16" style="font-size:.845rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Unlimited AI projects & iteration</li>
+            <li class="d-flex align-center gap-16" style="font-size:.845rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Dedicated AI engineer on your account</li>
+            <li class="d-flex align-center gap-16" style="font-size:.845rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Monthly performance reporting</li>
+            <li class="d-flex align-center gap-16" style="font-size:.845rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Priority Slack support channel</li>
+          </ul>
+          <a href="pricing.html" class="btn btn-primary" style="width:100%">View Retainer Plans <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <!-- AI Strategy Consulting -->
+        <div class="card" style="padding:40px;border:1px solid rgba(0,212,255,0.2)">
+          <div class="svc-icon" style="margin-bottom:20px;width:60px;height:60px;font-size:1.6rem;background:var(--gradient);border:none;color:#fff;display:flex;align-items:center;justify-content:center"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="eyebrow">Service 08</div>
+          <h3 style="font-size:1.4rem;margin-bottom:12px">AI Strategy Consulting</h3>
+          <p>Not sure where to start? In a 90-minute deep-dive, we audit your entire business, identify the highest-ROI AI opportunities, and hand you a custom implementation roadmap — ready to execute.</p>
+          <ul style="margin-top:20px;display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+            <li class="d-flex align-center gap-16" style="font-size:.845rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Full business & process AI audit</li>
+            <li class="d-flex align-center gap-16" style="font-size:.845rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Custom AI roadmap & stack recommendation</li>
+            <li class="d-flex align-center gap-16" style="font-size:.845rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> ROI projection & priority scoring</li>
+            <li class="d-flex align-center gap-16" style="font-size:.845rem;color:var(--text-muted)"><i class="bi bi-check-circle-fill" style="color:var(--success)"></i> Dedicated strategy report delivered in 48h</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="width:100%">Book a Strategy Session <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <div class="eyebrow" style="justify-content:center">Limited Monthly Spots</div>
+        <h2>Which Service is Right<br><span class="gradient-text">for Your Business?</span></h2>
+        <p>Book a free 30-minute strategy call. We'll diagnose your biggest bottlenecks and recommend the exact AI services to maximize your ROI — no fluff, no sales pitch.</p>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="bi bi-calendar-check"></i> Book Free Strategy Call</a>
+          <a href="pricing.html" class="btn btn-outline btn-lg">View Pricing</a>
+        </div>
+        <p style="margin-top:20px;font-size:.78rem;color:var(--text-subtle)">⚡ Usually respond within 2 hours · 30-Day ROI Guarantee · No contracts</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

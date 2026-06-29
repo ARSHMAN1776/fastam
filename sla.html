@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Level Agreement (SLA) — Fastam Solutions</title>
+  <meta name="description" content="Fastam Solutions enterprise Service Level Agreements (SLA), support protocols, and incident escalation procedures.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+  <style>
+    .sla-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    .sla-table th {
+      background: var(--surface);
+      color: var(--secondary);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 16px;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+    }
+    .sla-table td {
+      padding: 20px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+    .sla-table tr:hover td {
+      background: rgba(255,255,255,0.02);
+    }
+    .priority-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .priority-p1 { background: rgba(255, 74, 0, 0.1); color: #ff4a00; border: 1px solid rgba(255, 74, 0, 0.2); }
+    .priority-p2 { background: rgba(255, 184, 0, 0.1); color: #ffb800; border: 1px solid rgba(255, 184, 0, 0.2); }
+    .priority-p3 { background: rgba(0, 212, 255, 0.1); color: #00d4ff; border: 1px solid rgba(0, 212, 255, 0.2); }
+    .priority-p4 { background: rgba(255, 255, 255, 0.05); color: var(--text-subtle); border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero" style="padding-bottom:60px">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><a href="#">Company</a><span class="breadcrumb-sep">/</span><span>SLA & Support</span></nav>
+      <div class="eyebrow" style="justify-content:center; margin-bottom:24px">Mission-Critical Support</div>
+      <h1 style="max-width:900px; margin:0 auto 24px">Enterprise <span class="gradient-text">Service Level Agreement</span></h1>
+      <p style="max-width:700px; margin:0 auto">When you rely on AI for operations, downtime isn't an option. We provide highly structured, predictable incident response and uptime guarantees for our Enterprise clients.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="container">
+      
+      <!-- Metrics -->
+      <div class="grid-3 mb-48">
+        <div class="card reveal" style="padding:32px; text-align:center; border: 1px solid var(--border);">
+           <div style="font-size:2.5rem; font-weight:800; color:var(--success); margin-bottom:8px">99.9%</div>
+           <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); text-transform:uppercase;">Uptime Guarantee</div>
+        </div>
+        <div class="card reveal delay-1" style="padding:32px; text-align:center; border: 1px solid var(--border);">
+           <div style="font-size:2.5rem; font-weight:800; color:var(--primary); margin-bottom:8px">< 4 hrs</div>
+           <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); text-transform:uppercase;">Critical Response Time</div>
+        </div>
+        <div class="card reveal delay-2" style="padding:32px; text-align:center; border: 1px solid var(--border);">
+           <div style="font-size:2.5rem; font-weight:800; color:var(--secondary); margin-bottom:8px">24/7</div>
+           <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); text-transform:uppercase;">Monitoring</div>
+        </div>
+      </div>
+
+      <div class="post-content reveal">
+        <h2>Incident Severity Levels</h2>
+        <p>Our support team triages all incoming requests according to strict severity protocols to ensure business-critical infrastructure receives immediate engineering attention.</p>
+      </div>
+
+      <!-- SLA Table -->
+      <div class="table-responsive reveal delay-1">
+        <table class="sla-table">
+          <thead>
+            <tr>
+              <th style="width:15%">Severity</th>
+              <th style="width:35%">Definition</th>
+              <th style="width:25%">Initial Response Target</th>
+              <th style="width:25%">Resolution Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="priority-badge priority-p1">P1 - Critical</span></td>
+              <td><strong>Complete Outage.</strong> Core automations are entirely down, causing immediate halt to client's primary revenue operations or data loss.</td>
+              <td><strong style="color:var(--text)">Under 4 Hours</strong><br><span style="font-size:0.85rem">(24/7/365 protocol)</span></td>
+              <td>Continuous work until resolved. Status updates every 2 hours.</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-p2">P2 - High</span></td>
+              <td><strong>Severe Degradation.</strong> Primary workflows are functioning but highly impaired; significant impact on operational efficiency.</td>
+              <td><strong style="color:var(--text)">Under 8 Hours</strong><br><span style="font-size:0.85rem">(Business hours only)</span></td>
+              <td>24-48 Hours. Status updates daily.</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-p3">P3 - Medium</span></td>
+              <td><strong>Minor Issue.</strong> Non-critical automation failure or UI/chatbot bug that requires a workaround but doesn't halt logic.</td>
+              <td><strong style="color:var(--text)">1 Business Day</strong></td>
+              <td>3-5 Business Days.</td>
+            </tr>
+            <tr>
+              <td><span class="priority-badge priority-p4">P4 - Low</span></td>
+              <td><strong>General / Request.</strong> Aesthetic adjustments, copy updates, or questions about platform functionality.</td>
+              <td><strong style="color:var(--text)">2 Business Days</strong></td>
+              <td>Scheduled into next sprint.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="post-content mt-48 reveal">
+        <h2>Escalation Protocol</h2>
+        <p>If you feel your ticket is not receiving the appropriate priority classification, Enterprise clients have direct access to our Lead Engineering Team via dedicated Slack Connect channels.</p>
+        
+        <h2>Scheduled Maintenance</h2>
+        <p>To keep AI infrastructure secure and performant, Fastam Solutions schedules routine maintenance. We guarantee that at least <strong>48 hours of advance notice</strong> will be provided for any planned maintenance window that may result in more than 5 minutes of localized downtime.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-cta" style="background:var(--bg); margin-top: 60px;">
+    <div class="container">
+      <div class="cta-wrap reveal" style="background: linear-gradient(135deg, rgba(255,74,0,0.1) 0%, rgba(108,99,255,0.05) 100%); border-color: rgba(255,74,0,0.2);">
+        <div class="eyebrow" style="justify-content:center">Emergency Support</div>
+        <h2>Need Immediate <span class="gradient-text">Assistance?</span></h2>
+        <p>If you are experiencing a P1 Critical Outage, please bypass standard channels and use your dedicated emergency protocol email.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=URGENT%20P1%20Escalation" target="_blank" class="btn btn-primary btn-lg" style="background: #ff4a00; border-color: #ff4a00;">
+            <i class="bi bi-exclamation-triangle-fill"></i> Trigger P1 Alert
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development — Fastam Solutions</title>
+  <meta name="description" content="Custom websites, web applications, and scalable platforms built with modern technologies. Every project is crafted to perform, look stunning, and drive rea">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero" style="background: url('assets/img/enterprise_hero_tech.png') center center / cover no-repeat; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,20,0.85) 0%, var(--bg) 100%); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a><span class="breadcrumb-sep">/</span><a href="services.html" style="color:rgba(255,255,255,0.6)">Services</a><span class="breadcrumb-sep">/</span><span>Web Development</span></nav>
+      <div class="eyebrow" style="justify-content:center">Full-Stack Engineering</div>
+      <h1><span class="gradient-text">Architectural Excellence</span></h1>
+      <p style="max-width: 800px; margin: 0 auto;">We engineer high-performance web applications, enterprise portals, and scalable SaaS platforms built with React, Next.js, and military-grade security protocols.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid-2" style="gap:70px">
+        <div class="reveal-left">
+          <div class="svc-big-icon" style="background: var(--gradient); border:none; color:white; width: 64px; height: 64px; border-radius: 12px; display:flex; align-items:center; justify-content:center; font-size: 1.8rem; margin-bottom: 24px;"><i class="bi bi-code-slash"></i></div>
+          <div class="eyebrow">The Stack</div>
+          <h2>Custom <span class="gradient-text">Engineering</span></h2>
+          <p class="mt-16">Off-the-shelf templates limit your growth. We build bespoke digital infrastructure that is optimized for speed, SEO, and long-term scalability from the first line of code.</p>
+          <ul style="margin-top:28px;padding:0">
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Performance-Optimized Next.js & React Frameworks</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Enterprise-Scale SaaS & Web App Architecture</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Headless CMS Integrations (Strapi, Contentful, Sanity)</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Complex API Development & System Orchestration</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Advanced E-commerce Solutions (Custom & Shopify Plus)</li>
+            <li class='d-flex align-center gap-16' style='font-size:.875rem;color:var(--text-muted);padding:12px 0;border-bottom:1px solid var(--border)'><i class='bi bi-check-circle-fill' style='color:var(--success);flex-shrink:0'></i> Penetration-Tested Security & Data Compliance</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary mt-32"><i class="bi bi-rocket-takeoff-fill"></i> Launch Your Project</a>
+        </div>
+        <div class="reveal-right">
+          <div class="card" style="padding:44px; background: rgba(15,15,30,0.6); backdrop-filter: blur(24px); border: 1px solid rgba(108,99,255,0.15); box-shadow: 0 30px 60px rgba(0,0,0,0.4);">
+            <div style="text-align:center;margin-bottom:32px">
+              <div style="font-size:4rem;margin-bottom:20px; color: var(--primary);"><i class="bi bi-browser-safari"></i></div>
+              <h3>Engineering Core</h3>
+              <p class="mt-16" style="font-size: 0.9rem; color: var(--text-subtle);">Managed Full-Stack Deployment for Enterprise</p>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">99+</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Light Speed Score</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">100%</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Responsive Design</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SEO</div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">Search Ready</div>
+              </div>
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:12px;padding:20px;text-align:center">
+                <div style="font-size:1.6rem;font-weight:800;color:var(--success)"><i class="bi bi-shield-lock-fill"></i></div>
+                <div style="font-size:.7rem;color:var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px;">SSL Certified</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Enterprise Value</div>
+        <h2>Business-First <span class="gradient-text">Development</span></h2>
+      </div>
+      <div class="benefits-grid">
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-lightning-fill"></i></span><h4>Lightning Fast</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Milliseconds matter. We optimize every image and script for instant loading.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-phone-fill"></i></span><h4>Adaptive UI</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Flawless performance across all devices, from mobile to ultra-wide displays.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-shield-shaded"></i></span><h4>Security First</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Proactive protection against SQL injection, XSS, and other vulnerabilities.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-search-heart-fill"></i></span><h4>SEO-Friendly</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Clean semantic HTML and schema markup to help you rank higher.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-brush-fill"></i></span><h4>Modern Aesthetics</h4><p style="font-size: 0.8rem; color: var(--text-muted);">A design that feels premium, unique, and builds immediate user trust.</p></div>
+        <div class='card benefit-card reveal'><span class='benefit-icon'><i class="bi bi-capsule-pill"></i></span><h4>No Bloat</h4><p style="font-size: 0.8rem; color: var(--text-muted);">Clean, maintainable codebases without unnecessary dependencies.</p></div>
+      </div>
+  <section>
+    <div class="container">
+      <div class="sec-head center reveal"><div class="eyebrow">Our Process</div><h2>How We Deliver <span class="gradient-text">Your Project</span></h2></div>
+      <div class="process-wrap"><div class="process-line"></div>
+        <div class="process-grid">
+          <div class="process-step reveal"><div class="step-num">01</div><h4>Discovery Call</h4><p>We understand your goals, current setup, and exact requirements in a free 30-min session.</p></div>
+          <div class="process-step reveal delay-1"><div class="step-num">02</div><h4>Custom Proposal</h4><p>You receive a detailed scope, timeline, and pricing document within 24 hours.</p></div>
+          <div class="process-step reveal delay-2"><div class="step-num">03</div><h4>Development</h4><p>We build with regular check-ins and updates. Transparent progress, zero surprises.</p></div>
+          <div class="process-step reveal delay-3"><div class="step-num">04</div><h4>Delivery & Support</h4><p>Full handover, documentation, and post-launch support to ensure everything is perfect.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <div class="eyebrow" style="justify-content:center">Get Started</div>
+        <h2>Ready for World-Class<br><span class="gradient-text">Web Development?</span></h2>
+        <p>Email us today and get a custom proposal within 24 hours. No commitment required.</p>
+        <div class="cta-btns">
+          <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Web Development+Project+Inquiry" target="_blank" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Get a Free Quote</a>
+          <a href="portfolio.html" class="btn btn-outline btn-lg">View Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

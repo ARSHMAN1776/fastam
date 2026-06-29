@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Fastam Solutions | AI Agency Plans</title>
+  <meta name="description" content="Transparent pricing for Fastam Solutions AI agency. Monthly retainer plans from $1,500/mo and one-time project pricing for AI development, chatbots, CRM integration, voice agents and more.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Pricing</span></nav>
+      <div class="eyebrow" style="justify-content:center">Transparent Pricing</div>
+      <h1>Simple, Honest Pricing.<br><span class="gradient-text">No Surprises.</span></h1>
+      <p>Every engagement is scoped for maximum ROI. Choose a monthly retainer for ongoing AI partnership, or a one-time project for targeted AI deployment. All plans include our 30-Day ROI Guarantee.</p>
+    </div>
+  </section>
+
+  <!-- ==================== MONTHLY RETAINER PLANS ==================== -->
+  <section>
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Agency Retainer Plans</div>
+        <h2>Your Dedicated <span class="gradient-text">AI Team</span></h2>
+        <p>Monthly done-for-you AI agency partnership. We build, deploy, maintain, and optimize your AI infrastructure — every month, on autopilot.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <div class="card price-card reveal">
+          <div class="price-tier">Starter</div>
+          <div class="price-num">
+            <span class="price-cur">$</span>
+            <span class="price-val">1,500</span>
+            <span class="price-per">/month</span>
+          </div>
+          <p class="price-desc">Perfect for startups and small businesses ready to automate their first workflows and deploy their first AI agent.</p>
+          <ul class="price-feat">
+            <li><i class="bi bi-check-circle-fill"></i> 1 AI Service per month</li>
+            <li><i class="bi bi-check-circle-fill"></i> AI Automation (n8n / Zapier)</li>
+            <li><i class="bi bi-check-circle-fill"></i> 1 Chatbot or Voice Agent</li>
+            <li><i class="bi bi-check-circle-fill"></i> Monthly performance report</li>
+            <li><i class="bi bi-check-circle-fill"></i> Email support (48h response)</li>
+            <li><i class="bi bi-check-circle-fill"></i> 30-Day ROI Guarantee</li>
+            <li class="no"><i class="bi bi-x-circle-fill"></i> CRM AI Integration</li>
+            <li class="no"><i class="bi bi-x-circle-fill"></i> Custom AI Development</li>
+            <li class="no"><i class="bi bi-x-circle-fill"></i> Priority Slack channel</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="width:100%">Get Started</a>
+        </div>
+
+        <!-- Growth (Featured) -->
+        <div class="card price-card featured reveal delay-1">
+          <div class="price-badge">⭐ Most Popular</div>
+          <div class="price-tier">Growth</div>
+          <div class="price-num">
+            <span class="price-cur">$</span>
+            <span class="price-val">3,500</span>
+            <span class="price-per">/month</span>
+          </div>
+          <p class="price-desc">For growing businesses that need multiple AI systems working together — automation, CRM, chatbots, and voice agents as one coordinated machine.</p>
+          <ul class="price-feat">
+            <li><i class="bi bi-check-circle-fill"></i> 3 AI Services per month</li>
+            <li><i class="bi bi-check-circle-fill"></i> Full Workflow Automation Suite</li>
+            <li><i class="bi bi-check-circle-fill"></i> CRM AI Integration (HubSpot / GHL)</li>
+            <li><i class="bi bi-check-circle-fill"></i> Chatbot + Voice Agent deployment</li>
+            <li><i class="bi bi-check-circle-fill"></i> Bi-weekly strategy calls</li>
+            <li><i class="bi bi-check-circle-fill"></i> Priority Slack support channel</li>
+            <li><i class="bi bi-check-circle-fill"></i> Advanced analytics & reporting</li>
+            <li><i class="bi bi-check-circle-fill"></i> 30-Day ROI Guarantee</li>
+            <li class="no"><i class="bi bi-x-circle-fill"></i> Custom AI app development</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%">Get Started</a>
+        </div>
+
+        <!-- Elite -->
+        <div class="card price-card reveal delay-2" style="background:linear-gradient(135deg,rgba(108,99,255,0.08),rgba(0,212,255,0.04));border-color:rgba(108,99,255,0.35)">
+          <div class="price-badge" style="background:linear-gradient(135deg,#FFB800,#FF6B6B)">🏆 Elite</div>
+          <div class="price-tier">Elite</div>
+          <div class="price-num">
+            <span class="price-cur">$</span>
+            <span class="price-val">7,500</span>
+            <span class="price-per">/month</span>
+          </div>
+          <p class="price-desc">Full AI agency partnership. We become your dedicated AI team — unlimited projects, custom development, and a senior AI engineer on-call for your business.</p>
+          <ul class="price-feat">
+            <li><i class="bi bi-check-circle-fill"></i> Unlimited AI projects</li>
+            <li><i class="bi bi-check-circle-fill"></i> Custom AI App Development</li>
+            <li><i class="bi bi-check-circle-fill"></i> Full CRM AI & Automation Stack</li>
+            <li><i class="bi bi-check-circle-fill"></i> Multi-channel Chatbot + Voice Agents</li>
+            <li><i class="bi bi-check-circle-fill"></i> Dedicated senior AI engineer</li>
+            <li><i class="bi bi-check-circle-fill"></i> Weekly strategy & review calls</li>
+            <li><i class="bi bi-check-circle-fill"></i> White-label delivery option</li>
+            <li><i class="bi bi-check-circle-fill"></i> Priority 4h response SLA</li>
+            <li><i class="bi bi-check-circle-fill"></i> 30-Day ROI Guarantee</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;background:linear-gradient(135deg,#FFB800,#FF6B6B)">Go Elite</a>
+        </div>
+
+      </div>
+
+      <!-- Guarantee Banner -->
+      <div class="reveal" style="margin-top:40px;padding:28px 36px;background:rgba(0,232,147,0.06);border:1px solid rgba(0,232,147,0.2);border-radius:16px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <div style="font-size:2rem;flex-shrink:0">🛡️</div>
+        <div style="flex:1;min-width:220px">
+          <h5 style="color:var(--success);margin-bottom:4px">30-Day ROI Guarantee — All Plans</h5>
+          <p style="margin:0;font-size:.845rem">If our AI solution doesn't deliver measurable value in 30 days, we keep working for free until it does. Zero risk, maximum upside.</p>
+        </div>
+        <a href="contact.html" class="btn btn-outline" style="border-color:var(--success);color:var(--success);flex-shrink:0">Claim Guarantee</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ONE-TIME PROJECT PRICING ==================== -->
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">One-Time Projects</div>
+        <h2>Targeted AI <span class="gradient-text">Deployments</span></h2>
+        <p>Need a specific AI solution deployed fast? These are starting price ranges. Every project is scoped individually. Contact us for a precise quote within 24 hours.</p>
+      </div>
+      <div class="grid-3">
+
+        <div class="card reveal" style="padding:32px">
+          <div class="svc-icon" style="color:#A5A1FF;margin-bottom:16px"><i class="bi bi-cpu-fill"></i></div>
+          <h4>Custom AI Development</h4>
+          <div style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:12px 0">From $2,000</div>
+          <p style="font-size:.845rem">Custom LLM apps, AI agents, copilots and autonomous systems built to spec. Price depends on complexity and integrations.</p>
+          <a href="contact.html" class="btn-ghost mt-16">Get Quote <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="card reveal delay-1" style="padding:32px">
+          <div class="svc-icon" style="color:#70E5FF;margin-bottom:16px"><i class="bi bi-chat-dots-fill"></i></div>
+          <h4>Chatbot Development</h4>
+          <div style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:12px 0">From $800</div>
+          <p style="font-size:.845rem">Omnichannel AI chatbots for Web, WhatsApp, Instagram & Telegram. Includes custom training, setup and deployment.</p>
+          <a href="ai-chatbot.html" class="btn-ghost mt-16">View Details <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="card reveal delay-2" style="padding:32px">
+          <div class="svc-icon" style="color:#51FFB8;margin-bottom:16px"><i class="bi bi-arrow-repeat"></i></div>
+          <h4>CRM AI Integration</h4>
+          <div style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:12px 0">From $1,200</div>
+          <p style="font-size:.845rem">Full AI integration into HubSpot, Salesforce or GoHighLevel. Lead scoring, automated sequences & pipeline intelligence.</p>
+          <a href="contact.html" class="btn-ghost mt-16">Get Quote <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="card reveal" style="padding:32px">
+          <div class="svc-icon" style="color:#FFB800;margin-bottom:16px"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h4>AI Automation</h4>
+          <div style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:12px 0">From $500</div>
+          <p style="font-size:.845rem">n8n, Make, Zapier & Power Automate workflows. Simple automations to complex multi-step orchestration pipelines.</p>
+          <a href="ai-automation.html" class="btn-ghost mt-16">View Details <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="card reveal delay-1" style="padding:32px">
+          <div class="svc-icon" style="color:#FF6B6B;margin-bottom:16px"><i class="bi bi-telephone-fill"></i></div>
+          <h4>AI Voice Agent</h4>
+          <div style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:12px 0">From $1,500</div>
+          <p style="font-size:.845rem">Custom voice AI for inbound or outbound calls using Vapi + ElevenLabs. Setup, configuration, testing & CRM integration.</p>
+          <a href="ai-calling-agent.html" class="btn-ghost mt-16">View Details <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="card reveal delay-2" style="padding:32px">
+          <div class="svc-icon" style="color:#A5A1FF;margin-bottom:16px"><i class="bi bi-code-slash"></i></div>
+          <h4>AI Web Development</h4>
+          <div style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:12px 0">From $1,000</div>
+          <p style="font-size:.845rem">AI-native web applications, landing pages & SaaS platforms built with Next.js. Includes embedded AI features, SEO & deployment.</p>
+          <a href="web-development.html" class="btn-ghost mt-16">View Details <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section>
+    <div class="container container-sm">
+      <div class="sec-head center reveal">
+        <div class="eyebrow">Common Questions</div>
+        <h2>Pricing <span class="gradient-text">FAQ</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="card faq-item">
+          <div class="faq-header"><h4>What's included in the ROI Guarantee?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>If our AI solution doesn't deliver measurable, agreed-upon results within 30 days of deployment, we continue working at no additional charge until it does. We agree on KPIs upfront so there's no ambiguity.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>How do retainer projects get scoped?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>Every month we kick off with a planning call to define the deliverables. You choose what to prioritize — automation, chatbot improvements, new AI features — and we execute. Unused capacity rolls over to the next month.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>Can I get a custom quote for a specific project?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>Absolutely. Every complex project gets a custom quote based on your specific requirements, timeline, and scope. Contact us and we'll respond within 24 hours with a detailed proposal.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>How do you handle payments?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>Retainers are billed monthly in advance. One-time projects are 50% upfront and 50% on delivery. We accept bank transfers, PayPal, and crypto. Larger enterprise projects can be broken into milestones.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>Are there contracts or cancellation fees?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>No long-term contracts. Monthly retainers are month-to-month and can be cancelled with 30 days notice. We believe in earning your business every month through results — not locking you in.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>Do you offer discounts for annual commitments?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>Yes — annual retainer commitments receive a 15% discount applied to all monthly payments. Contact us to set up annual billing.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="cta-wrap reveal">
+        <h2>Not Sure Which Plan?<br><span class="gradient-text">Let's Talk Numbers.</span></h2>
+        <p>Book a free 30-minute strategy call. We'll diagnose your business, recommend the right services, and give you a custom quote — no pressure, no fluff.</p>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="bi bi-calendar-check"></i> Book Free Strategy Call</a>
+          <a href="faq.html" class="btn btn-outline btn-lg">View Full FAQ</a>
+        </div>
+        <p style="margin-top:20px;font-size:.78rem;color:var(--text-subtle)">⚡ Usually respond within 2 hours · 30-Day ROI Guarantee · No contracts</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

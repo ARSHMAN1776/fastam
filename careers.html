@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — Fastam Solutions</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Careers</span></nav>
+      <div class="eyebrow" style="justify-content:center">Join the Team</div>
+      <h1>Help Us Build the<br><span class="gradient-text">Future of Business</span></h1>
+      <p>We're a remote-first team of builders who are obsessed with AI, automation and creating real impact for clients worldwide. Sound like you?</p>
+    </div>
+  </section>
+  <section style="background:var(--bg-2)">
+    <div class="container">
+      <div class="sec-head center reveal"><div class="eyebrow">Why Fastam</div><h2>Why Work <span class="gradient-text">With Us?</span></h2></div>
+      <div class="grid-3">
+        <div class="card reveal" style="padding:32px;text-align:center"><div style="font-size:2.5rem;margin-bottom:16px">🌍</div><h4>100% Remote</h4><p>Work from anywhere in the world. We care about results, not your location or office hours.</p></div>
+        <div class="card reveal delay-1" style="padding:32px;text-align:center"><div style="font-size:2.5rem;margin-bottom:16px">🚀</div><h4>Cutting-Edge Work</h4><p>Work with the latest AI tools, automation platforms and modern web technologies daily.</p></div>
+        <div class="card reveal delay-2" style="padding:32px;text-align:center"><div style="font-size:2.5rem;margin-bottom:16px">📈</div><h4>Real Impact</h4><p>Your work directly shapes how businesses operate. Every project creates measurable change.</p></div>
+        <div class="card reveal" style="padding:32px;text-align:center"><div style="font-size:2.5rem;margin-bottom:16px">💰</div><h4>Competitive Pay</h4><p>We pay fairly and reward performance. Your contribution is recognized and compensated.</p></div>
+        <div class="card reveal delay-1" style="padding:32px;text-align:center"><div style="font-size:2.5rem;margin-bottom:16px">📚</div><h4>Always Learning</h4><p>Access to courses, tools, and resources. We invest in growing our team's skills constantly.</p></div>
+        <div class="card reveal delay-2" style="padding:32px;text-align:center"><div style="font-size:2.5rem;margin-bottom:16px">🤝</div><h4>Collaborative Culture</h4><p>No politics, no micromanagement. Just talented people working together with full autonomy.</p></div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="sec-head reveal"><div class="eyebrow">Open Roles</div><h2>Current <span class="gradient-text">Openings</span></h2><p>We hire based on skill and passion, not just credentials. Show us what you can do.</p></div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card job-card reveal">
+          <div class="job-info"><h4>AI Automation Engineer (n8n / Zapier)</h4><div class="job-tags mt-16"><span class="tag tag-primary">Full-Time</span><span class="tag tag-secondary">Remote</span><span class="tag tag-muted">AI & Automation</span></div></div>
+          <div class="job-meta"><a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Application+AI+Automation+Engineer" target="_blank" class="btn btn-primary btn-sm">Apply Now</a></div>
+        </div>
+        <div class="card job-card reveal">
+          <div class="job-info"><h4>Full-Stack Web Developer (React / Next.js)</h4><div class="job-tags mt-16"><span class="tag tag-primary">Full-Time</span><span class="tag tag-secondary">Remote</span><span class="tag tag-muted">Web Development</span></div></div>
+          <div class="job-meta"><a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Application+Web+Developer" target="_blank" class="btn btn-primary btn-sm">Apply Now</a></div>
+        </div>
+        <div class="card job-card reveal">
+          <div class="job-info"><h4>AI / NLP Engineer (Chatbots & Voice)</h4><div class="job-tags mt-16"><span class="tag tag-primary">Full-Time</span><span class="tag tag-secondary">Remote</span><span class="tag tag-muted">AI Systems</span></div></div>
+          <div class="job-meta"><a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Application+AI+Engineer" target="_blank" class="btn btn-primary btn-sm">Apply Now</a></div>
+        </div>
+        <div class="card job-card reveal">
+          <div class="job-info"><h4>UI/UX Product Designer (Figma)</h4><div class="job-tags mt-16"><span class="tag tag-muted">Part-Time</span><span class="tag tag-secondary">Remote</span><span class="tag tag-muted">Design</span></div></div>
+          <div class="job-meta"><a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Application+UX+Designer" target="_blank" class="btn btn-primary btn-sm">Apply Now</a></div>
+        </div>
+        <div class="card job-card reveal">
+          <div class="job-info"><h4>Sales & Business Development</h4><div class="job-tags mt-16"><span class="tag tag-muted">Commission</span><span class="tag tag-secondary">Remote</span><span class="tag tag-muted">Sales</span></div></div>
+          <div class="job-meta"><a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Application+Sales+BD" target="_blank" class="btn btn-primary btn-sm">Apply Now</a></div>
+        </div>
+      </div>
+      <div class="highlight-box mt-48 reveal" style="text-align:center">
+        <h4 style="margin-bottom:10px">Don't See Your Role?</h4>
+        <p style="max-width:460px;margin:0 auto 20px">We're always looking for exceptional people. Send us your CV and portfolio and we'll reach out when the right opportunity comes up.</p>
+        <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com&su=Open+Application+Fastam+Solutions" target="_blank" class="btn btn-primary"><i class="bi bi-envelope-fill"></i> Send Open Application</a>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>

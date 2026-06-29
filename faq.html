@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const t = localStorage.getItem('fastam-theme') || 'system';
+      if (t === 'light' || (t === 'system' && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Fastam Solutions</title>
+  <meta name="description" content="Frequently asked questions about Fastam Solutions services, pricing, process, and delivery. Get all your answers here.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/fastam.css?v=4">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero" style="background: url('assets/img/hero-ai-float.png') center center / cover no-repeat; position: relative;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,15,0.88) 0%, var(--bg) 100%); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <nav class="breadcrumb"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a><span class="breadcrumb-sep">/</span><span>FAQ</span></nav>
+      <div class="eyebrow" style="justify-content:center">Technical Support</div>
+      <h1>Knowledge <span class="gradient-text">Base</span></h1>
+      <p style="max-width: 800px; margin: 0 auto;">Everything you need to know about our project methodology, enterprise deployments, and architectural standards. For critical assistance: fastamsolutions@gmail.com.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container container-sm">
+      <!-- General -->
+      <div class="sec-head reveal" style="margin-bottom:32px">
+        <div class="eyebrow">General</div>
+        <h3>About Fastam Solutions</h3>
+      </div>
+      <div class="faq-list mb-48">
+        <div class="card faq-item" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(12px); margin-bottom: 12px;">
+          <div class="faq-header" style="padding: 24px; cursor: pointer;"><h4>What does Fastam Solutions do?</h4><div class="faq-toggle" style="color: var(--primary); font-weight: 700;">+</div></div>
+          <div class="faq-body" style="padding: 0 24px 24px; color: var(--text-muted);"><p>We are an elite AI-native development and automation agency. We specialize in Custom AI Development (LLM apps & autonomous agents), Omnichannel Chatbot Development, CRM AI Integration, Workflow Automation (n8n/Make/Zapier), and AI Voice Agents. We engineer complete AI systems that replace manual operations.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>Where is Fastam Solutions based?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We are a remote-first team. Our founder is based in Pakistan, but we serve clients across the US, UK, Europe, Middle East, and Southeast Asia. All work is done online, collaborating through video calls and project management tools.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>How long has Fastam Solutions been operating?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We've been delivering digital solutions since 2020. Over 5 years, we've completed 100+ projects for 50+ clients with a 99% satisfaction rate.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>What industries do you work with?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We work across all industries including e-commerce, real estate, healthcare, SaaS, marketing agencies, restaurants, finance, and more. Our solutions are industry-agnostic and adapt to your specific business needs.</p></div>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="sec-head reveal" style="margin-bottom:32px">
+        <div class="eyebrow">Services</div>
+        <h3>Our Services & Deliverables</h3>
+      </div>
+      <div class="faq-list mb-48">
+        <div class="card faq-item">
+          <div class="faq-header"><h4>What automation platforms do you work with?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We primarily work with n8n, Zapier, and Microsoft Power Automate. We can also work with Make (Integromat), ActivePieces, and build custom API integrations depending on your tech stack.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>How does the AI chatbot widget work?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We provide an embeddable chatbot widget you add to any website with 2 lines of code. The bot is powered by our AI backend and trained on your business information. Visitors interact with it like a real chat — it answers questions, captures leads, and guides users 24/7.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>Can the AI chatbot be trained on my specific products/services?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>Yes — on the Professional and Enterprise plans. You provide your business documentation, FAQs, product catalog or any relevant content, and we train the AI to respond accurately about your specific offerings.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>How does the AI calling agent work?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We build a custom voice AI agent using platforms like ElevenLabs and Twilio. The agent can answer inbound calls, make outbound calls, book appointments, qualify leads, and handle FAQs — all using natural-sounding AI voice, 24/7.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>What is CRM AI Integration?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We connect advanced AI models directly into your existing CRM (HubSpot, GoHighLevel, Salesforce). This enables automated lead scoring, real-time AI-based lead enrichment, instant AI follow-up emails and SMS, and automated pipeline movement without your team entering a single line of data manually.</p></div>
+        </div>
+      </div>
+
+      <!-- Process & Pricing -->
+      <div class="sec-head reveal" style="margin-bottom:32px">
+        <div class="eyebrow">Process & Pricing</div>
+        <h3>Working With Us</h3>
+      </div>
+      <div class="faq-list mb-48">
+        <div class="card faq-item">
+          <div class="faq-header"><h4>How long does a project typically take?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>It depends on scope. A simple automation or CRM integration takes 3–7 days. A web app or full AI calling system typically takes 2–4 weeks. We always provide a timeline estimate upfront before starting.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>What payment methods do you accept?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We accept PayPal, bank transfer (SWIFT/IBAN), Wise, and cryptocurrency (USDT/BTC). 50% is due upfront, 50% upon delivery. Subscription plans are billed monthly via PayPal or direct bank transfer.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>Do you offer refunds?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>We don't offer refunds once work has begun, but we do offer unlimited revisions until you are completely satisfied with the delivery. Our goal is always a happy client. If there's ever a concern, we'll make it right.</p></div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-header"><h4>Do you offer ongoing support after project delivery?</h4><div class="faq-toggle">+</div></div>
+          <div class="faq-body"><p>Yes. We offer post-delivery support for bug fixes and minor adjustments (usually 14–30 days depending on the project). Longer-term maintenance and support can be arranged via a monthly retainer.</p></div>
+        </div>
+        <div class="card faq-item" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(12px); margin-bottom: 12px;">
+          <div class="faq-header" style="padding: 24px; cursor: pointer;"><h4>How do I get started?</h4><div class="faq-toggle" style="color: var(--primary); font-weight: 700;">+</div></div>
+          <div class="faq-body" style="padding: 0 24px 24px; color: var(--text-muted);"><p>Simply email us at <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank" style="color:var(--primary)">fastamsolutions@gmail.com</a> or fill out the contact form on our website. We'll schedule a free 30-minute call to understand your needs and put together a custom proposal within 24 hours.</p></div>
+        </div>
+      </div>
+
+      <div class="highlight-box reveal text-center">
+        <h4 style="margin-bottom:12px">Still Have Questions?</h4>
+        <p style="max-width:400px;margin:0 auto 20px">We're happy to answer anything. Just send us a message and we'll get back within 24 hours.</p>
+        <a href="https://mail.google.com/mail/?view=cm&to=fastamsolutions@gmail.com" target="_blank" class="btn btn-primary"><i class="bi bi-envelope-fill"></i> Email Us Directly</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/fastam.js?v=4"></script>
+</body>
+</html>
