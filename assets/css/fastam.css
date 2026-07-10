@@ -1936,6 +1936,33 @@ textarea.form-control {
   cursor: pointer
 }
 
+/* Glass-style inputs (dark, blurred cards e.g. contact form) —
+   defined as classes rather than inline styles so :hover/:focus can win. */
+.glass-input {
+  background: rgba(255, 255, 255, .03);
+  border-color: rgba(255, 255, 255, .1);
+  color: #fff
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, .35)
+}
+
+.glass-input:hover {
+  border-color: rgba(255, 255, 255, .25)
+}
+
+.glass-input:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, .06);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, .25)
+}
+
+select.glass-input option {
+  background: var(--bg);
+  color: #fff
+}
+
 /* ========================
    FAQ ACCORDION
    ======================== */

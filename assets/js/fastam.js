@@ -545,21 +545,62 @@ function initTestimonialsSwiper() {
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-  form.addEventListener('submit', e => {
+  const status = document.getElementById('cf-status');
+
+  function showStatus(message, ok) {
+    if (!status) return;
+    status.textContent = message;
+    status.style.display = 'block';
+    status.style.background = ok ? 'rgba(0,232,147,0.1)' : 'rgba(255,90,90,0.1)';
+    status.style.border = `1px solid ${ok ? 'rgba(0,232,147,0.3)' : 'rgba(255,90,90,0.3)'}`;
+    status.style.color = ok ? 'var(--success)' : '#ff5a5a';
+  }
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('[type=submit]');
+    const originalText = btn.innerHTML;
     btn.textContent = 'Sending...';
     btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = '✓ Message Sent!';
-      btn.style.background = 'var(--success)';
-      form.reset();
+    if (status) status.style.display = 'none';
+
+    const service = form.service.value;
+    const payload = {
+      access_key: form.access_key.value,
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      budget: form.budget.value,
+      service: service,
+      subject: `New Project Inquiry — ${service}`,
+      message: form.message.value,
+      botcheck: form.botcheck.checked
+    };
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      if (data.success) {
+        btn.textContent = '✓ Message Sent!';
+        btn.style.background = 'var(--success)';
+        showStatus('Thanks — your message has been sent. We\'ll reply within 24 hours.', true);
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Something went wrong.');
+      }
+    } catch (err) {
+      showStatus(err.message || 'Sorry, something went wrong. Please email us directly at fastamsolutions@gmail.com.', false);
+    } finally {
       setTimeout(() => {
-        btn.textContent = 'Send Message';
+        btn.innerHTML = originalText;
         btn.disabled = false;
         btn.style.background = '';
       }, 4000);
-    }, 1500);
+    }
   });
 }
 

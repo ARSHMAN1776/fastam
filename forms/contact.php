@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 }
 
 // Your receiving email address
-$receiving_email_address = 'chs177398@gmail.com';
+$receiving_email_address = 'fastamsolutions@gmail.com';
 
 // Sanitize and validate input
 function sanitize_input($data) {
@@ -158,7 +158,7 @@ if ($mail_sent) {
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'message' => 'Sorry, there was an error sending your message. Please try again or contact us directly at chs177398@gmail.com'
+        'message' => 'Sorry, there was an error sending your message. Please try again or contact us directly at fastamsolutions@gmail.com'
     ]);
 }
 ?>

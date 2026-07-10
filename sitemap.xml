@@ -3,22 +3,200 @@
 
   <url>
     <loc>https://www.fastamsolutions.com/</loc>
+    <lastmod>2026-07-10</lastmod>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://www.fastamsolutions.com/about.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
     <loc>https://www.fastamsolutions.com/services.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://www.fastamsolutions.com/contact.html</loc>
+    <loc>https://www.fastamsolutions.com/pricing.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/about.html</loc>
+    <lastmod>2026-07-10</lastmod>
     <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/contact.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/ai-automation.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/ai-calling-agent.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/ai-chatbot.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/web-development.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/industry-ecommerce.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/industry-finance.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/industry-healthcare.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/industry-leadgen.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/industry-realestate.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/faq.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/case-study.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/case-study-hms.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/portfolio.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/testimonials.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/roi-calculator.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/ai-tech-stack.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/integrations.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/methodology.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/playbooks.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.55</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/playbook-post.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.55</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/canva-design.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.55</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/notion-setup.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.55</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/google-sheets.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.55</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/security.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/sla.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/careers.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/privacy-policy.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://www.fastamsolutions.com/terms-of-service.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <priority>0.30</priority>
   </url>
 
 </urlset>
