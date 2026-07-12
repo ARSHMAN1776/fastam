@@ -503,6 +503,27 @@ function initPortfolioFilter() {
 }
 
 /* ========================
+   BLOG / PLAYBOOKS FILTER
+   ======================== */
+function initBlogFilter() {
+  const buttons = document.querySelectorAll('.blog-filters .pf-btn');
+  const cards = document.querySelectorAll('.blog-card[data-cat]');
+  if (!buttons.length) return;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.cat === filter;
+        card.style.display = match ? '' : 'none';
+      });
+    });
+  });
+}
+
+/* ========================
    PRICING TOGGLE
    ======================== */
 function initPricingToggle() {
@@ -773,6 +794,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initFAQ();
   initPortfolioFilter();
+  initBlogFilter();
   initPricingToggle();
   initContactForm();
 
