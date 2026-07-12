@@ -1936,13 +1936,16 @@ textarea.form-control {
   cursor: pointer
 }
 
-/* Glass-style inputs (blurred cards e.g. contact form) — use theme tokens
-   (not hardcoded white) so they stay legible in both dark and light theme.
-   Defined as classes rather than inline styles so :hover/:focus can win. */
+/* Glass-style inputs (blurred cards e.g. contact form) — tinted with the
+   brand gradient (--primary/--border-2) instead of flat grey so they read
+   as "glass" rather than a generic form field, and stay legible in both
+   dark and light theme since every token here is theme-aware. */
 .glass-input {
-  background: var(--surface-2);
-  border-color: var(--border);
-  color: var(--text)
+  background: linear-gradient(135deg, rgba(99, 102, 241, .07), rgba(168, 85, 247, .03));
+  border: 1px solid var(--border-2);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px)
 }
 
 .glass-input::placeholder {
@@ -1950,13 +1953,13 @@ textarea.form-control {
 }
 
 .glass-input:hover {
-  border-color: var(--border-2)
+  border-color: rgba(99, 102, 241, .5)
 }
 
 .glass-input:focus {
   border-color: var(--primary);
-  background: var(--surface);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, .2)
+  background: linear-gradient(135deg, rgba(99, 102, 241, .12), rgba(168, 85, 247, .06));
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, .2), var(--glow-sm)
 }
 
 select.glass-input option {
