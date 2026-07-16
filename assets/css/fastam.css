@@ -2262,6 +2262,7 @@ section {
 }
 
 .form-control:focus {
+  color: var(--text);
   border-color: var(--primary);
   background: var(--surface-2);
   box-shadow: 0 0 0 3px rgba(108, 99, 255, .1)
@@ -2307,6 +2308,7 @@ textarea.form-control {
 }
 
 .glass-input:focus {
+  color: var(--text);
   border-color: var(--primary);
   background: linear-gradient(135deg, rgba(99, 102, 241, .12), rgba(168, 85, 247, .06));
   box-shadow: 0 0 0 3px rgba(99, 102, 241, .2), var(--glow-sm)
