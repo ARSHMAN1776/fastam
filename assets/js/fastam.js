@@ -46,7 +46,11 @@ const NAV_HTML = `
               <div class="mega-icon" style="background:rgba(0,232,147,0.12);border-color:rgba(0,232,147,0.25)"><i class="bi bi-grid-3x3-gap-fill" style="color:#00E893;font-size:1.05rem"></i></div>
               <div class="mega-info"><strong>Intelligence Stack</strong><span>Neural engines & platforms</span></div>
             </a>
-            <a href="pricing.html" class="mega-item">
+            <a href="quick-services.html" class="mega-item">
+              <div class="mega-icon" style="background:rgba(255,107,157,0.12);border-color:rgba(255,107,157,0.25)"><i class="bi bi-lightning-fill" style="color:#FF6B9D;font-size:1.05rem"></i></div>
+              <div class="mega-info"><strong>Quick Services</strong><span>Fast, one-off jobs & fixes</span></div>
+            </a>
+            <a href="pricing.html" class="mega-item" style="grid-column:1 / -1">
               <div class="mega-icon" style="background:rgba(249,216,73,0.12);border-color:rgba(249,216,73,0.25)"><i class="bi bi-rocket-takeoff-fill" style="color:#F9D849;font-size:1.05rem"></i></div>
               <div class="mega-info"><strong>Done-For-You AI</strong><span>Elite monthly agency retainers</span></div>
             </a>
@@ -139,6 +143,7 @@ const NAV_HTML = `
   <a href="industry-healthcare.html">Healthcare</a>
   <a href="industry-finance.html">Finance & Fintech</a>
   <a href="industry-leadgen.html">Lead Generation</a>
+  <a href="quick-services.html">Quick Services</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="playbooks.html">Playbooks</a>
   <div class="mobile-nav-divider"></div>
@@ -180,6 +185,7 @@ const FOOTER_HTML = `
           <a href="ai-calling-agent.html">AI Voice Agents</a>
           <a href="web-development.html">AI Web Development</a>
           <a href="ai-tech-stack.html">Intelligence Stack</a>
+          <a href="quick-services.html">Quick Services</a>
           <a href="pricing.html">Done-For-You AI</a>
         </div>
       </div>
@@ -466,6 +472,55 @@ function initCounters() {
   }, { threshold: 0.5 });
 
   counters.forEach(c => obs.observe(c));
+}
+
+/* ========================
+   HERO KPI COUNT-UP (decimals)
+   ======================== */
+function initHeroCounts() {
+  const els = document.querySelectorAll('.hero-count[data-to]');
+  if (!els.length) return;
+
+  els.forEach(el => {
+    const target = parseFloat(el.dataset.to);
+    const dec = parseInt(el.dataset.dec || '0', 10);
+    if (isNaN(target)) return;
+    const duration = 1600;
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = (target * eased).toFixed(dec);
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toFixed(dec);
+    };
+    requestAnimationFrame(tick);
+  });
+}
+
+/* ========================
+   HERO "RUNNING" TASK CYCLER
+   ======================== */
+function initHeroRun() {
+  const el = document.getElementById('hero-run-task');
+  if (!el) return;
+  const tasks = [
+    'n8n workflow · CRM sync',
+    'AI calling agent · qualifying lead',
+    'Make scenario · invoice → sheet',
+    'Chatbot · answering visitor',
+    'Zapier · booking → calendar',
+    'GPT pipeline · drafting reply',
+  ];
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % tasks.length;
+    el.style.opacity = '0';
+    setTimeout(() => {
+      el.textContent = tasks[i];
+      el.style.opacity = '1';
+    }, 260);
+  }, 2600);
 }
 
 /* ========================
@@ -792,6 +847,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initReveal();
   initCounters();
+  initHeroCounts();
+  initHeroRun();
   initFAQ();
   initPortfolioFilter();
   initBlogFilter();
